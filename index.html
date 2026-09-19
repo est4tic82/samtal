@@ -384,6 +384,69 @@ body.bare .block {
   padding-bottom: 1rem;
 }
 
+
+.pagebar {
+  display: flex;
+  gap: 1.4rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid var(--rule);
+}
+.pagebar button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.55rem 0 0.7rem;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: none;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.pagebar button:hover { color: var(--ink); }
+.pagebar button[aria-pressed="true"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+[data-page] { display: none; }
+[data-page].on { display: block; }
+.qgroup { margin-bottom: 2rem; }
+.qgroup > h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+ul.qlist { list-style: none; padding: 0; margin: 0; }
+ul.qlist li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.9rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.98rem;
+}
+ul.qlist li:last-child { border-bottom: none; }
+ul.qlist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 2px;
+}
+ul.qlist .why {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+}
+
 </style>
 </head>
 <body>
@@ -395,11 +458,17 @@ body.bare .block {
   <p class="sub">About two and a half minutes spoken. Know the beats, not the words.</p>
 </header>
 
+<div class="pagebar" role="group" aria-label="Page">
+  <button type="button" data-page-set="jahan" aria-pressed="true">Meeting with Jahan</button>
+  <button type="button" data-page-set="adam" aria-pressed="false">Questions for Adam</button>
+</div>
+
 <div class="langbar" role="group" aria-label="Language">
   <button type="button" data-set="en" aria-pressed="true">English</button>
   <button type="button" data-set="sv" aria-pressed="false">Svenska</button>
 </div>
 
+<div data-page="jahan" class="on">
 <div data-lang="en" class="on">
 <h2>Before going in</h2>
 <ul class="checklist">
@@ -701,6 +770,161 @@ body.bare .block {
 
 </div>
 
+</div>
+
+<div data-page="adam">
+<div data-lang="en" class="on">
+
+<h2>Before the conversation</h2>
+<ul class="checklist">
+  <li><strong>Listen far more than she talks.</strong> He wrote to warn her once already; he'll talk if given room. Her situation only needs one or two sentences of context.</li>
+  <li><strong>Ask for facts, take the facts.</strong> His account is angry and partly interpretation. The dates, names and sequences are gold; the framing is his, not hers.</li>
+  <li><strong>Don't ask him to commit to anything.</strong> No corroborating later, no statements, no documents. If it ever comes to that, ask then.</li>
+  <li><strong>Write nothing down in front of him.</strong> Notes immediately afterwards, not during.</li>
+  <li><strong>Start with the course.</strong> It's the only time-critical thing, and it's an easy, unloaded question to open with.</li>
+</ul>
+
+<div class="qgroup">
+  <h3>The implantology course &mdash; ask first</h3>
+  <ul class="qlist">
+    <li>"When did you do the implantology course in J&ouml;nk&ouml;ping &mdash; which year of your ST?"<span class="why">His records suggest an implant course in his first autumn. Confirming that is the backbone of her argument.</span></li>
+    <li>"How did you end up on it? Did you ask, or did someone put you forward?"<span class="why">Tells her whether nomination is automatic or discretionary here.</span></li>
+    <li>"Do you know how often it actually runs? Every two years, three, four?"<span class="why">The single number everything depends on.</span></li>
+    <li>"Was anyone ever told they weren't ready for a national course?"<span class="why">If never, the reason she was given is unprecedented.</span></li>
+    <li>"Is the J&ouml;nk&ouml;ping one the advanced course, or is there a basic implant course as well?"<span class="why">Resolves whether 'not ready' is absurd or arguable.</span></li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>What actually made them move</h3>
+  <ul class="qlist">
+    <li>"You mentioned Gustav in your email. What did he actually do that made them set a date for him?"<span class="why">The most valuable question in the list. Someone found the pressure point; she wants to know what it was.</span></li>
+    <li>"Was there anything that made them back down, ever?"</li>
+    <li>"When they changed their mind about something, who was it that changed it &mdash; Jahan, or someone above him?"</li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>Who he went to, and what happened</h3>
+  <ul class="qlist">
+    <li>"Did you go to the studierektor? What came of it?"<span class="why">She's about to write to Carin Starkhammar Johansson. Worth knowing how that lands here.</span></li>
+    <li>"Did you involve the union? Were they any use, and which one did you use?"<span class="why">He had the same dual-degree problem: l&auml;kare or tandl&auml;kare union.</span></li>
+    <li>"Did you ever ask HR anything directly? Did their answer match what the clinic told you?"<span class="why">His email says HR contradicted Jahan on his employment terms.</span></li>
+    <li>"Did you ever file an avvikelse, and did anything happen?"</li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>Documents and the plan</h3>
+  <ul class="qlist">
+    <li>"Was your utbildningsplan ever actually revised, or did it just sit there?"</li>
+    <li>"Did you get the protokoll from the specialistkollegium? Were they shared as a matter of course?"<span class="why">She's been invited to read 'earlier protokoll' she has never seen.</span></li>
+    <li>"Were your delm&aring;l signed off as you went, or all at the end?"</li>
+    <li>"Did you ever get anything in writing about how long your ST would be?"</li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>Hindsight</h3>
+  <ul class="qlist">
+    <li>"If you could go back, what would you do differently?"<span class="why">People who lost a fight usually know exactly where it went wrong, and are rarely asked.</span></li>
+    <li>"At what point did you realise it wasn't going to get better?"<span class="why">Her own calibration for how long to keep trying.</span></li>
+    <li>"Was there anyone at the clinic who was straight with you?"</li>
+    <li>"Is there anything you'd warn me about that I haven't asked?"<span class="why">Open the door once at the end, then stop.</span></li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>Afterwards &mdash; for her own decision</h3>
+  <ul class="qlist">
+    <li>"Did your ST time transfer when you left?"</li>
+    <li>"Was leaving the right call?"</li>
+    <li>"Would you have stayed if one thing had changed?"</li>
+  </ul>
+</div>
+
+<div class="flag">
+  <strong>What she should not do:</strong> repeat any of this to anyone at the clinic, quote him, attach his email, or let his account become her narrative. She is asking him for intelligence, not for an alliance. The files he sent also contain his personnummer &mdash; they don't go anywhere.
+</div>
+
+</div>
+<div data-lang="sv">
+
+<h2>Innan samtalet</h2>
+<ul class="checklist">
+  <li><strong>Lyssna mycket mer än hon pratar.</strong> Han skrev en gång för att varna henne; han berättar om han får utrymme. Hennes egen situation behöver en eller två meningar, inte mer.</li>
+  <li><strong>Be om fakta, ta fakta.</strong> Hans berättelse är arg och delvis tolkning. Datum, namn och händelseförlopp är guld; inramningen är hans, inte hennes.</li>
+  <li><strong>Be honom inte lova något.</strong> Inga intyg, inga utlåtanden, inga dokument. Om det någon gång behövs kan hon fråga då.</li>
+  <li><strong>Anteckna inget framför honom.</strong> Skriv direkt efteråt i stället.</li>
+  <li><strong>Börja med kursen.</strong> Det är det enda som brinner, och en enkel fråga att inleda med.</li>
+</ul>
+
+<div class="qgroup">
+  <h3>Implantatkursen &mdash; fråga först</h3>
+  <ul class="qlist">
+    <li>&rdquo;När gick du implantatkursen i Jönköping &mdash; vilket år av din ST?&rdquo;<span class="why">Hans egna papper antyder en implantatkurs redan första hösten. Det är ryggraden i hennes argument.</span></li>
+    <li>&rdquo;Hur kom du med på den? Bad du om det, eller anmälde någon dig?&rdquo;<span class="why">Visar om nominering är automatisk eller en bedömningsfråga här.</span></li>
+    <li>&rdquo;Vet du hur ofta den faktiskt ges? Vartannat år, vart tredje, vart fjärde?&rdquo;<span class="why">Den enda siffra allt hänger på.</span></li>
+    <li>&rdquo;Har någon någonsin fått höra att de inte var redo för en nationell kurs?&rdquo;<span class="why">Om aldrig: skälet hon fick är utan motstycke.</span></li>
+    <li>&rdquo;Är Jönköpingskursen den avancerade, eller finns det också en grundkurs i implantat?&rdquo;<span class="why">Avgör om &rdquo;inte redo&rdquo; är orimligt eller diskutabelt.</span></li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>Vad som faktiskt fick dem att röra sig</h3>
+  <ul class="qlist">
+    <li>&rdquo;Du nämnde Gustav i ditt mejl. Vad var det han faktiskt gjorde som fick dem att sätta ett datum?&rdquo;<span class="why">Den mest värdefulla frågan i listan. Någon hittade tryckpunkten &mdash; hon vill veta vilken.</span></li>
+    <li>&rdquo;Fanns det något som någonsin fick dem att backa?&rdquo;</li>
+    <li>&rdquo;När de ändrade sig om något &mdash; vem var det som ändrade det? Jahan, eller någon ovanför honom?&rdquo;</li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>Vem han vände sig till, och vad som hände</h3>
+  <ul class="qlist">
+    <li>&rdquo;Gick du till studierektorn? Vad ledde det till?&rdquo;<span class="why">Hon står i begrepp att skriva till Carin Starkhammar Johansson.</span></li>
+    <li>&rdquo;Tog du in facket? Var de till någon nytta, och vilket fack använde du?&rdquo;<span class="why">Han hade samma dubbelexamensproblem: läkar- eller tandläkarfack.</span></li>
+    <li>&rdquo;Frågade du HR något direkt? Stämde deras svar med det kliniken sa?&rdquo;<span class="why">Hans mejl säger att HR motsade Jahan om hans anställningsvillkor.</span></li>
+    <li>&rdquo;Skrev du någon avvikelse, och hände det något?&rdquo;</li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>Dokument och planen</h3>
+  <ul class="qlist">
+    <li>&rdquo;Reviderades din utbildningsplan någonsin, eller låg den bara där?&rdquo;</li>
+    <li>&rdquo;Fick du protokollen från specialistkollegiet? Delades de rutinmässigt?&rdquo;<span class="why">Hon har blivit ombedd att läsa &rdquo;tidigare protokoll&rdquo; hon aldrig sett.</span></li>
+    <li>&rdquo;Signerades dina delmål löpande, eller allt på slutet?&rdquo;</li>
+    <li>&rdquo;Fick du någonsin något skriftligt om hur lång din ST skulle vara?&rdquo;</li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>I efterhand</h3>
+  <ul class="qlist">
+    <li>&rdquo;Om du fick göra om det &mdash; vad skulle du göra annorlunda?&rdquo;<span class="why">Den som förlorat vet oftast exakt var det gick fel, och blir sällan tillfrågad.</span></li>
+    <li>&rdquo;När insåg du att det inte skulle bli bättre?&rdquo;<span class="why">Hennes egen kalibrering för hur länge hon ska fortsätta försöka.</span></li>
+    <li>&rdquo;Fanns det någon på kliniken som var rak mot dig?&rdquo;</li>
+    <li>&rdquo;Finns det något du skulle varna mig för som jag inte har frågat om?&rdquo;<span class="why">Öppna dörren en gång på slutet, sedan sluta.</span></li>
+  </ul>
+</div>
+
+<div class="qgroup">
+  <h3>Efteråt &mdash; för hennes eget beslut</h3>
+  <ul class="qlist">
+    <li>&rdquo;Följde din ST-tid med när du slutade?&rdquo;</li>
+    <li>&rdquo;Var det rätt beslut att sluta?&rdquo;</li>
+    <li>&rdquo;Hade du stannat om en enda sak hade förändrats?&rdquo;</li>
+  </ul>
+</div>
+
+<div class="flag">
+  <strong>Vad hon inte ska göra:</strong> upprepa något av det här för någon på kliniken, citera honom, bifoga hans mejl, eller låta hans berättelse bli hennes. Hon ber om information, inte om en allians. Filerna han skickade innehåller dessutom hans personnummer &mdash; de går ingenstans.
+</div>
+
+</div>
+</div>
+
 <footer>
   Prepared as talking notes — not to be read aloud or handed to anyone.
 </footer>
@@ -748,6 +972,27 @@ body.bare .block {
   var saved = '0';
   try { saved = localStorage.getItem('samtal-bare') || '0'; } catch (e) {}
   apply(saved === '1');
+})();
+</script>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('.pagebar button');
+  function setPage(page) {
+    document.querySelectorAll('[data-page]').forEach(function (el) {
+      el.classList.toggle('on', el.getAttribute('data-page') === page);
+    });
+    btns.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-page-set') === page));
+    });
+    try { localStorage.setItem('samtal-page', page); } catch (e) {}
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { setPage(b.getAttribute('data-page-set')); });
+  });
+  var saved = 'jahan';
+  try { saved = localStorage.getItem('samtal-page') || 'jahan'; } catch (e) {}
+  setPage(saved === 'adam' ? 'adam' : 'jahan');
 })();
 </script>
 </body>
