@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samtal med Jahan — speech and delivery notes</title>
+<style>
+:root {
+  --bg: #faf8f5;
+  --panel: #ffffff;
+  --ink: #1c1a17;
+  --ink-soft: #57524b;
+  --rule: #e2dcd3;
+  --accent: #7a4a2b;
+  --accent-soft: #f3ece4;
+  --note-bg: #f5f1ea;
+  --note-ink: #4a453d;
+  --warn: #8a3d2a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14130f;
+    --panel: #1c1a16;
+    --ink: #ece7df;
+    --ink-soft: #a9a29a;
+    --rule: #2f2b25;
+    --accent: #d9a378;
+    --accent-soft: #241f19;
+    --note-bg: #201d18;
+    --note-ink: #b3aca3;
+    --warn: #e0906f;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14130f;
+  --panel: #1c1a16;
+  --ink: #ece7df;
+  --ink-soft: #a9a29a;
+  --rule: #2f2b25;
+  --accent: #d9a378;
+  --accent-soft: #241f19;
+  --note-bg: #201d18;
+  --note-ink: #b3aca3;
+  --warn: #e0906f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+}
+
+header {
+  border-bottom: 2px solid var(--rule);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.kicker {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 0 0 0.6rem;
+  font-weight: 400;
+}
+
+.sub {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 3.5rem 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+h2:first-of-type { margin-top: 0; }
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  padding: 0.7rem 0 0.7rem 1.9rem;
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.98rem;
+}
+
+.checklist li:last-child { border-bottom: none; }
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 2px;
+}
+
+.speech {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1.75rem 1.75rem 0.5rem;
+}
+
+.block {
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.block:last-child { border-bottom: none; }
+
+.block p {
+  margin: 0 0 0.9rem;
+}
+
+.block p:last-of-type { margin-bottom: 0; }
+
+.note {
+  margin-top: 1rem;
+  background: var(--note-bg);
+  border-left: 3px solid var(--accent);
+  padding: 0.7rem 0.95rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--note-ink);
+  border-radius: 0 3px 3px 0;
+}
+
+.note strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.asks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.asks li {
+  padding: 0.55rem 0 0.55rem 2.2rem;
+  position: relative;
+  counter-increment: ask;
+}
+
+.asks {
+  counter-reset: ask;
+}
+
+.asks li::before {
+  content: counter(ask);
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pause {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 1.4rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+.tablewrap { overflow-x: auto; }
+
+th {
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  padding: 0 0.9rem 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: bottom;
+}
+
+td {
+  padding: 0.9rem 0.9rem 0.9rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+td:first-child {
+  font-style: italic;
+  color: var(--ink-soft);
+  width: 42%;
+}
+
+.flag {
+  background: var(--accent-soft);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+
+.flag strong { color: var(--warn); }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .wrap { padding: 2rem 1rem 3rem; }
+  .speech { padding: 1.1rem 1.1rem 0.3rem; }
+  h1 { font-size: 1.5rem; }
+  td:first-child { width: auto; }
+}
+
+.langbar {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  overflow: hidden;
+  width: fit-content;
+  background: var(--panel);
+}
+.langbar button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.5rem 1.15rem;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.langbar button:hover { color: var(--ink); }
+.langbar button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--bg);
+}
+[data-lang] { display: none; }
+[data-lang].on { display: block; }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="kicker">Talking notes</p>
+  <h1>Samtal med Jahan</h1>
+  <p class="sub">About two and a half minutes spoken. Know the beats, not the words.</p>
+</header>
+
+<div class="langbar" role="group" aria-label="Language">
+  <button type="button" data-set="en" aria-pressed="true">English</button>
+  <button type="button" data-set="sv" aria-pressed="false">Svenska</button>
+</div>
+
+<div data-lang="en" class="on">
+<h2>Before going in</h2>
+<ul class="checklist">
+  <li><strong>Ask for twenty minutes</strong>, one to one. Not a corridor conversation.</li>
+  <li><strong>Bring nothing.</strong> No papers, no printouts, no phone on the table. Documents make it a case; this is a conversation.</li>
+  <li><strong>Don't memorise it.</strong> Five beats: gratitude, the gap, the dark, the health sentence, the three asks. Word-perfect sounds rehearsed, and rehearsed sounds adversarial.</li>
+  <li><strong>Slower than feels natural.</strong> Nervousness speeds speech up, and speed reads as agitation.</li>
+  <li><strong>Decide the three asks are non-negotiable</strong> — everything else can be cut if the conversation turns. Those three get said.</li>
+  <li><strong>Beforehand, find whatever exists on the Romanian recognition</strong> — the application, forms, emails, anything in her file. Not to bring into the room, but so she knows how far it actually got if he asks.</li>
+</ul>
+
+<h2>The speech</h2>
+
+<div class="speech">
+
+  <div class="block">
+    <p>"Thank you for making time. I'll keep this short.</p>
+    <p>I'd like to start by saying something I mean sincerely: ST positions in käkkirurgi in Sweden are very rare, and I know what it means that I was given one here. That hasn't changed, and nothing I'm going to say changes it.</p>
+    <div class="note"><strong>Warm, unhurried.</strong> This is the only part that should sound like small talk. Look at him while saying it. It buys the rest of the conversation.</div>
+  </div>
+
+  <div class="block">
+    <p>I'm here because where I am now is very far from what we talked about when I joined. I'm not saying anyone misled me. I don't understand how we got from there to here, and I'd like to.</p>
+    <div class="note"><strong>"I'm not saying anyone misled me" is deliberate.</strong> It removes the accusation before he can brace against it. Say it plainly, not apologetically.</div>
+  </div>
+
+  <div class="block">
+    <p>The hardest part is being in the dark.</p>
+    <p>I've been told several times that I have one view of myself and that you have another. But I've never been told what your view actually is. No situations, no examples. So I'm left guessing, and what I guess is always worse than what's probably true.</p>
+    <div class="note"><strong>Short pause after "the hardest part is being in the dark."</strong> It's the thesis of the whole conversation. The last sentence gives him a face-saving opening — he can correct her rather than concede anything.</div>
+  </div>
+
+  <div class="block">
+    <p>I've also been told there's a plan for me, different from my colleagues', and that this is fine. I've accepted that. But nobody has told me what the plan is. It's hard to work toward something I can't see.</p>
+    <div class="note"><strong>"I've accepted that" matters.</strong> She isn't objecting to being treated differently — only to not knowing how. Much harder to argue with.</div>
+  </div>
+
+  <div class="block">
+    <p>And there's a pattern in how things reach me. They arrive late. I never had an introduction when I arrived — no inskolning, nothing about local routines or how things are documented here. SBAR is the clearest example. I wasn't introduced to it, and nobody mentioned it for months. Then it came up at a specialistkollegium as part of an assessment that I'm below level. It would have taken someone five minutes to tell me, and I would have fixed it the same day. Instead it was saved up, and it counted against me.</p>
+    <div class="note"><strong>No edge in the voice here.</strong> The facts are damning on their own; any sharpness lets him defend the process instead of answering. Let <em>"Instead it was saved up, and it counted against me"</em> sit for a beat before moving on.</div>
+  </div>
+
+  <div class="block">
+    <p>The implantology course is the most recent one, and it's where I stopped being able to carry this quietly. But it isn't really about the course. In my programme, implants come at the end of the first year. I'm at the end of my second, and I haven't started. That's a year of drift that nobody has explained to me. When I was told I wouldn't be going on the course, no reason was given that I could work with, and I don't understand how deferring it fits with a plan I've never seen.</p>
+    <div class="note"><strong>This is the strongest paragraph.</strong> It compares a written plan against a calendar — no interpretation in it. Say <em>"a year of drift"</em> plainly and don't rush past it. Pause afterwards; this is where a real answer is most likely to come.</div>
+  </div>
+
+  <div class="block">
+    <p>I want to be clear about one thing. What I find challenging here isn't the work or the requirements of the ST. It's the uncertainty. And it has started to affect my health, and my family. <em>[One true, concrete detail here &mdash; e.g. not sleeping properly for months, not being able to leave it at work.]</em> I'm not saying that to put pressure on you. I'm saying it because it's true and I think you'd want to know.</p>
+    <div class="note"><strong>Once, evenly, then move on.</strong> One concrete detail makes it credible; volume makes it rhetorical. Use something actually true for her, then return straight to a neutral tone. Don't elaborate and don't repeat it later &mdash; a single flat sentence carries more weight than an emotional account, and it can't be turned into a question about her capacity.<br><br><strong>Division of labour:</strong> health is the <em>entry point</em> and belongs prominently in the email requesting the meeting &mdash; it's the one ground he can't route to Aida. Inside the room it stays small, or it risks becoming a conversation about reduced duties and sick leave.</div>
+  </div>
+
+  <div class="block">
+    <p>I also want to say something about the medical side. I know this clinic works differently from most, and I understand that having people with both degrees is part of why it can work the way it does. I'm glad to be one of them, and I'm not looking to go anywhere. What I'm asking for in return is an ordinary ST: that I move through the programme at a normal pace and finish roughly when someone in my position should. That's the only thing I want.</p>
+    <div class="note"><strong>Warm, not transactional.</strong> "What I'm asking for in return" names the exchange without accusing anyone of exploiting it. "Finish roughly when someone in my position should" quietly sets the expectation out loud — which is what makes it harder to abandon later. Never say the suspicion behind this paragraph.</div>
+  </div>
+
+  <div class="block">
+    <p>So what would actually help me is three things.</p>
+    <ol class="asks">
+      <li>What your view of me actually is, with examples.</li>
+      <li>What the plan for me is, in a form I can read — including the recognition of my year and a half in Romania. That was agreed when I joined and the process was started, and then it stopped. I've never been told why.</li>
+      <li>And the course decision looked at again before registration closes.</li>
+    </ol>
+    <div class="note"><strong>Slow down and separate them.</strong> Three is the ceiling — more and he answers the easiest one. Small pause between each so they register as three requests, not a list. The second one runs longer than the others and that's fine: <em>"the process was started, and then it stopped"</em> is a plain fact with no interpretation in it, and it's hard to answer with anything except an explanation. Say it without emphasis and let it land.</div>
+  </div>
+
+  <div class="block">
+    <p>If I've got any of this wrong, I'd rather know than keep guessing.</p>
+    <p>Thank you for hearing me out."</p>
+    <div class="note"><strong>Placed last on purpose.</strong> Earlier it would soften the facts; here it reads as openness rather than retreat.</div>
+  </div>
+
+</div>
+
+<p class="pause">— then stop talking —</p>
+
+<div class="flag">
+  <strong>The silence is the most useful part.</strong> After the three asks, say nothing. It will feel far longer than it is. People fill silences, and what they fill them with is usually closer to the real answer than anything they'd say in response to a question. If he says something vague, resist the urge to follow up — wait again.
+</div>
+
+<h2>If he says</h2>
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>He says</th><th>She says</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"Let's take this on 7 October with Aida."</td>
+      <td>"Most of it, yes. But the course registration closes before then, so that one needs deciding sooner."</td>
+    </tr>
+    <tr>
+      <td>"You're not ready for that course."</td>
+      <td>"Can you tell me what I'd need to show to be ready? And when does it run next?"</td>
+    </tr>
+    <tr>
+      <td>"We'll find you an equivalent course."</td>
+      <td>"Which one, and when? I'd like it written into my plan."</td>
+    </tr>
+    <tr>
+      <td>"There's no problem, you're doing fine."</td>
+      <td>"Then I'd like that said at the next kollegium, because what I was told was the opposite."</td>
+    </tr>
+    <tr>
+      <td>"This is Aida's decision."</td>
+      <td>"I understand. But the resources for ST training sit with you, and this affects when I can apply for specialistbevis."</td>
+    </tr>
+    <tr>
+      <td>"Are you thinking of leaving?"</td>
+      <td>"No. I want to finish here. That's why I'm raising it rather than staying quiet."</td>
+    </tr>
+    <tr>
+      <td>Nothing much at all.</td>
+      <td>"Can I come back to you next week on the course, then?" — and then do.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Not in this conversation</h2>
+<ul class="checklist">
+  <li>The other doctor's on-call arrangement. Different matter, different forum, enormous downside here.</li>
+  <li>Adam, his email, or anything from it. It would turn her situation into a continuation of his.</li>
+  <li>Comparisons with named colleagues. Save it; it lands far harder later with dates attached.</li>
+  <li>The Romanian implant course as a substitute — if it comes up, it's <em>documentation toward a delmål</em>, not a replacement.</li>
+  <li>Any mention of the union, the studierektor, or escalation. Those run quietly in parallel.</li>
+</ul>
+
+<h2>Within 24 hours after</h2>
+<ul class="checklist">
+  <li><strong>Send him a short summary email.</strong> Three or four lines: thanks for the time, what she understood, what was agreed, by when. Warm, not legalistic. This is what turns a conversation into a record.</li>
+  <li><strong>Write down her own notes separately</strong> — what he actually said, including anything vague, while it's fresh.</li>
+  <li><strong>If he committed to anything with a date</strong>, put it in the email explicitly. Undated commitments evaporate.</li>
+</ul>
+
+</div>
+
+<div data-lang="sv">
+
+<h2>Innan hon går in</h2>
+<ul class="checklist">
+  <li><strong>Be om tjugo minuter</strong>, enskilt. Inget korridorsamtal.</li>
+  <li><strong>Ta inte med något.</strong> Inga papper, inga utskrifter, ingen telefon på bordet. Dokument gör det till ett ärende; det här är ett samtal.</li>
+  <li><strong>Lär dig inte utantill.</strong> Fem hållpunkter: tacksamheten, glappet, ovissheten, hälsomeningen, de tre frågorna. Ordagrant låter inövat, och inövat låter som en anklagelse.</li>
+  <li><strong>Långsammare än vad som känns naturligt.</strong> Nervositet gör talet snabbare, och snabbhet läses som upprördhet.</li>
+  <li><strong>Bestäm att de tre frågorna är oförhandlingsbara</strong> &mdash; allt annat kan strykas om samtalet vänder. De tre sägs.</li>
+  <li><strong>Ta reda på i förväg vad som finns om tillgodoräknandet</strong> &mdash; ansökan, blanketter, mejl, allt i hennes akt. Inte för att ta med in, utan för att veta hur långt det faktiskt kom om han frågar.</li>
+</ul>
+
+<h2>Talet</h2>
+
+<div class="speech">
+
+  <div class="block">
+    <p>&rdquo;Tack för att du tar dig tid. Jag ska fatta mig kort.</p>
+    <p>Jag vill börja med att säga något jag menar uppriktigt: ST-tjänster i käkkirurgi i Sverige är väldigt få, och jag vet vad det betyder att jag fick en här. Det har inte förändrats, och inget av det jag ska säga ändrar på det.</p>
+    <div class="note"><strong>Varmt och lugnt.</strong> Det här är den enda delen som ska låta som ett vanligt samtal. Se på honom när hon säger det. Det köper resten av samtalet.</div>
+  </div>
+
+  <div class="block">
+    <p>Jag är här för att det läge jag är i nu ligger väldigt långt ifrån det vi pratade om när jag började. Jag säger inte att någon har vilselett mig. Jag förstår inte hur vi gick därifrån till hit, och det skulle jag vilja göra.</p>
+    <div class="note"><strong>&rdquo;Jag säger inte att någon har vilselett mig&rdquo; är medvetet.</strong> Det tar bort anklagelsen innan han hinner spänna sig. Säg det rakt, inte ursäktande.</div>
+  </div>
+
+  <div class="block">
+    <p>Det svåraste är ovissheten.</p>
+    <p>Jag har flera gånger fått höra att jag har en bild av mig själv och att ni har en annan. Men jag har aldrig fått veta vad er bild faktiskt är. Inga situationer, inga exempel. Så jag lämnas att gissa, och det jag gissar är alltid värre än det som troligen är sant.</p>
+    <div class="note"><strong>Kort paus efter &rdquo;Det svåraste är ovissheten&rdquo;.</strong> Det är hela samtalets kärna. Sista meningen ger honom en öppning där han kan rätta henne i stället för att medge något.</div>
+  </div>
+
+  <div class="block">
+    <p>Jag har också fått höra att det finns en plan för mig, en annan än för mina kollegor, och att det är okej. Det har jag accepterat. Men ingen har berättat vad planen är. Det är svårt att arbeta mot något jag inte kan se.</p>
+    <div class="note"><strong>&rdquo;Det har jag accepterat&rdquo; är viktigt.</strong> Hon invänder inte mot att behandlas annorlunda &mdash; bara mot att inte veta hur. Mycket svårare att bemöta.</div>
+  </div>
+
+  <div class="block">
+    <p>Och det finns ett mönster i hur saker når mig. De kommer sent. Jag fick ingen inskolning när jag började &mdash; inget om lokala rutiner eller hur man dokumenterar här. SBAR är det tydligaste exemplet. Jag introducerades aldrig till det, och ingen nämnde det på flera månader. Sedan kom det upp på ett specialistkollegium som en del av en bedömning att jag ligger under nivå. Det hade tagit någon fem minuter att säga det, och jag hade rättat till det samma dag. I stället sparades det, och det räknades emot mig.</p>
+    <div class="note"><strong>Ingen skärpa i rösten här.</strong> Fakta talar för sig själva; skärpa låter honom försvara processen i stället för att svara. Låt <em>&rdquo;I stället sparades det, och det räknades emot mig&rdquo;</em> stå kvar ett ögonblick.</div>
+  </div>
+
+  <div class="block">
+    <p>Implantatkursen är det senaste, och det är där jag slutade kunna bära det här tyst. Men det handlar egentligen inte om kursen. I mitt program ligger implantat i slutet av första året. Jag är i slutet av mitt andra, och jag har inte börjat. Det är ett år av glidning som ingen har förklarat för mig. När jag fick beskedet att jag inte skulle gå kursen gavs inget skäl som jag kunde göra något med, och jag förstår inte hur ett uppskjutande passar in i en plan jag aldrig har sett.</p>
+    <div class="note"><strong>Det starkaste stycket.</strong> Det jämför en skriven plan med en kalender &mdash; ingen tolkning i det. Säg <em>&rdquo;ett år av glidning&rdquo;</em> rakt och skynda inte förbi. Pausa efteråt; här kommer ett riktigt svar mest sannolikt.</div>
+  </div>
+
+  <div class="block">
+    <p>Jag vill vara tydlig med en sak. Det jag tycker är svårt här är inte arbetet eller kraven i ST. Det är ovissheten. Och den har börjat påverka min hälsa, och min familj. <em>[En sann, konkret detalj här &mdash; t.ex. att hon inte har sovit ordentligt på månader, att hon inte kan lämna det på jobbet.]</em> Jag säger inte det för att sätta press på dig. Jag säger det för att det är sant och för att jag tror att du vill veta.</p>
+    <div class="note"><strong>En gång, lugnt, och sedan vidare.</strong> En konkret detalj gör det trovärdigt; mängd gör det retoriskt. Använd något som faktiskt stämmer, och gå sedan tillbaka till neutral ton. Utveckla inte och upprepa inte senare.<br><br><strong>Arbetsfördelning:</strong> hälsan är <em>ingången</em> och hör hemma tydligt i mejlet där hon ber om mötet &mdash; det är den enda grund han inte kan skicka vidare till Aida. Inne i rummet hålls den kort, annars riskerar samtalet att handla om nedsatt tjänstgöring och sjukskrivning.</div>
+  </div>
+
+  <div class="block">
+    <p>Jag vill också säga något om den medicinska sidan. Jag vet att den här kliniken fungerar annorlunda än de flesta, och jag förstår att det att vi har personer med dubbel examen är en del av varför den kan fungera som den gör. Jag är glad att vara en av dem, och jag är inte på väg någon annanstans. Det jag ber om i gengäld är en vanlig ST: att jag rör mig genom programmet i normal takt och blir klar ungefär när någon i min situation borde. Det är det enda jag vill.</p>
+    <div class="note"><strong>Varmt, inte transaktionellt.</strong> &rdquo;I gengäld&rdquo; nämner utbytet utan att anklaga någon för att utnyttja det. &rdquo;Blir klar ungefär när någon i min situation borde&rdquo; sätter förväntan i ord &mdash; vilket är det som gör den svårare att tyst överge senare. Säg aldrig misstanken bakom stycket.</div>
+  </div>
+
+  <div class="block">
+    <p>Det som skulle hjälpa mig är tre saker.</p>
+    <ol class="asks">
+      <li>Vad er bild av mig faktiskt är, med exempel.</li>
+      <li>Vad planen för mig är, i en form jag kan läsa &mdash; inklusive tillgodoräknandet av mina ett och ett halvt år i Rumänien. Det kom vi överens om när jag började och processen påbörjades, och sedan stannade den. Jag har aldrig fått veta varför.</li>
+      <li>Och att beslutet om kursen tas upp igen innan anmälningstiden går ut.</li>
+    </ol>
+    <div class="note"><strong>Sakta ner och särskilj dem.</strong> Tre är taket &mdash; fler och han svarar på den enklaste. Liten paus mellan varje så att de registreras som tre frågor, inte en lista. Den andra är längre än de övriga och det är bra: <em>&rdquo;processen påbörjades, och sedan stannade den&rdquo;</em> är ett rent faktum utan tolkning, och svårt att bemöta med annat än en förklaring.</div>
+  </div>
+
+  <div class="block">
+    <p>Om jag har fått något av det här om bakfoten vill jag hellre veta det än fortsätta gissa.</p>
+    <p>Tack för att du lyssnade.&rdquo;</p>
+    <div class="note"><strong>Placerad sist med flit.</strong> Tidigare skulle den mjuka upp fakta; här läses den som öppenhet i stället för reträtt.</div>
+  </div>
+
+</div>
+
+<p class="pause">&mdash; och sedan tyst &mdash;</p>
+
+<div class="flag">
+  <strong>Tystnaden är den mest användbara delen.</strong> Efter de tre frågorna: säg ingenting. Det kommer att kännas mycket längre än det är. Människor fyller tystnader, och det de fyller dem med ligger oftast närmare det verkliga svaret än något de säger på en fråga. Om han säger något vagt &mdash; motstå impulsen att följa upp. Vänta igen.
+</div>
+
+<h2>Om han säger</h2>
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>Han säger</th><th>Hon säger</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&rdquo;Vi tar det här den 7/10 med Aida.&rdquo;</td>
+      <td>&rdquo;Det mesta, ja. Men anmälan till kursen stänger innan dess, så just den behöver avgöras tidigare.&rdquo;</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Du är inte redo för den kursen.&rdquo;</td>
+      <td>&rdquo;Kan du säga vad jag skulle behöva visa för att vara redo? Och när ges den nästa gång?&rdquo;</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Vi hittar en motsvarande kurs åt dig.&rdquo;</td>
+      <td>&rdquo;Vilken, och när? Jag skulle vilja ha in den i min plan.&rdquo;</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Det är inga problem, du sköter dig bra.&rdquo;</td>
+      <td>&rdquo;Då skulle jag vilja att det sägs på nästa kollegium, för det jag fick höra var motsatsen.&rdquo;</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Det är Aidas beslut.&rdquo;</td>
+      <td>&rdquo;Jag förstår. Men resurserna för ST-utbildningen ligger hos dig, och det här påverkar när jag kan ansöka om specialistbevis.&rdquo;</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Funderar du på att sluta?&rdquo;</td>
+      <td>&rdquo;Nej. Jag vill bli klar här. Det är därför jag tar upp det i stället för att vara tyst.&rdquo;</td>
+    </tr>
+    <tr>
+      <td>Nästan ingenting alls.</td>
+      <td>&rdquo;Kan jag återkomma till dig nästa vecka om kursen, då?&rdquo; &mdash; och gör sedan det.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Inte i det här samtalet</h2>
+<ul class="checklist">
+  <li>Den andra läkarens jourupplägg. Annan fråga, annat forum, enorm nedsida här.</li>
+  <li>Adam, hans mejl, eller något ur det. Det skulle göra hennes situation till en fortsättning på hans.</li>
+  <li>Jämförelser med namngivna kollegor. Spara det; det landar mycket hårdare senare med datum.</li>
+  <li>Den rumänska implantatkursen som ersättning &mdash; om den kommer upp är den <em>underlag till ett delmål</em>, inte en ersättning.</li>
+  <li>Facket, studierektorn eller upptrappning. Det löper tyst parallellt.</li>
+</ul>
+
+<h2>Inom 24 timmar efteråt</h2>
+<ul class="checklist">
+  <li><strong>Skicka honom ett kort sammanfattande mejl.</strong> Tre eller fyra rader: tack för tiden, vad hon uppfattade, vad som överenskoms, till när. Varmt, inte juridiskt. Det är det som gör samtalet till en handling.</li>
+  <li><strong>Skriv egna anteckningar separat</strong> &mdash; vad han faktiskt sa, inklusive det vaga, medan det är färskt.</li>
+  <li><strong>Om han lovat något med ett datum</strong>, skriv in datumet i mejlet. Odaterade löften förångas.</li>
+</ul>
+
+</div>
+
+<footer>
+  Prepared as talking notes — not to be read aloud or handed to anyone.
+</footer>
+
+</div>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('.langbar button');
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.classList.toggle('on', el.getAttribute('data-lang') === lang);
+    });
+    btns.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang));
+    });
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('samtal-lang', lang); } catch (e) {}
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.getAttribute('data-set')); });
+  });
+  var saved = 'en';
+  try { saved = localStorage.getItem('samtal-lang') || 'en'; } catch (e) {}
+  setLang(saved === 'sv' ? 'sv' : 'en');
+})();
+</script>
+</body>
+</html>
