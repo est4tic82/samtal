@@ -64,8 +64,8 @@ body {
 
 header {
   border-bottom: 2px solid var(--rule);
-  padding-bottom: 1.5rem;
-  margin-bottom: 2.5rem;
+  padding-bottom: 0;
+  margin-bottom: 2rem;
 }
 
 .kicker {
@@ -387,27 +387,35 @@ body.bare .block {
 
 .pagebar {
   display: flex;
-  gap: 1.4rem;
-  margin-bottom: 1.1rem;
-  border-bottom: 1px solid var(--rule);
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
 }
 .pagebar button {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  padding: 0.55rem 0 0.7rem;
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding: 0.15rem 0 0.55rem;
   border: 0;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
+  border-bottom: 3px solid transparent;
   background: none;
   color: var(--ink-soft);
+  opacity: 0.55;
   cursor: pointer;
+  text-align: left;
+  transition: color 0.15s, opacity 0.15s, border-color 0.15s;
 }
-.pagebar button:hover { color: var(--ink); }
+.pagebar button:hover { opacity: 0.85; color: var(--ink); }
 .pagebar button[aria-pressed="true"] {
-  color: var(--accent);
+  color: var(--ink);
+  opacity: 1;
   border-bottom-color: var(--accent);
+}
+@media (max-width: 560px) {
+  .pagebar { gap: 0.5rem 1.4rem; }
+  .pagebar button { font-size: 1.35rem; }
 }
 [data-page] { display: none; }
 [data-page].on { display: block; }
@@ -453,15 +461,12 @@ ul.qlist .why {
 <div class="wrap">
 
 <header>
-  <p class="kicker">Talking notes</p>
-  <h1>Samtal med Jahan</h1>
-  <p class="sub">About two and a half minutes spoken. Know the beats, not the words.</p>
+  <p class="kicker" data-en="Talking notes" data-sv="Samtalsanteckningar">Talking notes</p>
+  <nav class="pagebar" role="group" aria-label="Page">
+    <button type="button" data-page-set="jahan" aria-pressed="true" data-en="Samtal med Jahan" data-sv="Samtal med Jahan">Samtal med Jahan</button>
+    <button type="button" data-page-set="adam" aria-pressed="false" data-en="Questions for Adam" data-sv="Fr&aring;gor till Adam">Questions for Adam</button>
+  </nav>
 </header>
-
-<div class="pagebar" role="group" aria-label="Page">
-  <button type="button" data-page-set="jahan" aria-pressed="true">Meeting with Jahan</button>
-  <button type="button" data-page-set="adam" aria-pressed="false">Questions for Adam</button>
-</div>
 
 <div class="langbar" role="group" aria-label="Language">
   <button type="button" data-set="en" aria-pressed="true">English</button>
@@ -940,6 +945,10 @@ ul.qlist .why {
     });
     btns.forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang));
+    });
+    document.querySelectorAll('[data-en][data-sv]').forEach(function (el) {
+      var t = el.getAttribute('data-' + lang);
+      if (t) { el.textContent = t; }
     });
     document.documentElement.lang = lang;
     try { localStorage.setItem('samtal-lang', lang); } catch (e) {}
