@@ -455,6 +455,46 @@ ul.qlist .why {
   margin-top: 0.2rem;
 }
 
+
+.email {
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1.75rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+.email .subject {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  padding-bottom: 0.9rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+}
+.email h4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin: 1.6rem 0 0.5rem;
+  color: var(--ink);
+}
+.email p { margin: 0 0 0.9rem; }
+.email ul { margin: 0 0 0.9rem; padding-left: 1.2rem; }
+.email li { margin-bottom: 0.3rem; }
+.why {
+  border-left: 3px solid var(--accent);
+  background: var(--note-bg);
+  padding: 0.65rem 0.9rem;
+  margin: 0.4rem 0 1.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--note-ink);
+  border-radius: 0 3px 3px 0;
+}
+body.bare .why { display: none; }
+
 </style>
 </head>
 <body>
@@ -464,6 +504,8 @@ ul.qlist .why {
   <p class="kicker" data-en="Talking notes" data-sv="Samtalsanteckningar">Talking notes</p>
   <nav class="pagebar" role="group" aria-label="Page">
     <button type="button" data-page-set="jahan" aria-pressed="true" data-en="Meeting with Jahan" data-sv="Samtal med Jahan">Meeting with Jahan</button>
+    <button type="button" data-page-set="v2" aria-pressed="false" data-en="Revised speech" data-sv="Reviderat tal">Revised speech</button>
+    <button type="button" data-page-set="aida" aria-pressed="false" data-en="Letter to Aida" data-sv="Brev till Aida">Letter to Aida</button>
     <button type="button" data-page-set="adam" aria-pressed="false" data-en="Questions for Adam" data-sv="Fr&aring;gor till Adam">Questions for Adam</button>
   </nav>
 </header>
@@ -941,6 +983,449 @@ ul.qlist .why {
 
 <div class="flag">
   <strong>Vad hon inte ska göra:</strong> upprepa något av det här för någon på kliniken, citera honom, bifoga hans mejl, eller låta hans berättelse bli hennes. Hon ber om information, inte om en allians. Filerna han skickade innehåller dessutom hans personnummer &mdash; de går ingenstans.
+</div>
+
+</div>
+</div>
+
+<div data-page="v2">
+<div data-lang="en" class="on">
+
+<div class="flag">
+  <strong>Why this version exists.</strong> The VT 2026 protokoll contains detailed observations, named examples and a written åtgärdsplan &mdash; including <em>"avvakta implantatpatienter"</em>. That means the original speech's central claims ("I've never been told what your view is", "a plan I've never seen", "no reason was given") are contradicted by a document she was invited to read. Saying them would cost her the room. This version starts from having read it.
+</div>
+
+<h2>Before going in</h2>
+<ul class="checklist">
+  <li><strong>Read the VT 2025 protokoll first</strong> if she can get it. It tells her what is new and what was already said &mdash; which decides whether the "feedback comes late" point holds at all.</li>
+  <li><strong>Clear the unsigned journal notes before the meeting.</strong> It's named in the protokoll, it's checkable, and it costs nothing to fix. Same with arriving prepared for morning report.</li>
+  <li><strong>Come as someone working the plan, not disputing it.</strong> Credibility here comes from having already started.</li>
+  <li><strong>One structural question is the point of the meeting:</strong> which delm&aring;l do these points map to. Everything else is secondary.</li>
+  <li><strong>Establish separately, with HR, what she is employed as</strong> &mdash; ST-tandl&auml;kare or ST-l&auml;kare. Not a question for this room, but it decides how strong the argument is.</li>
+</ul>
+
+<h2>The speech</h2>
+
+<div class="speech">
+
+  <div class="block">
+    <p>"Thank you for making time. I'll keep this short.</p>
+    <p>I've read the protokoll from the kollegium. I want to start by saying I take it seriously, and that some of it I've already started on &mdash; the unsigned notes are being cleared, and I'm at morning report in time and prepared.</p>
+    <div class="note"><strong>This opening is the whole credibility of the conversation.</strong> She has read the document and acted on the cheapest items before being asked. Everything she says afterwards is heard differently because of it.</div>
+  </div>
+
+  <div class="block">
+    <p>I also want to say that I want to do the åtgärdsplan. I'd like us to put the sessions in the calendar rather than leaving them as intentions &mdash; antikoagulantia, radiology, airway assessment. If you tell me who to chase, I'll chase them.</p>
+    <div class="note"><strong>Offer to own the logistics.</strong> It removes the easiest reason for the plan to quietly not happen, and it makes her the one driving it.</div>
+  </div>
+
+  <div class="block">
+    <p>What I'd like to understand is how the assessment maps to my ST, because there's a part of it I can't place.</p>
+    <p>My ST is in käkkirurgi. A lot of what's in the protokoll sits clearly inside that &mdash; airway assessment, spreading odontogenic infections, antibiotics, radiology, pharmacology. I'm working on those and I want to.</p>
+    <p>But some of it I can't find in the käkkirurgi målbeskrivning. Independent handling of primary care patients. General medical baseline competence. Primary on-call in a physician role. The overall rating on the form is even scaled against "nivå legitimerad läkare".</p>
+    <p>So my question is simple: which delmål do those points map to? If they map to something, tell me and I'll work on them. If they're about what the clinic needs medically rather than about my specialty training, then I think we should hold them separately. I'm glad to keep doing that work. I just don't think it should be what holds my ST back.</p>
+    <div class="note"><strong>The core of the meeting.</strong> Asked as a question, not an accusation &mdash; "I can't place it" rather than "you're assessing me on the wrong thing". There is no good answer for the items that don't map, and that silence is more useful than any argument.<br><br>Say it once, then stop and let him work through it. He may not have noticed the mismatch himself; in a department built on dual-qualified people the two roles genuinely blur.</div>
+    <div class="interrupt"><h4>If he cuts in here</h4><dl>
+      <dt>"You're a doctor too &mdash; it's all part of the job here."</dt><dd>"It is, and I'm not stepping back from it. My question is narrower: is it part of my ST, or part of the clinic's rota? Those are different things."</dd>
+      <dt>"We assess the whole person."</dt><dd>"Of course. But the certificate at the end is against specific delmål, and that's what I need to be working toward."</dd>
+      <dt>"Käkkirurgi here includes medical responsibility."</dt><dd>"Then I'd like that written into my utbildningsplan, so it counts rather than just sits alongside."</dd>
+      <dt>"That's a technicality."</dt><dd>"Maybe. But it decides what I spend the next years on, so I'd like to get it right."</dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>On the implantology course. I've read that the plan is to hold off on implant patients, and I understand that. But the course is theory, not patients. And missing it has a consequence that pausing patients doesn't: whether something else counts toward the delmål isn't decided here, it's decided by Socialstyrelsen when I apply. I'd ask you to look at that decision again before registration closes.</p>
+    <div class="note"><strong>Narrow and precise.</strong> She concedes the clinical pause, which is reasonable and in their own plan, and separates the theoretical course from it. This is the one genuinely strong argument left on the course, so it shouldn't be buried in a longer complaint.</div>
+    <div class="interrupt"><h4>If he cuts in here</h4><dl>
+      <dt>"Theory without the patients is pointless."</dt><dd>"I'd rather have the theory ready for when the patients start. Otherwise I'm waiting on both."</dd>
+      <dt>"We'll find an equivalent."</dt><dd>"Which one, and when? And who confirms it counts for the delmål &mdash; as I understand it that's Socialstyrelsen at application, not here."</dd>
+      <dt>"It's decided."</dt><dd>"I understand. I'd just like it recorded that I asked, and why." <em>Then leave it.</em></dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>There's one more thing that isn't in the protokoll at all. When you and I talked before I started, we discussed a shorter ST because of the year and a half I'd already done in Romania. The process to recognise that was begun after I started, and then it stopped. I've never been told why.</p>
+    <div class="note"><strong>Untouched by the protokoll</strong> &mdash; which is exactly why she should say so. It's the one thing here with no counter-document, and the competence discussion doesn't explain a stalled administrative process.</div>
+  </div>
+
+  <div class="block">
+    <p>I want to be clear about one thing. What I find challenging here isn't the work or the requirements of the ST. It's not knowing where I stand between these meetings. <em>[one true, concrete detail]</em> It has started to affect my health. I'm not saying that to put pressure on you &mdash; I'm saying it because it's true and I think you'd want to know.</p>
+    <div class="note"><strong>Reworded from the original.</strong> "Being in the dark" is harder to claim now that a detailed protokoll exists. "Not knowing where I stand between these meetings" is accurate and still points at the real problem: twice-yearly verdicts with little in between. Once, evenly, then move on.</div>
+  </div>
+
+  <div class="block">
+    <p>So what would help me is three things.</p>
+    <ol class="asks">
+      <li>Which delmål the points in the assessment map to &mdash; particularly the medical ones.</li>
+      <li>The course decision looked at again before registration closes.</li>
+      <li>Where the recognition of my Romanian time stands, and what's needed to restart it.</li>
+    </ol>
+    <div class="note"><strong>All three are answerable and none is a grievance.</strong> The first is the one that matters most; the other two are concrete enough that answering them is easier than not.</div>
+  </div>
+
+  <div class="block">
+    <p>If I've got any of this wrong, I'd rather know than keep guessing.</p>
+    <p>Thank you for hearing me out."</p>
+  </div>
+
+</div>
+
+<p class="pause">&mdash; then stop talking &mdash;</p>
+
+<h2>What's dropped from the original, and why</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Line</th><th>Why it's gone</th></tr></thead>
+  <tbody>
+    <tr><td>"I've never been told what your view actually is. No situations, no examples."</td><td>The protokoll is four pages of specifics. This would be refuted instantly.</td></tr>
+    <tr><td>"Nobody has told me what the plan is."</td><td>There is a written åtgärdsplan with named people and follow-up.</td></tr>
+    <tr><td>"No reason was given that I could work with."</td><td>The plan says <em>avvakta implantatpatienter</em>. That is a reason, whether or not she agrees with it.</td></tr>
+    <tr><td>"A year of drift that nobody has explained."</td><td>Partly explained by the assessment. Keep it only if the VT 2025 protokoll shows nothing comparable.</td></tr>
+    <tr><td>"The hardest part is being in the dark."</td><td>Replaced with not knowing where she stands <em>between</em> assessments, which is still true.</td></tr>
+    <tr><td>The invisibility paragraph.</td><td>Too soft to survive alongside a document this detailed. Raise separately, in writing, about specific assignments.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="flag">
+  <strong>Held in reserve, not said here.</strong> The employment classification question (ST-tandl&auml;kare vs ST-l&auml;kare) goes to HR in writing. If the answer is that she is employed as a dental ST, the medical items in this assessment become much harder to justify &mdash; and that is a conversation for the studierektor, not for this room.
+</div>
+
+</div>
+<div data-lang="sv">
+
+<div class="flag">
+  <strong>Varför den här versionen finns.</strong> Protokollet från VT 2026 innehåller detaljerade observationer, namngivna exempel och en skriftlig åtgärdsplan &mdash; däribland <em>&rdquo;avvakta implantatpatienter&rdquo;</em>. Det innebär att originaltalets bärande påståenden (&rdquo;jag har aldrig fått veta vad er bild är&rdquo;, &rdquo;en plan jag aldrig sett&rdquo;, &rdquo;inget skäl gavs&rdquo;) motsägs av ett dokument hon blivit ombedd att läsa. Att säga dem skulle kosta henne rummet. Den här versionen utgår från att hon läst det.
+</div>
+
+<h2>Innan hon går in</h2>
+<ul class="checklist">
+  <li><strong>Läs protokollet från VT 2025 först</strong> om hon kan få det. Det visar vad som är nytt och vad som redan sagts &mdash; vilket avgör om &rdquo;återkopplingen kommer sent&rdquo; överhuvudtaget håller.</li>
+  <li><strong>Signera journalanteckningarna före mötet.</strong> Det står i protokollet, det går att kontrollera, och det kostar inget att åtgärda. Samma sak med att vara förberedd till morgonrapport.</li>
+  <li><strong>Kom som någon som arbetar med planen, inte som någon som bestrider den.</strong> Trovärdigheten kommer av att redan ha börjat.</li>
+  <li><strong>En strukturell fråga är hela poängen med mötet:</strong> vilka delmål punkterna hör till. Allt annat är sekundärt.</li>
+  <li><strong>Ta reda på separat, via HR, vad hon är anställd som</strong> &mdash; ST-tandläkare eller ST-läkare. Ingen fråga för det här rummet, men den avgör hur starkt argumentet är.</li>
+</ul>
+
+<h2>Talet</h2>
+
+<div class="speech">
+
+  <div class="block">
+    <p>&rdquo;Tack för att du tar dig tid. Jag ska fatta mig kort.</p>
+    <p>Jag har läst protokollet från kollegiet. Jag vill börja med att säga att jag tar det på allvar, och att en del av det har jag redan börjat med &mdash; de osignerade anteckningarna håller på att signeras, och jag är i tid och förberedd till morgonrapporten.</p>
+    <div class="note"><strong>Den här inledningen är hela samtalets trovärdighet.</strong> Hon har läst dokumentet och åtgärdat det billigaste utan att bli tillsagd. Allt hon säger efteråt hörs annorlunda.</div>
+  </div>
+
+  <div class="block">
+    <p>Jag vill också säga att jag vill genomföra åtgärdsplanen. Jag skulle vilja att vi lägger in tillfällena i kalendern i stället för att lämna dem som avsikter &mdash; antikoagulantia, radiologi, luftvägsbedömning. Säg vem jag ska kontakta så gör jag det.</p>
+    <div class="note"><strong>Erbjud dig att sköta logistiken.</strong> Det tar bort den enklaste anledningen till att planen tyst inte blir av, och gör henne till den som driver den.</div>
+  </div>
+
+  <div class="block">
+    <p>Det jag skulle vilja förstå är hur bedömningen hänger ihop med min ST, för det finns en del jag inte kan placera.</p>
+    <p>Min ST är i käkkirurgi. Mycket av det som står i protokollet ligger tydligt inom den &mdash; luftvägsbedömning, spridda odontogena infektioner, antibiotika, radiologi, farmakologi. Det arbetar jag med och vill arbeta med.</p>
+    <p>Men en del hittar jag inte i målbeskrivningen för käkkirurgi. Självständig handläggning av primärvårdspatienter. Medicinsk grundkompetens. Primärjour i läkarroll. Den övergripande skattningen på blanketten är till och med graderad mot &rdquo;nivå legitimerad läkare&rdquo;.</p>
+    <p>Så min fråga är enkel: vilka delmål hör de punkterna till? Hör de till något så säg det, så arbetar jag med dem. Handlar de om vad kliniken behöver medicinskt snarare än om min specialistutbildning tycker jag att vi bör hålla isär dem. Jag gör gärna det arbetet. Jag tycker bara inte att det ska vara det som håller tillbaka min ST.</p>
+    <div class="note"><strong>Samtalets kärna.</strong> Ställd som en fråga, inte en anklagelse &mdash; &rdquo;jag kan inte placera det&rdquo; i stället för &rdquo;ni bedömer mig på fel sak&rdquo;. Det finns inget bra svar för de punkter som inte hör hemma, och den tystnaden är mer värd än något argument.<br><br>Säg det en gång och låt honom tänka. Han kan mycket väl inte ha sett problemet själv; på en klinik byggd på dubbelutbildade flyter rollerna ihop.</div>
+    <div class="interrupt"><h4>Om han avbryter här</h4><dl>
+      <dt>&rdquo;Du är ju också läkare &mdash; det ingår i jobbet här.&rdquo;</dt><dd>&rdquo;Det gör det, och jag drar mig inte undan. Min fråga är snävare: ingår det i min ST, eller i klinikens bemanning? Det är två olika saker.&rdquo;</dd>
+      <dt>&rdquo;Vi bedömer hela människan.&rdquo;</dt><dd>&rdquo;Självklart. Men beviset på slutet gäller bestämda delmål, och det är dem jag behöver arbeta mot.&rdquo;</dd>
+      <dt>&rdquo;Käkkirurgi här innebär medicinskt ansvar.&rdquo;</dt><dd>&rdquo;Då vill jag ha in det i min utbildningsplan, så att det räknas i stället för att bara ligga bredvid.&rdquo;</dd>
+      <dt>&rdquo;Det är en formalitet.&rdquo;</dt><dd>&rdquo;Kanske. Men det avgör vad jag lägger de närmaste åren på, så jag vill gärna få det rätt.&rdquo;</dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>Om implantatkursen. Jag har läst att planen är att avvakta med implantatpatienter, och det förstår jag. Men kursen är teori, inte patienter. Och att missa den får en konsekvens som ett uppehåll med patienter inte får: om något annat räknas mot delmålet avgörs inte här, utan av Socialstyrelsen när jag ansöker. Jag skulle vilja be dig titta på det beslutet igen innan anmälningstiden går ut.</p>
+    <div class="note"><strong>Snävt och precist.</strong> Hon medger det kliniska uppehållet, som är rimligt och står i deras egen plan, och skiljer den teoretiska kursen från det. Det är det enda riktigt starka argumentet som återstår om kursen, så det ska inte begravas i ett längre klagomål.</div>
+    <div class="interrupt"><h4>Om han avbryter här</h4><dl>
+      <dt>&rdquo;Teori utan patienter är meningslöst.&rdquo;</dt><dd>&rdquo;Jag har hellre teorin klar till när patienterna börjar. Annars väntar jag på båda.&rdquo;</dd>
+      <dt>&rdquo;Vi hittar en motsvarande.&rdquo;</dt><dd>&rdquo;Vilken, och när? Och vem bekräftar att den räknas för delmålet &mdash; så vitt jag förstår är det Socialstyrelsen vid ansökan, inte här.&rdquo;</dd>
+      <dt>&rdquo;Det är bestämt.&rdquo;</dt><dd>&rdquo;Jag förstår. Jag vill bara att det noteras att jag frågade, och varför.&rdquo; <em>Lämna det sedan.</em></dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>Det finns en sak till som inte står i protokollet alls. När du och jag pratade innan jag började talade vi om en förkortad ST eftersom jag redan gjort ett och ett halvt år i Rumänien. Processen för att tillgodoräkna det påbörjades efter att jag börjat, och sedan stannade den. Jag har aldrig fått veta varför.</p>
+    <div class="note"><strong>Orörd av protokollet</strong> &mdash; vilket är just därför hon ska säga det. Det är det enda här utan motdokument, och kompetensdiskussionen förklarar inte en stannad administrativ process.</div>
+  </div>
+
+  <div class="block">
+    <p>Jag vill vara tydlig med en sak. Det jag tycker är svårt här är inte arbetet eller kraven i ST. Det är att inte veta var jag står mellan de här mötena. <em>[en sann, konkret detalj]</em> Det har börjat påverka min hälsa. Jag säger inte det för att sätta press på dig &mdash; jag säger det för att det är sant och för att jag tror att du vill veta.</p>
+    <div class="note"><strong>Omformulerat från originalet.</strong> &rdquo;Ovisshet&rdquo; är svårare att hävda nu när ett detaljerat protokoll finns. &rdquo;Att inte veta var jag står mellan de här mötena&rdquo; är korrekt och pekar fortfarande på det verkliga problemet: två bedömningar om året och lite däremellan. En gång, lugnt, sedan vidare.</div>
+  </div>
+
+  <div class="block">
+    <p>Det som skulle hjälpa mig är tre saker.</p>
+    <ol class="asks">
+      <li>Vilka delmål punkterna i bedömningen hör till &mdash; särskilt de medicinska.</li>
+      <li>Att beslutet om kursen tas upp igen innan anmälningstiden går ut.</li>
+      <li>Var tillgodoräknandet av min rumänska tid står, och vad som behövs för att återuppta det.</li>
+    </ol>
+    <div class="note"><strong>Alla tre går att svara på och ingen är ett klagomål.</strong> Den första är viktigast; de andra två är så konkreta att det är enklare att svara än att låta bli.</div>
+  </div>
+
+  <div class="block">
+    <p>Om jag har fått något av det här om bakfoten vill jag hellre veta det än fortsätta gissa.</p>
+    <p>Tack för att du lyssnade.&rdquo;</p>
+  </div>
+
+</div>
+
+<p class="pause">&mdash; och sedan tyst &mdash;</p>
+
+<h2>Vad som ströks från originalet, och varför</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Mening</th><th>Varför den är borta</th></tr></thead>
+  <tbody>
+    <tr><td>&rdquo;Jag har aldrig fått veta vad er bild faktiskt är. Inga situationer, inga exempel.&rdquo;</td><td>Protokollet är fyra sidor exempel. Skulle bemötas omedelbart.</td></tr>
+    <tr><td>&rdquo;Ingen har berättat vad planen är.&rdquo;</td><td>Det finns en skriftlig åtgärdsplan med namngivna personer och uppföljning.</td></tr>
+    <tr><td>&rdquo;Inget skäl gavs som jag kunde göra något med.&rdquo;</td><td>Planen säger <em>avvakta implantatpatienter</em>. Det är ett skäl, oavsett om hon håller med.</td></tr>
+    <tr><td>&rdquo;Ett år av glidning som ingen har förklarat.&rdquo;</td><td>Delvis förklarat av bedömningen. Behåll bara om VT 2025-protokollet inte visar något liknande.</td></tr>
+    <tr><td>&rdquo;Det svåraste är ovissheten.&rdquo;</td><td>Ersatt med att inte veta var hon står <em>mellan</em> bedömningarna, vilket fortfarande stämmer.</td></tr>
+    <tr><td>Stycket om att inte vara med.</td><td>För löst för att hålla bredvid ett så detaljerat dokument. Ta det separat, skriftligt, om bestämda uppdrag.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="flag">
+  <strong>Hålls i reserv, sägs inte här.</strong> Frågan om anställningsform (ST-tandläkare eller ST-läkare) går till HR skriftligt. Om svaret är att hon är anställd som ST-tandläkare blir de medicinska punkterna i bedömningen betydligt svårare att försvara &mdash; och det är ett samtal för studierektorn, inte för det här rummet.
+</div>
+
+</div>
+</div>
+
+<div data-page="aida">
+<div data-lang="sv" class="on">
+
+<div class="flag">
+  <strong>Hur brevet är byggt.</strong> Det är ett <em>svar</em> i tråden och börjar där Aidas mejl slutar. Varje hård punkt är en iakttagelse eller en fråga, aldrig en anklagelse. Exakt en signal om att det inte stannar här, sist. Inga namngivna kollegor, ingen studierektor, inget fack. Svara alla så att Jahan ser den.<br><br>
+  <strong>Det är långt med flit</strong> – men punkt 10 höjer temperaturen mest. Vill hon hålla tonen mjukare är det den hon stryker först, och sparar till studierektorn.
+</div>
+
+<div class="email">
+  <div class="subject"><strong>Ämne:</strong> Sv: Implantatkurs och uppföljning</div>
+
+  <p>Hej Aida,</p>
+
+  <p>Tack för ditt svar, och tack för att du lägger in fler uppföljningsmöten än specialistkollegiet. Att vi ses oftare är precis vad jag behöver för att hänga med, och jag ser fram emot den 7/10. Jag har läst igenom protokollen som du föreslog.</p>
+
+  <h4>Vad jag har gjort sedan föregående kollegium</h4>
+  <p>Jag tog åtgärdsplanen på stort allvar och arbetade igenom den direkt:</p>
+  <ul>
+    <li>Signeringskön är genomarbetad. Jag har inga osignerade journalanteckningar liggande.</li>
+    <li>Jag rapporterar enligt SBAR, både i telefon och på avdelningen.</li>
+    <li>Jag är på plats i tid till morgonrapport och förbereder rapporten i förväg.</li>
+    <li>Jag har upprättat en egen studieteknik och en plan för inläsningen, som jag presenterade vid kollegiet i juni.</li>
+  </ul>
+  <p>Jag nämner det inte för att räkna upp saker, utan för att jag inte hittar något av det i juniprotokollet. Om något av det fortfarande brister vill jag verkligen veta det, med exempel, så att jag kan rätta till det.</p>
+
+  <p>Jag återkommer ändå i kursfrågan, eftersom anmälningstiden mycket väl kan gå ut före mötet, och ditt svar väckte ett par saker jag vill förklara bättre än jag gjorde förra gången.</p>
+
+  <h4>1. Planen handlar om patienter. Kursen handlar om teori.</h4>
+  <p>Åtgärdsplanen säger &rdquo;avvakta implantatpatienter&rdquo;. Jag har frågor om det beslutet också, och jag återkommer till dem längre ner. Men det är inte samma sak: pausen gäller patienter, medan kursen är tre dagars teori. Den konkurrerar inte med arbetet på plan 14 eller med jouren, och den innebär inte att jag opererar implantatpatienter. Så även om pausen för patienter ligger kvar avgör den inte kursfrågan. Och det är kursen som har en tidsgräns, därför tar jag den först.</p>
+
+  <h4>2. Om utbildningslängden</h4>
+  <p>Du skriver att kursdeltagandet i sig inte påverkar längden, och att längden beror på utbildningskraven i sin helhet. Men kursen är en del av de kraven. Det är sättet som delmålet uppfylls på. Om delmålet inte kan intygas utan den förskjuts min ansökan till Socialstyrelsen i motsvarande grad, oavsett hur länge jag varit anställd. Kursen påverkar alltså när jag kan ansöka om att bli specialist, även om den inte ändrar hur många månader jag är anställd här.</p>
+  <p>Den kliniska sidan har samma problem. Om implantat inte sker år 1 och inte år 2 ska de ske år 3, som redan har sitt eget innehåll. Antingen flyttas något annat, eller så förlängs utbildningen i praktiken.</p>
+  <p>Fast jag är inte säker på år 3 heller, eftersom det inte finns några kriterier för när pausen hävs och inget datum för omprövning. Som det ser ut nu finns det ingenting som säger att implantat sker år 3 överhuvudtaget, och det är egentligen därför jag frågar.</p>
+
+  <h4>3. Om en motsvarande kurs</h4>
+  <p>Du skriver att vilken kurs jag kommer gå inte kan bestämmas i förväg utan beror på kursutbudet när det blir aktuellt. Jag förstår resonemanget. Men så vitt jag har kunnat ta reda på ges de nationella fördjupningskurserna i ett fast roterande schema och är få till antalet. Utan en namngiven kurs med ett datum är det i praktiken inte ett uppskjutande utan ett uppehåll utan slut. Och om en ersättning räknas mot delmålet avgörs ytterst av Socialstyrelsen vid min ansökan, inte här. Det är alltså inget vi kan vara säkra på i förväg.</p>
+
+  <h4>4. Vad protokollen säger om implantat</h4>
+  <p>Du nämner att vi utgår från föregående protokoll och checklista. Jag har gått igenom alla tre specialistkollegier, och det är där jag kör fast.</p>
+  <p>I det första protokollet nämns implantat inte alls; där står i stället att jag ska fortsätta utveckla dentoalveolärkirurgi. I det andra dyker &rdquo;avvakta implantatpatienter&rdquo; upp som en rad i åtgärdsplanen. Det finns ingen observation som rör mitt implantatarbete i något av protokollen, inget angivet skäl, inga kriterier för när det hävs, och punkten togs inte upp vid genomgången i juni.</p>
+  <p>Samtidigt beskrivs mitt kirurgiska arbete positivt: förbättrad op-ex-teknik (benplastik, separation) och god potential avseende kirurgiskt handlag.</p>
+
+  <h4>5. Påpekandena är generella, inte implantatspecifika</h4>
+  <p>Att bedöma patienter strukturerat, att läsa på fallen innan jag träffar dem, att konsultera kollegor och att rapportera enligt SBAR gäller alla mina patienter. Ingen annan kategori är pausad. Jag noterar också att kollegor som inte har läkarlegitimation arbetar med implantat, så medicinsk grundkompetens kan rimligen inte vara det som avgör tillgången till implantatkirurgi här. Jag har därför svårt att se kopplingen till just implantat, och skulle verkligen vilja förstå den.</p>
+  <p>Det finns också ett mönster i <em>när</em> återkopplingen når mig, och jag tror att det har betydelse här. SBAR togs upp med mig först vid det andra kollegiet, ungefär ett år in. Ingen hade nämnt det innan dess. Jag rättade till det samma vecka och jag använder det nu. Det hade tagit någon fem minuter att säga det i stunden. De osignerade anteckningarna och morgonrapporten var likadant: båda togs upp vid en formell bedömning i stället för när de inträffade, och skrevs sedan in som en del av ett omdöme om min nivå.</p>
+  <p>Saker som kan rättas till på en dag blir anmärkningar i ett protokoll om de sparas i ett halvår. Så vitt jag förstår ska bedömning och återkoppling under ST vara löpande, inte bara vid terminsavstämningarna. Det är det jag helst av allt skulle vilja att vi ändrar på, och det är också därför jag tar upp kursen nu i stället för att vänta till den 7/10.</p>
+
+  <h4>6. Kursen är snarare en del av lösningen</h4>
+  <p>Det planen ber mig göra är att arbeta strukturerat och objektivt, att hämta in den information jag behöver innan jag bestämmer något, och att titta på röntgen innan jag fattar beslut. Elektiv implantatkirurgi är ett av de mest strukturerade och förutsägbara arbetsflödena i käkkirurgi: det kräver CBCT-analys, en bedömning av patientens medicinska risker, planering som utgår från den färdiga konstruktionen, noggranna mätningar och en operation som genomförs i tydliga steg. Jag har svårt att tänka mig ett bättre område att träna just det planen efterfrågar på. Så som jag ser det ligger kursen närmare lösningen än hindret.</p>
+
+  <h4>7. Om min tidigare utbildning</h4>
+  <p>Jag nämnde min tidigare implantatutbildning i mitt förra mejl men förklarade den nog inte tillräckligt. Det rör sig om Competence in Implantology Course (<em>Atestat de studii complementare în implantologie orală</em>): en sexmånaders postgraduate-utbildning vid Carol Davila-universitetet under det rumänska hälsoministeriet, med nationell skriftlig och muntlig-praktisk examination och en klinisk fallportfölj granskad och godkänd av en universitetskommission. Därtill har jag placerat flera hundra implantat i klinisk verksamhet och deltagit i flera internationella implantatkongresser.</p>
+  <p>Jag ber inte om att kursen ska ersättas av detta. Tvärtom. Avancerade implantatkurser förväntar sig normalt att deltagarna redan har gått en grundkurs och har satt implantat i okomplicerade fall. Det är precis den bakgrund jag har.</p>
+  <p>Utbildningen är en kvalifikation utfärdad av hälsoministeriet i ett EU-land. Jag hävdar inte att den automatiskt ska erkännas som likvärdig med något här. Jag ber bara om att den bedöms mot mina delmål. Klinikens utbildningsplan anger också att den individuella studieplanen ska utgå från ST-tandläkarens tidigare utbildning och erfarenhet. Jag har presenterat mina tidigare fall vid två tillfällen; du hade inte möjlighet att delta vid något av dem. Mig veterligen har utbildningen inte bedömts mot något delmål ännu, och jag lämnar gärna in intyg, kursplan och falldokumentation för bedömning.</p>
+
+  <h4>8. Om jag saknar implantatverksamhet här</h4>
+  <p>Om skälet är att jag inte har några implantatfall här, så går resonemanget i en cirkel. Kliniken håller inne mina implantatfall, och avsaknaden av de fallen används sedan som skäl till att jag inte kan gå den nationella kursen. Jag kan inte skaffa lokal implantaterfarenhet så länge jag inte får ha implantatpatienter.</p>
+  <p>Och pausen är en administrativ instruktion, inte en bedömning av att jag inte skulle klara kursinnehållet. Den står i åtgärdsplanen bredvid punkter om rapportering, förberedelse inför patientfall och signering, och protokollet säger att min kirurgiska teknik har förbättrats.</p>
+
+  <h4>9. Höstens plan innehåller inget implantatmoment</h4>
+  <p>De fyra ämnen som lades fast i juni, alltså oroantrala kommunikationer, antiresorptiva läkemedel och MRONJ, strålade patienter och ORN samt antikoagulantia, innehåller inget implantatmoment. Jag arbetar gärna med alla fyra.</p>
+
+  <h4>10. Hur det går med åtgärdsplanen</h4>
+  <p>Jag vill vara säker på att det inte är jag som bromsar, så jag har gått igenom juniavstämningen. Där framgår att genomgången med Anna Borg har påbörjats, att luftvägsdelen blivit en terminsexamination, och att jag själv bokar medsittningarna. Genomgången om antikoagulantia finns inte med i avstämningen, och punkten om att handledargruppen skulle återkomma med en plan för den medicinska delen står ordagrant som i föregående protokoll.</p>
+  <p>Skulle vi kunna gå igenom vilka delar av planen som är mina att ordna och vilka som är klinikens, och sätta ett datum på var och en? Jag tar gärna ansvar för mina.</p>
+
+  <h4>En sista sak</h4>
+  <p>Jag minns att du sa till mig att jag ska ta emot återkoppling som den kommer, vara mer ödmjuk och inte gå i försvar. Jag har tänkt mycket på det, och jag tar det på allvar. Jag hoppas att det här mejlet inte läses så. Jag tog emot planen och gjorde det den bad om. Det jag ber om här är motsatsen till att värja sig mot återkoppling: jag vill förstå resonemanget bakom ett beslut så att jag kan göra något åt det, och jag vill ha den utbildning som skulle hjälpa mig att göra just det planen ber mig om.</p>
+
+  <h4>Min begäran</h4>
+  <p>Jag ber dig ompröva och anmäla mig till kursen i oktober.</p>
+  
+
+  <p>Jag är tacksam om du tittar på det en gång till innan anmälningstiden går ut. Jag löser gärna det här tillsammans med dig.</p>
+
+  <p>Med vänliga hälsningar,<br>Gabriela</p>
+</div>
+
+<h2>Varför varje del finns där</h2>
+
+<div class="why"><strong>Inledningen svarar på Aidas mejl</strong> i stället för att börja om: hon tackar ja till de extra uppföljningsmötena, har läst protokollen som Aida bad om, och har redan åtgärdat det billigaste.</div>
+
+<div class="why"><strong>Listan över vad hon gjort är brevets nya grund.</strong> Hon genomförde planen – signering, SBAR, morgonrapport, en studieplan presenterad i juni – och inget av det finns i juniprotokollet. Placerad högst upp gör den henne till den som levererade och dem till dem som inte antecknade det. Den tar också tyst bort de administrativa skälen för att säga att hon inte är redo.<br><br>Om morgonrapporten: hon ber om exempel i stället för att förneka rakt av. Om det aldrig hänt är den begäran den starkaste tänkbara formen av förnekelse, och omöjlig att ta illa upp av.</div>
+
+<div class="why"><strong>Punkt 1 ligger först för att den är renast.</strong> Den säger rakt ut att hon ifrågasätter patientpausen också och återkommer till den, så inget medges – men den lägger den åt sidan tillräckligt länge för att göra den snäva poängen: pausen gäller patienter, kursen är teori, och även en oförändrad paus avgör inte kursen. Tidsgränsen förklarar varför den kommer först.</div>
+
+<div class="why"><strong>&rdquo;Inte säker på år 3 heller&rdquo; stänger den sista utgången.</strong> Utan den meningen ger brevet dem tyst en lösning de aldrig har lovat. Utan kriterier och utan omprövningsdatum är år 3 hennes antagande, inte deras plan – och att säga det gör om en schemafråga till frågan om att det inte finns något slut alls. Den förbereder också den tredje skriftliga punkten.</div>
+
+<div class="why"><strong>Punkt 2 motsäger hennes svar rakt av</strong>, utan gärdsgårdar: kursen <em>är</em> en del av de utbildningskrav hon hänvisar till, så hennes eget resonemang leder tillbaka till den. Punkt 3 gör samma sak med svaret om motsvarande kurs. Ingen av dem låtsas hålla med.</div>
+
+<div class="why"><strong>Punkt 4 använder Aidas egen ingång.</strong> Nu också med första protokollet: implantat nämns inte alls där. Pausen dyker upp utan föregående observation.</div>
+
+<div class="why"><strong>Punkt 5 stänger två dörrar</strong> – de generella påpekandena gäller alla patienter, och kollegor utan läkarlegitimation gör implantat.<br><br><strong>Stycket om fördröjd återkoppling är ett av brevets starkaste.</strong> Meningen om löpande bedömning är medvetet formulerad som hennes uppfattning och inte som en hänvisning: klinikens egen utbildningsplan talar om <em>terminsvis</em> uppföljning, så en regelhänvisning skulle kunna vändas mot henne. Som förväntan håller den ändå, och det finns inget att motbevisa. Det är inget klagomål på att bli kritiserad, utan på att kritik sparas tills den ställs in i ett protokoll. Formulerat som ett mönster med tre exempel förklarar det också varför hon skriver nu i stället för att vänta till den 7/10 – vilket tar udden av det uppenbara svaret att allt kan vänta till mötet.</div>
+
+<div class="why"><strong>Punkt 6 är brevets starkaste drag.</strong> Den vänder åtgärdsplanen till ett argument för kursen.</div>
+
+<div class="why"><strong>Punkt 7 vänder på frågan om lämplighet</strong> och nämner de två presentationerna utan att göra en poäng av frånvaron. EU-meningen är medvetet blygsam: ingen begäran om automatiskt erkännande, bara om bedömning.</div>
+
+<div class="why"><strong>Punkt 8 namnger fällan och visar sedan varför det är en fälla.</strong> Kliniken håller inne patienterna, och avsaknaden av patienter blir sedan skälet. Andra stycket är det som får det att sitta: pausen står i en lista med administrativa punkter, inte bland omdömen om hennes operationer – och protokollet berömmer hennes teknik. Det finns alltså ingen väg ut genom egen ansträngning, vilket är just det som gör det orimligt. Sagt utan anklagelse går det inte att bemöta.</div>
+
+<div class="why"><strong>Punkt 9 visar att glappet växer.</strong> Hösten innehåller inget implantatmoment alls – så &rdquo;vi tar det senare&rdquo; har redan kostat en termin till.</div>
+
+<div class="why"><strong>Punkt 10 höjer temperaturen.</strong> Den handlar om klinikens egen leverans av planen. Den är formulerad som en fråga och går att kontrollera – men den är också den som kan få Aida att gå i försvar. Vill hon hålla det mjukt är det den hon stryker och sparar till studierektorn.</div>
+
+
+
+<div class="why"><strong>Slutstycket avväpnar den närmast till hands liggande tolkningen.</strong> Ett långt brev fullt av frågor bjuder in precis det svar Aida redan gett henne en gång. Att själv nämna den kommentaren, ta den på allvar och sedan rama om frågor som engagemang snarare än motstånd tar bort det svaret innan det hinner användas. Hon godtar inte beskrivningen, hon vägrar bara låta sig beskrivas så.</div>
+
+<div class="why"><strong>&rdquo;Jag löser gärna det här tillsammans med dig&rdquo; är hela signalen.</strong> Underdrivet, men det antyder att det finns någon annanstans att gå utan att nämna vart.</div>
+
+<div class="flag">
+  <strong>Innan hon skickar:</strong> ha intyget och en sammanställning över implantatvolym redo att bifoga. Kontrollera meningen om kursens förkunskapskrav mot arrangörens kursplan – den enda meningen som kan motbevisas. Och bestäm om punkt 10 ska vara med.
+</div>
+
+</div>
+
+<div data-lang="en">
+
+<div class="flag">
+  <strong>How the letter is built.</strong> It's a <em>reply</em> in the thread and starts where Aida's email ends. Every hard point is an observation or a question, never an accusation. Exactly one signal that this doesn't stop here, at the end. No colleagues named, no studierektor, no union. Reply-all so Jahan sees it.<br><br>
+  <strong>It's long on purpose</strong> – but point 10 raises the temperature most. If she wants a softer tone, that's the one to cut first and save for the studierektor.
+</div>
+
+<div class="email">
+  <div class="subject"><strong>Subject:</strong> Re: Implantatkurs och uppf&ouml;ljning</div>
+
+  <p>Hi Aida,</p>
+
+  <p>Thank you for your reply, and for scheduling more follow-up meetings than just the specialistkollegium. Meeting more often is exactly what I need in order to keep up, and I'm looking forward to 7 October. I've read through the protokoll as you suggested.</p>
+
+  <h4>What I've done since the previous kollegium</h4>
+  <p>I took the åtgärdsplan very seriously and worked through it straight away:</p>
+  <ul>
+    <li>The signing queue is cleared. I have no unsigned journal notes outstanding.</li>
+    <li>I report using SBAR, both by phone and on the ward.</li>
+    <li>I'm present in time for morning report and prepare the report in advance.</li>
+    <li>I've established my own study technique and a reading plan, which I presented at the kollegium in June.</li>
+  </ul>
+  <p>I mention this not to list things, but because I can't find any of it in the June protokoll. If any of it still falls short, I really do want to know, with examples, so that I can put it right.</p>
+
+  <p>I'm coming back on the course question all the same, because registration may well close before the meeting, and because your reply raised a couple of things I'd like to explain better than I did last time.</p>
+
+  <h4>1. The plan concerns patients. The course is theory.</h4>
+  <p>The action plan says <em>avvakta implantatpatienter</em>. I have questions about that decision too, and I come back to them below. But they aren't the same thing: the pause concerns patients, while the course is three days of theory. It doesn't compete with plan 14 or with jour, and it doesn't involve me operating on implant patients. So even if the patient pause stays in place, it doesn't settle the course. And the course is the one with a deadline, which is why I'm taking it first.</p>
+
+  <h4>2. On the length of the training</h4>
+  <p>You write that course participation in itself doesn't affect the length, and that the length depends on the training requirements as a whole. But the course is part of those requirements. It is the way the delmål is met. If the delmål can't be certified without it, my application to Socialstyrelsen is pushed back correspondingly, however long I've been employed. So the course does affect when I can apply to become a specialist, even if it does not change how many months I am employed here.</p>
+  <p>The clinical side has the same problem. If implants don't happen in year 1 and don't happen in year 2, they happen in year 3, which already has its own content. Either something else moves, or the training extends in practice.</p>
+  <p>Although I'm not certain of year 3 either, since there are no criteria for when the pause lifts and no date for reviewing it. As things stand, nothing tells me implants happen in year 3 at all, which is really why I'm asking.</p>
+
+  <h4>3. On an equivalent course</h4>
+  <p>You write that which course I'll attend can't be determined in advance and depends on what's available when it becomes relevant. I understand the reasoning. But as far as I have been able to establish, the national fördjupningskurser run on a fixed rotating schedule and there are few of them. Without a named course and a date, this isn't really a deferral but an open-ended pause. And whether a substitute counts toward the delmål is ultimately decided by Socialstyrelsen when I apply, not here, so it isn't something we can be sure of in advance.</p>
+
+  <h4>4. What the protokoll say about implants</h4>
+  <p>You mention that we'll work from the previous protokoll and checklist. I've been through all three specialistkollegium, and that's where I get stuck.</p>
+  <p>In the first protokoll implants aren't mentioned at all; it says instead that I should continue developing dentoalveolar surgery. In the second, <em>avvakta implantatpatienter</em> appears as a line in the action plan. There is no observation anywhere concerning my implant work, no reason given, no criteria for when it lifts, and the item wasn't revisited at the June review.</p>
+  <p>At the same time my surgical work is described positively: improved op-ex technique (benplastik, separation) and good potential regarding surgical handling.</p>
+
+  <h4>5. The concerns recorded are general, not implant-specific</h4>
+  <p>Assessing patients in a structured way, reading up on cases before I see them, consulting colleagues, and reporting with SBAR apply to all my patients, and no other category is paused. I'd also note that colleagues who don't hold a läkarlegitimation work with implants, so medical baseline competence can't reasonably be what governs access to implant surgery here. So I find it hard to see the connection to implants specifically, and I'd genuinely like to understand it.</p>
+  <p>There is also a pattern in <em>when</em> feedback reaches me, and I think it matters here. SBAR was first raised with me at the second kollegium, about a year in. Nobody had mentioned it before that. I corrected it the same week and I use it now. It would have taken someone five minutes to tell me at the time. The unsigned notes and the morning report were the same: both were raised at a formal assessment rather than when they happened, and then written down as part of a judgment about my level.</p>
+  <p>Things that could be fixed in a day turn into findings in a protokoll if they are saved up for six months. As I understand it, assessment and feedback during ST are meant to be continuous, not only at the term reviews. That is the thing I would most like us to change, and it is also why I am raising the course now rather than waiting until 7 October.</p>
+
+  <h4>6. The course is closer to the solution</h4>
+  <p>What the plan asks me to do is work in a structured and objective way, gather the information I need before I decide anything, and look at the radiology before making a decision. Elective implant surgery is one of the most structured and predictable workflows in käkkirurgi: it requires CBCT analysis, an assessment of the patient's medical risks, planning that starts from the final restoration, careful measurement, and an operation carried out in defined steps. I find it hard to think of a better area in which to practise exactly the things the plan asks for. As I see it, the course sits closer to the solution than to the obstacle.</p>
+
+  <h4>7. On my earlier training</h4>
+  <p>I mentioned my earlier implant training in my last email but I don't think I explained it well enough. It is the Competence in Implantology Course (<em>Atestat de studii complementare în implantologie orală</em>): a six-month postgraduate programme at Carol Davila University under the Romanian Ministry of Health, with a national written and oral-practical examination and a clinical case portfolio reviewed and approved by a university commission. In addition I have placed several hundred implants in practice, and attended several international implant congresses.</p>
+  <p>I'm not asking for the course to be replaced by this. The opposite. Advanced implant courses normally expect participants to have already done a basic course and to have placed implants in straightforward cases. That is exactly the background I have.</p>
+  <p>The training is a qualification issued by the health ministry of an EU member state. I'm not claiming it should be automatically recognised as equivalent to anything here. I am only asking that it be assessed against my delmål. The clinic's utbildningsplan also states that the individual study plan shall be based on the ST-tandläkare's prior training and experience. I have presented my earlier cases on two occasions; you weren't able to attend either. As far as I know the training hasn't yet been assessed against any delmål, and I'm happy to submit the certificate, the syllabus and the case documentation for assessment.</p>
+
+  <h4>8. If the issue is that I have no implant work here</h4>
+  <p>If the reason is that I have no implant cases here, then the argument runs in a circle. The clinic holds my implant cases, and the absence of those cases is then used as the reason I can't go on the national course. I can't produce local implant experience while I'm not allowed implant patients.</p>
+  <p>And the hold is an administrative instruction, not a judgment that I couldn't follow the course material. It sits in the action plan next to points about reporting, preparing for cases and signing notes, and the protokoll says my surgical technique has improved.</p>
+
+  <h4>9. The autumn plan contains no implant component</h4>
+  <p>The four topics set in June, which are oroantral communications, antiresorptive drugs and MRONJ, irradiated patients and ORN, and anticoagulants, contain no implant component. I'm glad to work on all four.</p>
+
+  <h4>10. How the action plan is going</h4>
+  <p>I want to be sure that I am not the one holding things up, so I've gone through the June review. It shows that the sessions with Anna Borg have started, that the airway part has become a term examination, and that I book the medsittningar myself. The anticoagulant session doesn't appear in the review, and the point saying that the supervisor group would come back with a plan for the medical part is written exactly as it was in the previous protokoll.</p>
+  <p>Could we go through which parts of the plan are mine to arrange and which are the clinic's, and put a date on each of them? I'm happy to take responsibility for mine.</p>
+
+  <h4>One last thing</h4>
+  <p>I remember you telling me that I should take feedback as it comes, be more humble, and not fight it. I have thought about that a lot, and I do take it seriously. I hope this email doesn't read that way. I accepted the plan and I did what it asked. What I am asking for here is the opposite of avoiding feedback: I want to understand the reasoning behind a decision so that I can act on it, and I want the training that would help me do exactly what the plan asks of me.</p>
+
+  <h4>My request</h4>
+  <p>I'd like to ask you to reconsider and register me for the course in October.</p>
+  
+
+  <p>I'd be grateful if you'd look at it once more before registration closes. I'd rather resolve this with you.</p>
+
+  <p>Best regards,<br>Gabriela</p>
+</div>
+
+<h2>Why each part is there</h2>
+
+<div class="why"><strong>The opening answers Aida's email</strong> rather than starting fresh: she accepts the extra follow-ups, has read the protokoll as asked, and has already fixed the cheapest items.</div>
+
+<div class="why"><strong>The compliance list is the new foundation of the letter.</strong> She did the plan – signing, SBAR, morning report, a study plan presented in June – and none of it appears in the June protokoll. Placed at the top, it makes her the person who delivered and them the ones who didn't record it. It also quietly removes the administrative grounds for saying she isn't ready.<br><br>On the morning report: she asks for examples rather than denying it flatly. If it never happened, that request is the strongest possible form of denial and impossible to take offence at.</div>
+
+<div class="why"><strong>Point 1 leads because it's the cleanest.</strong> It says plainly that she also disputes the patient pause and will come back to it, so nothing is conceded — but it sets that aside long enough to make the narrow point: the pause is about patients, the course is theory, and even an unchanged pause doesn't decide the course. The deadline explains why this one comes first.</div>
+
+<div class="why"><strong>&ldquo;I'm not certain of year 3 either&rdquo; is the line that closes the last exit.</strong> Without it, the letter quietly grants them a resolution they have never committed to. With no criteria and no review date, year 3 is her assumption, not their plan – and saying so turns a scheduling argument into the absence of any endpoint. It also sets up the third written request.</div>
+
+<div class="why"><strong>Point 2 contradicts her answer directly</strong>, without hedging: the course <em>is</em> part of the training requirements she's pointing to, so her own reasoning leads back to it. Point 3 does the same to the &ldquo;equivalent course&rdquo; answer. Neither pretends to agree.</div>
+
+<div class="why"><strong>Point 4 uses Aida's own framing</strong>, and now includes the first protokoll: implants aren't mentioned there at all. The pause appears with no preceding observation.</div>
+
+<div class="why"><strong>Point 5 closes two doors</strong> – the general concerns apply to every patient, and colleagues without a läkarlegitimation do implants.<br><br><strong>The delayed-feedback paragraph is one of the strongest things in the letter.</strong> The line about continuous assessment is deliberately phrased as her understanding rather than as a citation: the clinic's own utbildningsplan describes <em>terminsvis</em> uppföljning, so quoting a rule could be turned back on her. Stated as an expectation it still lands, and there is nothing to disprove. It isn't a complaint about being criticised; it's about criticism being stored up until it hardens into a formal finding. Stated as a pattern with three examples, it also explains why she is writing now instead of waiting for 7 October – which pre-empts the obvious reply that all of this can wait for the meeting.</div>
+
+<div class="why"><strong>Point 6 is the strongest move in the letter.</strong> It turns the action plan into an argument for the course.</div>
+
+<div class="why"><strong>Point 7 inverts the readiness question</strong> and mentions the two presentations without making a point of the absence. The EU sentence is deliberately modest: no claim of automatic recognition, only a request for assessment.</div>
+
+<div class="why"><strong>Point 8 names the trap and then shows why it is one.</strong> The clinic withholds the patients, and the absence of patients becomes the reason. The second paragraph is what makes it stick: the pause sits in a list of administrative items, not among findings about her operating – and the protokoll praises her technique. So there is no route out of it by her own effort, which is exactly what makes it unreasonable. Stated without accusation, it can't be answered.</div>
+
+<div class="why"><strong>Point 9 shows the gap widening.</strong> The autumn contains no implant component at all – so "we'll do it later" has already cost another term.</div>
+
+<div class="why"><strong>Point 10 raises the temperature.</strong> It concerns the clinic's own delivery of the plan. It's phrased as a question and it's checkable – but it's also the one most likely to make Aida defensive. If she wants to keep it soft, this is the one to cut and save for the studierektor.</div>
+
+
+
+<div class="why"><strong>The closing paragraph disarms the obvious reading.</strong> A long letter full of questions invites exactly the response Aida has already given her once. Naming that remark herself, taking it seriously, and then reframing questions as engagement rather than resistance takes that reply off the table before it can be used. She doesn't accept the characterisation, she just declines to be described by it.</div>
+
+<div class="why"><strong>"I'd rather resolve this with you" is the whole signal.</strong> Understated, but it implies there is somewhere else this could go without naming it.</div>
+
+<div class="flag">
+  <strong>Before sending:</strong> have the certificate and a summary of implant volume ready to attach. Check the sentence about course prerequisites against the organiser's kursplan – the one line that could be disproved. And decide whether point 10 stays in.
 </div>
 
 </div>
