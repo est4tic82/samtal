@@ -340,6 +340,50 @@ footer {
   color: var(--ink);
 }
 
+
+.h2row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 3.5rem 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.h2row h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.toggle-notes {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink-soft);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.toggle-notes:hover { color: var(--ink); border-color: var(--accent); }
+.toggle-notes[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+body.bare .note,
+body.bare .interrupt { display: none; }
+body.bare .block {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
 </style>
 </head>
 <body>
@@ -368,7 +412,7 @@ footer {
   <li><strong>Beforehand, find whatever exists on the Romanian recognition</strong> — the application, forms, emails, anything in her file. Not to bring into the room, but so she knows how far it actually got if he asks.</li>
 </ul>
 
-<h2>The speech</h2>
+<div class="h2row"><h2>The speech</h2><button type="button" class="toggle-notes" data-on="Show notes" data-off="Speech only" aria-pressed="false">Speech only</button></div>
 
 <div class="speech">
 
@@ -519,7 +563,7 @@ footer {
   <li><strong>Ta reda på i förväg vad som finns om tillgodoräknandet</strong> &mdash; ansökan, blanketter, mejl, allt i hennes akt. Inte för att ta med in, utan för att veta hur långt det faktiskt kom om han frågar.</li>
 </ul>
 
-<h2>Talet</h2>
+<div class="h2row"><h2>Talet</h2><button type="button" class="toggle-notes" data-on="Visa anteckningar" data-off="Endast talet" aria-pressed="false">Endast talet</button></div>
 
 <div class="speech">
 
@@ -682,6 +726,28 @@ footer {
   var saved = 'en';
   try { saved = localStorage.getItem('samtal-lang') || 'en'; } catch (e) {}
   setLang(saved === 'sv' ? 'sv' : 'en');
+})();
+</script>
+
+<script>
+(function () {
+  var btns = document.querySelectorAll('.toggle-notes');
+  function apply(bare) {
+    document.body.classList.toggle('bare', bare);
+    btns.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(bare));
+      b.textContent = bare ? b.getAttribute('data-on') : b.getAttribute('data-off');
+    });
+    try { localStorage.setItem('samtal-bare', bare ? '1' : '0'); } catch (e) {}
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      apply(!document.body.classList.contains('bare'));
+    });
+  });
+  var saved = '0';
+  try { saved = localStorage.getItem('samtal-bare') || '0'; } catch (e) {}
+  apply(saved === '1');
 })();
 </script>
 </body>
