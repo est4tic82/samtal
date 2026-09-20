@@ -495,6 +495,126 @@ ul.qlist .why {
 }
 body.bare .why { display: none; }
 
+
+.finding {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.1rem;
+  background: var(--panel);
+}
+.finding h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.finding p { margin: 0 0 0.7rem; font-size: 0.95rem; }
+.finding p:last-child { margin-bottom: 0; }
+.finding .src {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.finding .say {
+  border-left: 3px solid var(--accent);
+  padding-left: 0.85rem;
+  font-style: italic;
+  color: var(--ink);
+  margin-top: 0.8rem;
+}
+.rank {
+  display: inline-block;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 50%;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+
+.day {
+  margin-bottom: 2.2rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.day:last-child { border-bottom: none; }
+.day > h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+}
+.day > .when {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+ul.todo { list-style: none; padding: 0; margin: 0; }
+ul.todo > li {
+  position: relative;
+  padding: 0.75rem 0 0.75rem 1.9rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.97rem;
+}
+ul.todo > li:last-child { border-bottom: none; }
+ul.todo > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.15rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 1.5px solid var(--accent);
+  border-radius: 2px;
+}
+ul.todo .detail {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-top: 0.3rem;
+}
+ul.todo .script {
+  display: block;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.8rem;
+  margin-top: 0.45rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+.prio {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.12rem 0.4rem;
+  border-radius: 3px;
+  background: var(--accent);
+  color: var(--bg);
+  margin-left: 0.4rem;
+  vertical-align: 0.1rem;
+}
+
 </style>
 </head>
 <body>
@@ -506,6 +626,8 @@ body.bare .why { display: none; }
     <button type="button" data-page-set="jahan" aria-pressed="true" data-en="Meeting with Jahan" data-sv="Samtal med Jahan">Meeting with Jahan</button>
     <button type="button" data-page-set="v2" aria-pressed="false" data-en="Revised speech" data-sv="Reviderat tal">Revised speech</button>
     <button type="button" data-page-set="aida" aria-pressed="false" data-en="Letter to Aida" data-sv="Brev till Aida">Letter to Aida</button>
+    <button type="button" data-page-set="plan" aria-pressed="false" data-en="To do" data-sv="Att g&ouml;ra">To do</button>
+    <button type="button" data-page-set="evidence" aria-pressed="false" data-en="7 October" data-sv="7 oktober">7 October</button>
     <button type="button" data-page-set="adam" aria-pressed="false" data-en="Questions for Adam" data-sv="Fr&aring;gor till Adam">Questions for Adam</button>
   </nav>
 </header>
@@ -1300,7 +1422,7 @@ body.bare .why { display: none; }
   <p>Det jag ber om är en plats på kursen i oktober.</p>
   
 
-  <p>Jag löser hellre det här mellan oss.</p>
+  <p>Jag löser hellre det här oss emellan. Det enda jag inte kan låta vänta till den 7/10 är själva platsen.</p>
 
   <p>Med vänliga hälsningar,<br>Gabriela</p>
 </div>
@@ -1339,7 +1461,7 @@ body.bare .why { display: none; }
 
 <div class="why"><strong>Slutstycket avväpnar den närmast till hands liggande tolkningen.</strong> Ett långt brev fullt av frågor bjuder in precis det svar Aida redan gett henne en gång. Att själv nämna den kommentaren, ta den på allvar och sedan rama om frågor som engagemang snarare än motstånd tar bort det svaret innan det hinner användas. Hon godtar inte beskrivningen, hon vägrar bara låta sig beskrivas så.</div>
 
-<div class="why"><strong>&rdquo;Jag löser hellre det här mellan oss&rdquo; är hela signalen.</strong> Underdrivet, men det antyder att det finns någon annanstans att gå utan att nämna vart. Begäran ovanför är bestämd för att den är precis, inte för att den är hård: &rdquo;det jag ber om är en plats på kursen&rdquo; lämnar inget utrymme för ett halvt svar men är fortfarande en fråga.</div>
+<div class="why"><strong>Avslutningen behåller tidspressen utan hot.</strong> &rdquo;Det enda jag inte kan låta vänta till den 7/10 är själva platsen&rdquo; stänger väntevägen genom att peka på platsen i stället för på någon konsekvens. Svagare som påtryckning, men i linje med resten av brevet och med stycket ovanför – en varning här hade underminerat hela tonen. Begäran ovanför är bestämd för att den är precis, inte för att den är hård: &rdquo;det jag ber om är en plats på kursen&rdquo; lämnar inget utrymme för ett halvt svar men är fortfarande en fråga.</div>
 
 <div class="flag">
   <strong>Innan hon skickar:</strong> ha intyget och en sammanställning över implantatvolym redo att bifoga. Kontrollera meningen om kursens förkunskapskrav mot arrangörens kursplan – den enda meningen som kan motbevisas. Och bestäm om punkt 12 ska vara med.
@@ -1429,7 +1551,7 @@ body.bare .why { display: none; }
   <p>What I'm asking for is a place on the course in October.</p>
   
 
-  <p>I'd much rather settle this between us.</p>
+  <p>I'd rather we sorted this out ourselves. The only part I can't leave until the 7th is the place itself.</p>
 
   <p>Best regards,<br>Gabriela</p>
 </div>
@@ -1468,11 +1590,488 @@ body.bare .why { display: none; }
 
 <div class="why"><strong>The closing paragraph disarms the obvious reading.</strong> A long letter full of questions invites exactly the response Aida has already given her once. Naming that remark herself, taking it seriously, and then reframing questions as engagement rather than resistance takes that reply off the table before it can be used. She doesn't accept the characterisation, she just declines to be described by it.</div>
 
-<div class="why"><strong>"I'd much rather settle this between us" is the whole signal.</strong> Understated, but it implies there is somewhere else this could go without naming it. The ask above it is firm because it is specific, not because it is forceful: "what I'm asking for is a place on the course" leaves no room for a partial answer while still being a request.</div>
+<div class="why"><strong>The closing keeps the timing pressure without a threat.</strong> "The only part I can't leave until the 7th is the place itself" closes the waiting route by pointing at the place rather than at any consequence. Weaker as leverage than a warning would be, but consistent with the rest of the letter and with the paragraph above it — a warning here would have undercut the register the whole letter is built on. The ask above it is firm because it is specific, not because it is forceful: "what I'm asking for is a place on the course" leaves no room for a partial answer while still being a request.</div>
 
 <div class="flag">
   <strong>Before sending:</strong> have the certificate and a summary of implant volume ready to attach. Check the sentence about course prerequisites against the organiser's kursplan – the one line that could be disproved. And decide whether point 12 stays in.
 </div>
+
+</div>
+</div>
+
+<div data-page="evidence">
+<div data-lang="en" class="on">
+
+<div class="flag">
+  <strong>What this page is.</strong> The findings that come from putting the documents side by side, ranked by how hard they are to answer. Every one is built from the clinic's own papers: Aida's meeting notes of 27 January 2025, the three specialistkollegium protokoll, and the clinic's utbildningsplan. Nothing here relies on anyone's memory or opinion.<br><br>
+  <strong>How to use it on 7 October.</strong> Not as a list to read out. Pick three at most. Ask each as a question, then stop talking. The value is in the answers, and several of these have no good answer.
+</div>
+
+<h2>The findings</h2>
+
+<div class="finding">
+  <h3><span class="rank">1</span>Their own level assessment puts implants in this autumn</h3>
+  <span class="src">SK3 June 2026 + Aida's notes 27 Jan 2025</span>
+  <p>The June kollegium concludes: <em>Bed&ouml;mning sammanlagd aktuell utbildningsniv&aring;: ST &aring;r 1.</em></p>
+  <p>Aida's notes from the first meeting set out what ST year 1 contains: dentoalveolar surgery, opex, exposures, retrograde root fillings, cysts, and then <em>h&ouml;sten: implantat, benaugmentationer</em>, with c-op as third operator.</p>
+  <p>So by the clinic's own classification she is an ST year 1, and by the clinic's own year 1 curriculum, implants belong in the autumn. This autumn.</p>
+  <p class="say">"If I'm assessed as ST year 1, and year 1 has implants in the autumn, then on your own assessment implants belong in this term. What am I missing?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">2</span>A domain-specific finding became a global demotion by copy-paste</h3>
+  <span class="src">SK2 vs SK3</span>
+  <p>SK2 says she does not reach ST level <em>in structured assessment, handling and reporting of k&auml;kkirurgiska patients</em>. Three named areas.</p>
+  <p>SK3 reproduces that text word for word, adds a checklist review containing no new observation of her work, and then concludes with an unqualified classification of her overall training level.</p>
+  <p>A qualified finding about three areas became a global level determination with no new evidence in between.</p>
+  <p class="say">"The assessment text in June is the same as the previous one, and the review section doesn't record any new observation. What was the level determination based on?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">3</span>She went backwards while doing everything the plan asked</h3>
+  <span class="src">SK1 &rarr; SK2 &rarr; SK3</span>
+  <p>August 2025: ST &aring;r 1, which was correct, she was in year 1. VT 2026: below ST level. June 2026: ST &aring;r 1 again, now in her second year.</p>
+  <p>Between SK2 and SK3 she cleared the signing queue, adopted SBAR, was in time and prepared for morning report, and presented a study plan at the June kollegium. None of it appears in the June protokoll, and the text criticising those same points was carried forward unchanged.</p>
+  <p class="say">"I did what the plan asked between the two meetings. If the assessment text doesn't change when I do that, what would change it?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">4</span>The implant pause has no basis anywhere in three protokoll</h3>
+  <span class="src">SK1, SK2, SK3</span>
+  <p>Implants appear once across all three documents: <em>avvakta implantatpatienter</em>, three words in the SK2 action plan. No observation about her implant work anywhere. No reason. No criteria for lifting it. Not revisited at the June review.</p>
+  <p>SK1 doesn't mention implants at all; it says continue developing dentoalveolar surgery.</p>
+  <p>Meanwhile both later protokoll describe her surgery positively: improved op-ex technique, benplastik, separation, good potential in surgical handling.</p>
+  <p class="say">"What is the implant pause based on, and what do I need to show for it to end?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">5</span>The stated concerns cannot be what implants depend on</h3>
+  <span class="src">SK2/SK3 + clinic practice</span>
+  <p>The recorded concerns are structured assessment, reading up in advance, consultation workflow, SBAR reporting, and medical baseline competence. Every one applies to all her patient categories. No other category is paused.</p>
+  <p>And colleagues who hold no l&auml;karlegitimation place implants routinely, so medical competence cannot be the gate.</p>
+  <p class="say">"My colleagues don't hold a l&auml;karlegitimation and they do implants. So what is it about implants specifically?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">6</span>The individual plan required by the clinic's own rules was never made</h3>
+  <span class="src">Clinic utbildningsplan + Jahan at recruitment</span>
+  <p>The utbildningsplan says the individual study plan is drawn up <em>snarast efter antagning</em>, on the basis of the ST-tandl&auml;kare's prior training and experience, and revised at the end of each term, with results and agreements documented. Responsibility is assigned to the verksamhetschef and the huvudansvariga handledaren.</p>
+  <p>Jahan said the draft should be refined with Aida using the Romanian residency, so that the training time would be shorter. That never happened. The only version is an unsigned draft she found herself.</p>
+  <p class="say">"The utbildningsplan says the plan is built on prior training and revised every term. Can we do that now?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">7</span>Her prior training assessment was started and abandoned</h3>
+  <span class="src">Aida's notes 27 Jan 2025</span>
+  <p>First line of the first meeting: they went through the documentation from Romania, it needed completing, and then a supervisor's signature. The notes also list scanning her diplomas, Ethoss among them, which is bone regeneration.</p>
+  <p>So her implant background was known from day one, and the assessment of it has a named next step that was never taken.</p>
+  <p class="say">"We started going through my Romanian documentation at our first meeting. What happened to it?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">8</span>She has already done two harder national courses</h3>
+  <span class="src">Course record</span>
+  <p>Reconstruction in cancer patients and orthognathic surgery, both from the eight national f&ouml;rdjupningskurser, both considerably more complex than implantology. Her level was not raised as an obstacle for either.</p>
+  <p>So by the clinic's own practice, her stage of training is not a barrier to national courses.</p>
+  <p class="say">"My level wasn't an obstacle for the reconstruction or orthognathic courses. Why is it for this one?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">9</span>The action plan's clinic-side items didn't move</h3>
+  <span class="src">SK3 June review</span>
+  <p>Of the plan: the radiology sessions with Anna Borg started. The airway item became a term examination she presents. The two medsittningar are hers to book. The anticoagulant session she arranged herself with Sayf.</p>
+  <p>And the point saying the supervisor group would come back with a plan for the medical part is written exactly as it was in the previous protokoll.</p>
+  <p class="say">"Could we go through which parts are mine to arrange and which are the clinic's, and put a date on each?"</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">10</span>Feedback arrives only at formal assessments</h3>
+  <span class="src">SK1 vs SK2</span>
+  <p>SBAR, the unsigned notes and morning report all appear for the first time in SK2, about a year in. None is in SK1. Each could have been fixed the same day.</p>
+  <p>Assessment and feedback during ST are meant to be continuous, not only at the term reviews.</p>
+  <p class="say">"I'd rather hear these things when they happen than at a kollegium a term later."</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">11</span>Almost nothing in the protokoll is actually rated</h3>
+  <span class="src">All three protokoll</span>
+  <p>Across the three documents the only marked box is stress management. The &ouml;vergripande skattning row has never been filled in. Journal documentation is marked <em>ej bed&ouml;mt</em>. Clinical judgment defers to other rows rather than being assessed.</p>
+  <p>Every conclusion about her level exists in prose only.</p>
+  <p class="say"><em>Check the original formatting before using this one. Worth raising with the studierektor rather than in the room.</em></p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">12</span>The scale is the wrong one for her specialty</h3>
+  <span class="src">All three protokoll</span>
+  <p>The &ouml;vergripande skattning row grades against <em>h&aring;ller ej niv&aring; legitimerad l&auml;kare</em>. She is an ST-tandl&auml;kare in a dental specialty. Several recorded concerns sit outside the k&auml;kkirurgi m&aring;lbeskrivning altogether: independent handling of primary care patients, general medical baseline competence, primary on-call in a physician role.</p>
+  <p class="say">"Which delm&aring;l in the k&auml;kkirurgi m&aring;lbeskrivning do these points map to?"</p>
+  <p><em>This is studierektor material. In the room it reads as a technicality; to a studierektor for dental specialist training it is a category error.</em></p>
+</div>
+
+<h2>How to run the meeting</h2>
+<ul class="checklist">
+  <li><strong>Pick three, not twelve.</strong> Findings 1, 4 and 8 are the strongest and they fit together: their own assessment puts implants now, the pause has no recorded basis, and her level was never an obstacle for harder courses.</li>
+  <li><strong>Ask, then stop.</strong> Each of these is written as a question for a reason. The silence afterwards produces more than any follow-up.</li>
+  <li><strong>Bring nothing visible.</strong> Know the dates. Papers on the table turn a conversation into a hearing and make everyone perform.</li>
+  <li><strong>Concede fast where they're right.</strong> Every accepted point narrows the ground they have left.</li>
+  <li><strong>Leave with one dated commitment.</strong> A warm meeting with no date is not an outcome.</li>
+  <li><strong>Write the summary email the same day.</strong> What was discussed, what was agreed, by when. That is what makes the meeting exist afterwards.</li>
+</ul>
+
+<div class="flag">
+  <strong>Hold back:</strong> finding 12 and probably 11, which belong with the studierektor. Anything about a named colleague's attendance. Adam, his email, and anything from it. The department's reputation. None of these help in that room and all of them cost something.
+</div>
+
+</div>
+
+<div data-lang="sv">
+
+<div class="flag">
+  <strong>Vad den här sidan är.</strong> De släktskap som framträder när dokumenten läggs bredvid varandra, rangordnade efter hur svåra de är att besvara. Allt är byggt på klinikens egna handlingar: Aidas mötesanteckningar från den 27 januari 2025, de tre specialistkollegieprotokollen och klinikens utbildningsplan. Ingenting bygger på minne eller tyckande.<br><br>
+  <strong>Hur den används den 7/10.</strong> Inte som en lista att läsa upp. Välj högst tre. Ställ var och en som en fråga och sluta sedan prata. Värdet ligger i svaren, och flera av de här har inget bra svar.
+</div>
+
+<h2>Iakttagelserna</h2>
+
+<div class="finding">
+  <h3><span class="rank">1</span>Deras egen nivåbedömning lägger implantat till den här hösten</h3>
+  <span class="src">SK3 juni 2026 + Aidas anteckningar 27 jan 2025</span>
+  <p>Junikollegiet avslutas: <em>Bedömning sammanlagd aktuell utbildningsnivå: ST år 1.</em></p>
+  <p>Aidas anteckningar från första mötet beskriver vad år 1 innehåller: dentoalveolär kirurgi, opex, friläggningar, retrograda rotfyllningar, cystor, och sedan <em>hösten: implantat, benaugmentationer</em>, med c-op som tredje operatör.</p>
+  <p>Enligt klinikens egen klassificering är hon alltså ST år 1, och enligt klinikens eget år 1 hör implantat till hösten. Den här hösten.</p>
+  <p class="say">&rdquo;Om jag bedöms som ST år 1, och år 1 har implantat på hösten, då hör implantat enligt er egen bedömning hemma den här terminen. Vad missar jag?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">2</span>En områdesspecifik anmärkning blev en generell nedgradering genom kopiering</h3>
+  <span class="src">SK2 mot SK3</span>
+  <p>SK2 säger att hon inte når ST-nivå <em>gällande strukturerad bedömning, handläggning och rapportering av käkkirurgiska patienter</em>. Tre namngivna områden.</p>
+  <p>SK3 återger den texten ordagrant, lägger till en checklistegenomgång utan någon ny observation av hennes arbete, och avslutar med en oreserverad klassificering av hennes samlade utbildningsnivå.</p>
+  <p class="say">&rdquo;Bedömningstexten i juni är densamma som föregående, och genomgången innehåller inga nya observationer. Vad grundades nivåbedömningen på?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">3</span>Hon gick bakåt medan hon gjorde allt planen bad om</h3>
+  <span class="src">SK1 &rarr; SK2 &rarr; SK3</span>
+  <p>Augusti 2025: ST år 1, vilket stämde, hon var i år 1. VT 2026: under ST-nivå. Juni 2026: ST år 1 igen, nu i sitt andra år.</p>
+  <p>Mellan SK2 och SK3 arbetade hon igenom signeringskön, började använda SBAR, var i tid och förberedd till morgonrapport och presenterade en studieplan vid junikollegiet. Inget av det finns i juniprotokollet, och texten som kritiserar samma punkter står kvar oförändrad.</p>
+  <p class="say">&rdquo;Jag gjorde det planen bad om mellan mötena. Om bedömningstexten inte ändras när jag gör det, vad skulle ändra den?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">4</span>Implantatpausen har ingen grund någonstans i tre protokoll</h3>
+  <span class="src">SK1, SK2, SK3</span>
+  <p>Implantat nämns en gång i alla tre: <em>avvakta implantatpatienter</em>, tre ord i SK2:s åtgärdsplan. Ingen observation om hennes implantatarbete. Inget skäl. Inga kriterier för när det hävs. Inte uppföljt i juni.</p>
+  <p>SK1 nämner inte implantat alls; där står att hon ska fortsätta utveckla dentoalveolärkirurgi.</p>
+  <p>Samtidigt beskrivs hennes kirurgi positivt i båda de senare: förbättrad op-ex-teknik, benplastik, separation, god potential avseende kirurgiskt handlag.</p>
+  <p class="say">&rdquo;Vad vilar implantatpausen på, och vad behöver jag visa för att den ska hävas?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">5</span>De angivna påpekandena kan inte vara det implantat hänger på</h3>
+  <span class="src">SK2/SK3 + klinikens praxis</span>
+  <p>Anmärkningarna gäller strukturerad bedömning, inläsning i förväg, konsultationsgång, SBAR och medicinsk grundkompetens. Alla gäller samtliga patientkategorier. Ingen annan kategori är pausad.</p>
+  <p>Och kollegor utan läkarlegitimation sätter implantat rutinmässigt, så medicinsk kompetens kan inte vara grinden.</p>
+  <p class="say">&rdquo;Mina kollegor har inte läkarlegitimation och gör implantat. Vad är det med just implantat?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">6</span>Den individuella plan klinikens egna regler kräver blev aldrig till</h3>
+  <span class="src">Klinikens utbildningsplan + Jahan vid rekryteringen</span>
+  <p>Utbildningsplanen säger att den individuella studieplanen upprättas <em>snarast efter antagning</em>, utifrån ST-tandläkarens tidigare utbildning och erfarenhet, och revideras i slutet av varje termin, med resultat och överenskommelser dokumenterade. Ansvaret ligger på verksamhetschefen och den huvudansvariga handledaren.</p>
+  <p>Jahan sa att utkastet skulle anpassas tillsammans med Aida utifrån den rumänska ST-tiden, så att utbildningstiden skulle bli kortare. Det skedde aldrig.</p>
+  <p class="say">&rdquo;Utbildningsplanen säger att planen bygger på tidigare utbildning och revideras varje termin. Kan vi göra det nu?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">7</span>Bedömningen av hennes tidigare utbildning påbörjades och lämnades</h3>
+  <span class="src">Aidas anteckningar 27 jan 2025</span>
+  <p>Första raden vid första mötet: de gick igenom dokumentationen från Rumänien, den behövde kompletteras och sedan skrivas på av handledare. Anteckningarna listar också inskanning av hennes diplom, däribland Ethoss, alltså benregeneration.</p>
+  <p>Hennes implantatbakgrund var alltså känd från dag ett, och bedömningen av den har ett utpekat nästa steg som aldrig togs.</p>
+  <p class="say">&rdquo;Vi började gå igenom min rumänska dokumentation vid första mötet. Vad hände med den?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">8</span>Hon har redan gått två svårare nationella kurser</h3>
+  <span class="src">Kursmeriter</span>
+  <p>Rekonstruktion hos cancerpatienter och ortognatkirurgi, båda bland de åtta nationella fördjupningskurserna, båda betydligt mer komplexa än implantologi. Hennes nivå togs inte upp som hinder för någon av dem.</p>
+  <p class="say">&rdquo;Min nivå var inget hinder för rekonstruktions- eller ortognatkursen. Varför är den det för den här?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">9</span>Åtgärdsplanens klinikdelar rörde sig inte</h3>
+  <span class="src">SK3 junigenomgång</span>
+  <p>Av planen: genomgångarna med Anna Borg har påbörjats. Luftvägsdelen blev en terminsexamination som hon håller. De två medsittningarna bokar hon själv. Antikoagulantia ordnade hon själv med Sayf.</p>
+  <p>Och punkten om att handledargruppen skulle återkomma med en plan för den medicinska delen står ordagrant som i föregående protokoll.</p>
+  <p class="say">&rdquo;Kan vi gå igenom vilka delar som är mina att ordna och vilka som är klinikens, och sätta datum på var och en?&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">10</span>Återkoppling kommer bara vid formella bedömningar</h3>
+  <span class="src">SK1 mot SK2</span>
+  <p>SBAR, de osignerade anteckningarna och morgonrapporten dyker alla upp först i SK2, ungefär ett år in. Inget av det finns i SK1. Vart och ett hade kunnat rättas samma dag.</p>
+  <p>Bedömning och återkoppling under ST ska vara löpande, inte bara vid terminsavstämningarna.</p>
+  <p class="say">&rdquo;Jag hör hellre sådant när det händer än på ett kollegium en termin senare.&rdquo;</p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">11</span>Nästan ingenting i protokollen är faktiskt skattat</h3>
+  <span class="src">Alla tre protokoll</span>
+  <p>I de tre dokumenten är den enda ikryssade rutan förmåga att hantera stress. Raden övergripande skattning har aldrig fyllts i. Journaldokumentation är markerad <em>ej bedömt</em>. Klinisk bedömning hänvisar till andra rader i stället för att bedömas.</p>
+  <p class="say"><em>Kontrollera originalformateringen innan den här används. Hör hemma hos studierektorn snarare än i rummet.</em></p>
+</div>
+
+<div class="finding">
+  <h3><span class="rank">12</span>Skalan är fel för hennes specialitet</h3>
+  <span class="src">Alla tre protokoll</span>
+  <p>Raden övergripande skattning graderar mot <em>håller ej nivå legitimerad läkare</em>. Hon är ST-tandläkare i en odontologisk specialitet. Flera anmärkningar ligger helt utanför målbeskrivningen för käkkirurgi: självständig handläggning av primärvårdspatienter, medicinsk grundkompetens, primärjour i läkarroll.</p>
+  <p class="say">&rdquo;Vilka delmål i målbeskrivningen för käkkirurgi hör de här punkterna till?&rdquo;</p>
+  <p><em>Studierektorsmaterial. I rummet låter det som en formalitet; för en studierektor för tandläkarnas specialistutbildning är det ett kategorifel.</em></p>
+</div>
+
+<h2>Hur mötet körs</h2>
+<ul class="checklist">
+  <li><strong>Välj tre, inte tolv.</strong> Punkt 1, 4 och 8 är starkast och hänger ihop: deras egen bedömning lägger implantat nu, pausen saknar dokumenterad grund, och hennes nivå var aldrig ett hinder för svårare kurser.</li>
+  <li><strong>Fråga, sedan tyst.</strong> Var och en är formulerad som en fråga av ett skäl. Tystnaden efteråt ger mer än någon följdfråga.</li>
+  <li><strong>Ta inte med papper.</strong> Kunna datumen. Papper på bordet gör samtalet till en förhörssituation.</li>
+  <li><strong>Medge snabbt där de har rätt.</strong> Varje medgiven punkt krämper ihop marken de har kvar.</li>
+  <li><strong>Gå därifrån med ett datum.</strong> Ett varmt möte utan datum är inget resultat.</li>
+  <li><strong>Skriv sammanfattningsmejlet samma dag.</strong> Vad som togs upp, vad som bestämdes, till när.</li>
+</ul>
+
+<div class="flag">
+  <strong>Håll tillbaka:</strong> punkt 12 och troligen 11, som hör hemma hos studierektorn. Allt om en namngiven kollegas närvaro. Adam, hans mejl och allt därifrån. Klinikens rykte. Inget av det hjälper i det rummet och allt kostar något.
+</div>
+
+</div>
+</div>
+
+<div data-page="plan">
+<div data-lang="en" class="on">
+
+<div class="flag">
+  <strong>The point of this list.</strong> Nothing here depends on anyone at the clinic changing their mind. Each step either produces a fact she doesn't have, puts someone outside the clinic in the picture, or creates a record. That is what shifts this over months.<br><br>
+  <strong>If she only does three things:</strong> call the union tomorrow, write to the studierektor once Aida has answered or failed to, and confirm every conversation by email the same day.
+</div>
+
+<div class="day">
+  <h3>Monday</h3>
+  <p class="when">The letter is with Aida. Don't chase it today.</p>
+  <ul class="todo">
+    <li><strong>Call L&auml;karf&ouml;rbundet.</strong><span class="prio">first</span>
+      <span class="detail">She emailed on Wednesday and has had no reply. Ask for an ombudsman, not membership services. Say she has an employment matter with a meeting on 7 October. Membership is over six months old, so no qualifying period applies there.</span>
+      <span class="script">"Will you represent me? Is there any question about eligibility given I'm employed on the dental side? Can someone attend a meeting on 7 October?"</span>
+      <span class="detail">If they hesitate on eligibility, ask for that in writing. A written refusal is useful in itself: it documents her classification as a dental ST, which is the foundation of the delm&aring;l argument.</span>
+    </li>
+    <li><strong>Call Tj&auml;nstetandl&auml;karna.</strong>
+      <span class="detail">Membership went in on Sunday. Ask what help is available from day one and what is subject to a qualifying period, given the matter began before she joined. Mention that she joined L&auml;karf&ouml;rbundet on her manager's suggestion and has been paying dues to a union that may not be able to represent her.</span>
+    </li>
+    <li><strong>Ask the friend in J&ouml;nk&ouml;ping.</strong>
+      <span class="detail">Is registration still open, who handles it, what did her own clinic have to do, and are people from other clinics attending. Information only &mdash; she must not ask the friend to arrange anything or put her name forward.</span>
+    </li>
+    <li><strong>Email the course organiser herself.</strong>
+      <span class="detail">Short, from an ST-tandl&auml;kare at Link&ouml;ping: is there still a place, and what does the clinic need to do. A written answer from the organiser is worth far more than anything informal.</span>
+    </li>
+    <li><strong>Move the documents out of her work account.</strong>
+      <span class="detail">The three protokoll, Aida's 27 January notes, the draft plan, the email thread, her own timeline. Personal storage. Work accounts can be closed at short notice.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Tuesday</h3>
+  <p class="when">Only if Aida hasn't answered, or the answer is thin.</p>
+  <ul class="todo">
+    <li><strong>Short note to Jahan.</strong><span class="prio">key</span>
+      <span class="detail">Four lines, not a second letter. He has already read the twelve points, so nothing is repeated. This is the first time he has to either act or visibly decline to.</span>
+      <span class="script">"I wrote to Aida on Monday about the implantology course and haven't had an answer. A place needs securing before 7 October. Could you decide this one, since it can't wait for the meeting?"</span>
+    </li>
+    <li><strong>Write her own timeline.</strong>
+      <span class="detail">Dates and facts only, no interpretation. Start January 2025, the 27 January meeting, SK1, the PRF conversation, the surgery with Sami, the NF case, SK2, what she did after SK2, SK3, the course emails. For her, the union and the studierektor &mdash; not for the clinic.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Wednesday to Friday</h3>
+  <p class="when">Once Aida has answered or clearly won't.</p>
+  <ul class="todo">
+    <li><strong>Write to the studierektor.</strong><span class="prio">key</span>
+      <span class="detail">Carin Starkhammar Johansson, Region &Ouml;sterg&ouml;tland &mdash; verify she still holds the role before writing. Keep it to three documented facts and one question. No history, no personalities, no Adam, no colleagues.</span>
+      <span class="script">Classified ST year 1 at eighteen months. Implants paused for over a year with no reason recorded in any of three protokoll and no criteria for lifting it. No individual study plan ever drawn up with her. Is this normal, and what is the route when a national course is withheld?</span>
+    </li>
+    <li><strong>Write to HR.</strong>
+      <span class="detail">Neutral, factual request. What is she employed as, ST-tandl&auml;kare or ST-l&auml;kare? What does her contract say about training length? Is there documentation of what was agreed at recruitment about crediting her Romanian ST? When does the regional funding for the post end?</span>
+      <span class="detail">That last date is the real deadline in this whole situation and nobody has established it.</span>
+    </li>
+    <li><strong>Find out who the skyddsombud is</strong> at Sinnescentrum.
+      <span class="detail">Not to contact yet. Just to know, in case the health side needs a route that doesn't depend on any union.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Before 7 October</h3>
+  <ul class="todo">
+    <li><strong>Ask for the documents in advance.</strong>
+      <span class="detail">The earlier protokoll and the checklist Aida referred to, and the current version of the individual study plan. She was invited to read them; asking is simply accepting.</span>
+    </li>
+    <li><strong>Establish what the meeting is.</strong>
+      <span class="detail">Aida calls 7 October an uppf&ouml;ljningsm&ouml;te; Jahan has referred to the specialistkollegium. Who attends, and is anything being assessed? She should not walk into something that can produce another level judgment without knowing.</span>
+    </li>
+    <li><strong>Pick three findings from the 7 October tab.</strong>
+      <span class="detail">Findings 1, 4 and 8. Their own assessment places implants this autumn; the pause has no recorded basis; her level was never an obstacle for two harder national courses.</span>
+    </li>
+    <li><strong>Ask the union to attend.</strong>
+      <span class="detail">Whichever one will. Even a refusal establishes her as a member with an active matter.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Running, from now on</h3>
+  <ul class="todo">
+    <li><strong>Confirm every conversation by email the same day.</strong><span class="prio">habit</span>
+      <span class="detail">Three lines. What was discussed, what was agreed, by when. This is the single highest-value thing available to her, and it is what makes the next year different from the last two. A department that runs on unrecorded decisions cannot operate that way with someone who writes things down.</span>
+    </li>
+    <li><strong>Log everything as it happens.</strong>
+      <span class="detail">Dates, who was present, what was said. Same evening, not later.</span>
+    </li>
+    <li><strong>Verify the Romanian route.</strong>
+      <span class="detail">Written answers: can the suspension be lifted, how much Swedish time counts, what documentation is needed at reactivation, and does the Swedish clinic have to attest anything. Do it a year before it could be needed, not when it is.</span>
+    </li>
+    <li><strong>Keep the exit warm and silent.</strong>
+      <span class="detail">Lars in G&ouml;teborg, once the course question has resolved. A conversation about her reading of the situation, not a request for a job. Nothing about Adam, nothing about escalation.</span>
+    </li>
+    <li><strong>Get her health support that isn't you.</strong>
+      <span class="detail">F&ouml;retagsh&auml;lsov&aring;rden or v&aring;rdcentralen, arranged in a good week rather than a bad one. This runs for months and there will be worse weeks than this one.</span>
+    </li>
+  </ul>
+</div>
+
+<h2>Never, in any room or any email</h2>
+<ul class="checklist">
+  <li>The necrotising fasciitis case. She was right and it cost her. It goes to the union, or eventually chefl&auml;karen, and not before she has representation.</li>
+  <li>Sami, the PRF ban, or any suggestion that she is being held back to protect a colleague. True or not, unprovable, and the fastest way to lose everything she has built.</li>
+  <li>Favouritism, or anything a named colleague did or didn't attend.</li>
+  <li>Adam, his emails, his attachments, his nicknames. Any of it reaching the clinic makes her situation a continuation of his.</li>
+  <li>The department's reputation, the failed recruitment, what the nurses say.</li>
+  <li>The Romanian route, to anyone at the clinic. Its entire value is that they don't know about it.</li>
+</ul>
+
+</div>
+
+<div data-lang="sv">
+
+<div class="flag">
+  <strong>Poängen med listan.</strong> Ingenting här hänger på att någon på kliniken ändrar sig. Varje steg ger antingen ett faktum hon inte har, drar in någon utanför kliniken, eller skapar ett underlag. Det är det som flyttar det här över månader.<br><br>
+  <strong>Om hon bara gör tre saker:</strong> ring facket i morgon, skriv till studierektorn när Aida svarat eller låtit bli, och bekräfta varje samtal med ett mejl samma dag.
+</div>
+
+<div class="day">
+  <h3>Måndag</h3>
+  <p class="when">Brevet ligger hos Aida. Ligg inte på idag.</p>
+  <ul class="todo">
+    <li><strong>Ring Läkarförbundet.</strong><span class="prio">först</span>
+      <span class="detail">Hon mejlade i onsdags utan svar. Be om en ombudsman, inte medlemsservice. Säg att hon har ett anställningsärende med ett möte den 7/10. Medlemskapet är äldre än sex månader, så ingen kvalifikationstid gäller där.</span>
+      <span class="script">&rdquo;Kommer ni att företräda mig? Finns det någon fråga om behörighet eftersom jag är anställd på tandläkarsidan? Kan någon delta på ett möte den 7/10?&rdquo;</span>
+      <span class="detail">Tvekar de om behörigheten: be om det skriftligt. Ett skriftligt nej är i sig användbart, det dokumenterar hennes status som ST-tandläkare.</span>
+    </li>
+    <li><strong>Ring Tjänstetandläkarna.</strong>
+      <span class="detail">Fråga vad som gäller från dag ett och vad som har kvalifikationstid, eftersom ärendet började innan hon gick med. Nämn att hon gick med i Läkarförbundet på chefens förslag.</span>
+    </li>
+    <li><strong>Fråga kompisen i Jönköping.</strong>
+      <span class="detail">Är anmälan öppen, vem håller i den, vad behövde hennes klinik göra, kommer folk från andra kliniker. Bara information &mdash; be henne inte ordna något.</span>
+    </li>
+    <li><strong>Mejla kursarrangören själv.</strong>
+      <span class="detail">Kort, från en ST-tandläkare i Linköping: finns det plats kvar och vad behöver kliniken göra. Ett skriftligt svar är värt mycket mer än något informellt.</span>
+    </li>
+    <li><strong>Flytta dokumenten från jobbkontot.</strong>
+      <span class="detail">De tre protokollen, Aidas anteckningar från 27 januari, planutkastet, mejltråden, hennes egen tidslinje.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Tisdag</h3>
+  <p class="when">Bara om Aida inte svarat, eller svarat tunt.</p>
+  <ul class="todo">
+    <li><strong>Kort mejl till Jahan.</strong><span class="prio">nyckel</span>
+      <span class="detail">Fyra rader, inte ett nytt brev. Han har redan läst de tolv punkterna.</span>
+      <span class="script">&rdquo;Jag skrev till Aida i måndags om implantatkursen och har inte fått svar. En plats behöver säkras före den 7/10. Skulle du kunna avgöra just den frågan, eftersom den inte kan vänta till mötet?&rdquo;</span>
+    </li>
+    <li><strong>Skriv sin egen tidslinje.</strong>
+      <span class="detail">Datum och fakta, ingen tolkning. För henne, facket och studierektorn &mdash; inte för kliniken.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Onsdag till fredag</h3>
+  <p class="when">När Aida svarat eller tydligt inte tänker göra det.</p>
+  <ul class="todo">
+    <li><strong>Skriv till studierektorn.</strong><span class="prio">nyckel</span>
+      <span class="detail">Carin Starkhammar Johansson &mdash; kontrollera att hon fortfarande har uppdraget. Tre dokumenterade fakta och en fråga. Ingen historik, inga personer, ingen Adam, inga kollegor.</span>
+      <span class="script">Bedömd som ST år 1 efter arton månader. Implantat pausade i över ett år utan angivet skäl i något av tre protokoll och utan kriterier för när det hävs. Ingen individuell studieplan har någonsin upprättats med henne. Är det normalt, och vad är vägen när en nationell kurs hålls inne?</span>
+    </li>
+    <li><strong>Skriv till HR.</strong>
+      <span class="detail">Vad är hon anställd som? Vad säger avtalet om utbildningstid? Finns dokumentation om vad som avtalades vid rekryteringen om tillgodoräknande? När tar regionens finansiering av tjänsten slut?</span>
+      <span class="detail">Det sista datumet är den verkliga deadline i hela den här historien, och ingen har tagit reda på det.</span>
+    </li>
+    <li><strong>Ta reda på vem skyddsombudet är</strong> på Sinnescentrum.
+      <span class="detail">Inte för att kontakta än. Bara för att veta.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Inför den 7 oktober</h3>
+  <ul class="todo">
+    <li><strong>Be om handlingarna i förväg.</strong>
+      <span class="detail">De tidigare protokollen och checklistan Aida hänvisade till, samt den aktuella individuella studieplanen.</span>
+    </li>
+    <li><strong>Ta reda på vad mötet faktiskt är.</strong>
+      <span class="detail">Aida kallar det uppföljningsmöte; Jahan har talat om specialistkollegiet. Vilka deltar, och bedöms något?</span>
+    </li>
+    <li><strong>Välj tre punkter från fliken 7 oktober.</strong>
+      <span class="detail">Punkt 1, 4 och 8.</span>
+    </li>
+    <li><strong>Be facket delta.</strong>
+      <span class="detail">Vilket som än vill. Även ett nej etablerar henne som medlem med ett pågående ärende.</span>
+    </li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Löpande härefter</h3>
+  <ul class="todo">
+    <li><strong>Bekräfta varje samtal med mejl samma dag.</strong><span class="prio">vana</span>
+      <span class="detail">Tre rader. Vad som togs upp, vad som bestämdes, till när. Det enskilt mest värdefulla hon kan göra. En klinik som lever på oantecknade beslut kan inte göra det med någon som skriver ner saker.</span>
+    </li>
+    <li><strong>Anteckna allt när det händer.</strong>
+      <span class="detail">Datum, vilka som var där, vad som sades. Samma kväll.</span>
+    </li>
+    <li><strong>Verifiera den rumänska vägen.</strong>
+      <span class="detail">Skriftliga svar: kan vilandeförklaringen hävas, hur mycket svensk tid räknas, vilka handlingar behövs, och måste svenska kliniken intyga något.</span>
+    </li>
+    <li><strong>Håll utgången varm och tyst.</strong>
+      <span class="detail">Lars i Göteborg, när kursfrågan är avgjord. Ett samtal om hur hon läser situationen, inte en jobbförfrågan.</span>
+    </li>
+    <li><strong>Ordna stöd för hälsan som inte är du.</strong>
+      <span class="detail">Företagshälsovården eller vårdcentralen, ordnat en bra vecka och inte en dålig.</span>
+    </li>
+  </ul>
+</div>
+
+<h2>Aldrig, i något rum eller mejl</h2>
+<ul class="checklist">
+  <li>Fallet med nekrotiserande fasciit. Hon hade rätt och det kostade henne. Det går till facket, eller så småningom chefläkaren.</li>
+  <li>Sami, PRF-stoppet, eller att hon hålls tillbaka för att skydda en kollega. Obevisbart, och snabbaste sättet att förlora allt.</li>
+  <li>Favorisering, eller vad en namngiven kollega gick eller inte gick på.</li>
+  <li>Adam, hans mejl, hans bilagor, hans öknamn.</li>
+  <li>Klinikens rykte, den misslyckade rekryteringen, vad sköterskorna säger.</li>
+  <li>Den rumänska vägen, till någon på kliniken. Hela dess värde är att de inte vet om den.</li>
+</ul>
 
 </div>
 </div>
