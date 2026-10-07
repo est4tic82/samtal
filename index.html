@@ -645,6 +645,9 @@ ul.todo .script {
   margin: 0 0 0.6rem;
 }
 
+
+ul.todo.done > li { color: var(--ink-soft); }
+ul.todo.done > li::before { background: var(--accent); }
 </style>
 </head>
 <body>
@@ -656,8 +659,12 @@ ul.todo .script {
     <button type="button" data-page-set="jahan" aria-pressed="true" data-en="Meeting with Jahan" data-sv="Samtal med Jahan">Meeting with Jahan</button>
     <button type="button" data-page-set="v2" aria-pressed="false" data-en="Revised speech" data-sv="Reviderat tal">Revised speech</button>
     <button type="button" data-page-set="v3" aria-pressed="false" data-en="Revised 2" data-sv="Reviderat 2">Revised 2</button>
+    <button type="button" data-page-set="v4" aria-pressed="false" data-en="Revised 3" data-sv="Reviderat 3">Revised 3</button>
     <button type="button" data-page-set="ambush" aria-pressed="false" data-en="If he calls her in" data-sv="Om han kallar in henne">If he calls her in</button>
     <button type="button" data-page-set="sr" aria-pressed="false" data-en="Studierektor" data-sv="Studierektorn">Studierektor</button>
+    <button type="button" data-page-set="jahanmail" aria-pressed="false" data-en="Note to Jahan" data-sv="Mejl till Jahan">Note to Jahan</button>
+    <button type="button" data-page-set="personal" aria-pressed="false" data-en="The human one" data-sv="Det personliga">The human one</button>
+    <button type="button" data-page-set="lars" aria-pressed="false" data-en="Lars" data-sv="Lars">Lars</button>
     <button type="button" data-page-set="aida" aria-pressed="false" data-en="Letter to Aida" data-sv="Brev till Aida">Letter to Aida</button>
     <button type="button" data-page-set="plan" aria-pressed="false" data-en="To do" data-sv="Att g&ouml;ra">To do</button>
     <button type="button" data-page-set="strategy" aria-pressed="false" data-en="Playing it smart" data-sv="Spela smart">Playing it smart</button>
@@ -1637,123 +1644,121 @@ ul.todo .script {
 <div data-lang="en" class="on">
 
 <div class="flag">
-  <strong>What this page is.</strong> The findings that come from putting the documents side by side, ranked by how hard they are to answer. Every one is built from the clinic's own papers: Aida's meeting notes of 27 January 2025, the three specialistkollegium protokoll, and the clinic's utbildningsplan. Nothing here relies on anyone's memory or opinion.<br><br>
-  <strong>How to use it on 7 October.</strong> Not as a list to read out. Pick three at most. Ask each as a question, then stop talking. The value is in the answers, and several of these have no good answer.
+  <strong>Our approach.</strong> Sit back and listen. Be as warm as possible. Acknowledge where they are right. Make sure her questions are asked before the meeting ends. Send a summary email the same day, whatever happens, with anything left open written in as open questions.<br><br>
+  <strong>Why it works.</strong> Her letter already says everything. The meeting doesn't need to argue it; it needs to let them answer, and then turn their answers into a record. Warmth in the room and exactness on paper.
 </div>
 
-<h2>The findings</h2>
-
-<div class="finding">
-  <h3><span class="rank">1</span>Their own level assessment puts implants in this autumn</h3>
-  <span class="src">SK3 June 2026 + Aida's notes 27 Jan 2025</span>
-  <p>The June kollegium concludes: <em>Bed&ouml;mning sammanlagd aktuell utbildningsniv&aring;: ST &aring;r 1.</em></p>
-  <p>Aida's notes from the first meeting set out what ST year 1 contains: dentoalveolar surgery, opex, exposures, retrograde root fillings, cysts, and then <em>h&ouml;sten: implantat, benaugmentationer</em>, with c-op as third operator.</p>
-  <p>So by the clinic's own classification she is an ST year 1, and by the clinic's own year 1 curriculum, implants belong in the autumn. This autumn.</p>
-  <p class="say">"If I'm assessed as ST year 1, and year 1 has implants in the autumn, then on your own assessment implants belong in this term. What am I missing?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">2</span>A domain-specific finding became a global demotion by copy-paste</h3>
-  <span class="src">SK2 vs SK3</span>
-  <p>SK2 says she does not reach ST level <em>in structured assessment, handling and reporting of k&auml;kkirurgiska patients</em>. Three named areas.</p>
-  <p>SK3 reproduces that text word for word, adds a checklist review containing no new observation of her work, and then concludes with an unqualified classification of her overall training level.</p>
-  <p>A qualified finding about three areas became a global level determination with no new evidence in between.</p>
-  <p class="say">"The assessment text in June is the same as the previous one, and the review section doesn't record any new observation. What was the level determination based on?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">3</span>She went backwards while doing everything the plan asked</h3>
-  <span class="src">SK1 &rarr; SK2 &rarr; SK3</span>
-  <p>August 2025: ST &aring;r 1, which was correct, she was in year 1. VT 2026: below ST level. June 2026: ST &aring;r 1 again, now in her second year.</p>
-  <p>Between SK2 and SK3 she cleared the signing queue, adopted SBAR, was in time and prepared for morning report, and presented a study plan at the June kollegium. None of it appears in the June protokoll, and the text criticising those same points was carried forward unchanged.</p>
-  <p class="say">"I did what the plan asked between the two meetings. If the assessment text doesn't change when I do that, what would change it?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">4</span>The implant pause has no basis anywhere in three protokoll</h3>
-  <span class="src">SK1, SK2, SK3</span>
-  <p>Implants appear once across all three documents: <em>avvakta implantatpatienter</em>, three words in the SK2 action plan. No observation about her implant work anywhere. No reason. No criteria for lifting it. Not revisited at the June review.</p>
-  <p>SK1 doesn't mention implants at all; it says continue developing dentoalveolar surgery.</p>
-  <p>Meanwhile both later protokoll describe her surgery positively: improved op-ex technique, benplastik, separation, good potential in surgical handling.</p>
-  <p class="say">"What is the implant pause based on, and what do I need to show for it to end?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">5</span>The stated concerns cannot be what implants depend on</h3>
-  <span class="src">SK2/SK3 + clinic practice</span>
-  <p>The recorded concerns are structured assessment, reading up in advance, consultation workflow, SBAR reporting, and medical baseline competence. Every one applies to all her patient categories. No other category is paused.</p>
-  <p>And colleagues who hold no l&auml;karlegitimation place implants routinely, so medical competence cannot be the gate.</p>
-  <p class="say">"My colleagues don't hold a l&auml;karlegitimation and they do implants. So what is it about implants specifically?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">6</span>The individual plan required by the clinic's own rules was never made</h3>
-  <span class="src">Clinic utbildningsplan + Jahan at recruitment</span>
-  <p>The utbildningsplan says the individual study plan is drawn up <em>snarast efter antagning</em>, on the basis of the ST-tandl&auml;kare's prior training and experience, and revised at the end of each term, with results and agreements documented. Responsibility is assigned to the verksamhetschef and the huvudansvariga handledaren.</p>
-  <p>Jahan said the draft should be refined with Aida using the Romanian residency, so that the training time would be shorter. That never happened. The only version is an unsigned draft she found herself.</p>
-  <p class="say">"The utbildningsplan says the plan is built on prior training and revised every term. Can we do that now?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">7</span>Her prior training assessment was started and abandoned</h3>
-  <span class="src">Aida's notes 27 Jan 2025</span>
-  <p>First line of the first meeting: they went through the documentation from Romania, it needed completing, and then a supervisor's signature. The notes also list scanning her diplomas, Ethoss among them, which is bone regeneration.</p>
-  <p>So her implant background was known from day one, and the assessment of it has a named next step that was never taken.</p>
-  <p class="say">"We started going through my Romanian documentation at our first meeting. What happened to it?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">8</span>She has already done two harder national courses</h3>
-  <span class="src">Course record</span>
-  <p>Reconstruction in cancer patients and orthognathic surgery, both from the eight national f&ouml;rdjupningskurser, both considerably more complex than implantology. Her level was not raised as an obstacle for either.</p>
-  <p>So by the clinic's own practice, her stage of training is not a barrier to national courses.</p>
-  <p class="say">"My level wasn't an obstacle for the reconstruction or orthognathic courses. Why is it for this one?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">9</span>The action plan's clinic-side items didn't move</h3>
-  <span class="src">SK3 June review</span>
-  <p>Of the plan: the radiology sessions with Anna Borg started. The airway item became a term examination she presents. The two medsittningar are hers to book. The anticoagulant session she arranged herself with Sayf.</p>
-  <p>And the point saying the supervisor group would come back with a plan for the medical part is written exactly as it was in the previous protokoll.</p>
-  <p class="say">"Could we go through which parts are mine to arrange and which are the clinic's, and put a date on each?"</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">10</span>Feedback arrives only at formal assessments</h3>
-  <span class="src">SK1 vs SK2</span>
-  <p>SBAR, the unsigned notes and morning report all appear for the first time in SK2, about a year in. None is in SK1. Each could have been fixed the same day.</p>
-  <p>Assessment and feedback during ST are meant to be continuous, not only at the term reviews.</p>
-  <p class="say">"I'd rather hear these things when they happen than at a kollegium a term later."</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">11</span>Almost nothing in the protokoll is actually rated</h3>
-  <span class="src">All three protokoll</span>
-  <p>Across the three documents the only marked box is stress management. The &ouml;vergripande skattning row has never been filled in. Journal documentation is marked <em>ej bed&ouml;mt</em>. Clinical judgment defers to other rows rather than being assessed.</p>
-  <p>Every conclusion about her level exists in prose only.</p>
-  <p class="say"><em>Check the original formatting before using this one. Worth raising with the studierektor rather than in the room.</em></p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">12</span>The scale is the wrong one for her specialty</h3>
-  <span class="src">All three protokoll</span>
-  <p>The &ouml;vergripande skattning row grades against <em>h&aring;ller ej niv&aring; legitimerad l&auml;kare</em>. She is an ST-tandl&auml;kare in a dental specialty. Several recorded concerns sit outside the k&auml;kkirurgi m&aring;lbeskrivning altogether: independent handling of primary care patients, general medical baseline competence, primary on-call in a physician role.</p>
-  <p class="say">"Which delm&aring;l in the k&auml;kkirurgi m&aring;lbeskrivning do these points map to?"</p>
-  <p><em>This is studierektor material. In the room it reads as a technicality; to a studierektor for dental specialist training it is a category error.</em></p>
-</div>
-
-<h2>How to run the meeting</h2>
+<h2>Before she walks in</h2>
 <ul class="checklist">
-  <li><strong>Pick three, not twelve.</strong> Findings 1, 4 and 8 are the strongest and they fit together: their own assessment puts implants now, the pause has no recorded basis, and her level was never an obstacle for harder courses.</li>
-  <li><strong>Ask, then stop.</strong> Each of these is written as a question for a reason. The silence afterwards produces more than any follow-up.</li>
-  <li><strong>Bring nothing visible.</strong> Know the dates. Papers on the table turn a conversation into a hearing and make everyone perform.</li>
-  <li><strong>Concede fast where they're right.</strong> Every accepted point narrows the ground they have left.</li>
-  <li><strong>Leave with one dated commitment.</strong> A warm meeting with no date is not an outcome.</li>
-  <li><strong>Write the summary email the same day.</strong> What was discussed, what was agreed, by when. That is what makes the meeting exist afterwards.</li>
+  <li><strong>A notebook.</strong> She writes down anything with a date, a name or a commitment. That is what the summary email is built from.</li>
+  <li><strong>Know the dates.</strong> First supervision meeting 27 January 2025. Protokoll August 2025, spring 2026, June 2026. Her letter 20 September.</li>
+  <li><strong>Notice who is there.</strong> Someone unexpected, for example from HR, is a reason to use the union line in the table below.</li>
+  <li><strong>Phone silent, face down.</strong></li>
+  <li><strong>She can pause at any moment:</strong> <em>"Får jag tänka på det och återkomma?"</em> (Can I think about that and come back to you?)</li>
+</ul>
+
+<h2>1. The start: let them lead</h2>
+<div class="finding">
+  <p>She lets them open. If there's a natural moment for her to say something first, a warm line that names the letter without pressing it:</p>
+  <p class="say">"Tack för att vi ses. Jag har skickat ett mejl med några frågor, men jag lyssnar gärna först."</p>
+  <p>(Thank you for meeting. I've sent an email with some questions, but I'm happy to listen first.)</p>
+</div>
+
+<h2>2. While listening: acknowledge specifics</h2>
+<div class="finding">
+  <p>Agreeing where they're right is disarming and costs her nothing. She agrees with particular points, never with the overall judgment such as "not at ST level" or "ST year 1".</p>
+  <p class="say">"Det har du rätt i."</p><p>(You're right about that.)</p>
+  <p class="say">"Det tar jag till mig."</p><p>(I'll take that on board.)</p>
+  <p class="say">"Ni har rätt i att SBAR var något jag behövde. Det använder jag nu."</p><p>(You're right that SBAR was something I needed. I use it now.)</p>
+  <p class="say">"Det förstår jag, och det har jag arbetat med sedan i våras."</p><p>(I understand, and I've been working on that since the spring.)</p>
+  <p class="say">"Har du ett exempel, så att jag vet exakt vad jag ska fokusera på?"</p><p>(Do you have an example, so I know exactly what to focus on?)</p>
+</div>
+
+<h2>3. Before the end: the questions not yet covered</h2>
+<div class="finding">
+  <p>When the meeting is winding down:</p>
+  <p class="say">"Innan vi avslutar: det finns några frågor från mitt mejl som vi inte har hunnit med. Kan vi ta dem nu, eller boka en tid för dem?"</p>
+  <p>(Before we finish: there are a few questions from my email we haven't covered. Can we take them now, or book a time for them?)</p>
+  <p>Then only those that weren't covered:</p>
+  <p><strong>Implants:</strong> <em>"Vilka kriterier gäller för att jag ska kunna börja med implantat, och när kan vi stämma av det?"</em> (What are the criteria for me to start implants, and when can we review it?)</p>
+  <p><strong>Complex and trauma cases:</strong> <em>"Hur fördelas komplexa fall och traumafall till ST?"</em> (How are complex and trauma cases allocated to ST?)</p>
+  <p><strong>The individual plan:</strong> <em>"Kan vi ta fram min individuella studieplan, inklusive hur min ST-tid från Rumänien räknas? När kan vi sätta oss och göra den?"</em> (Can we draw up my individual study plan, including how my Romanian ST time is counted? When can we sit down and do it?)</p>
+  <p><strong>The course:</strong> <em>"Vilken motsvarande kurs är det, och när ges den?"</em> (Which equivalent course is it, and when is it held?)</p>
+</div>
+
+<h2>Suggestions: things I'd still try to get in</h2>
+<ul class="checklist">
+  <li><strong>A date for anything promised.</strong> <em>"Tack. Till när?"</em> A warm meeting with no date produces nothing.</li>
+  <li><strong>The protokoll.</strong> <em>"Jag skulle gärna vilja få protokollet efter mötet och ha möjlighet att kommentera om något saknas."</em> (I'd like to receive the protokoll and comment if something is missing.) Last time the text was copied unchanged.</li>
+  <li><strong>Who is responsible for what.</strong> <em>"Vem ansvarar för vilka delar av min utbildning, och vem vänder jag mig till om jag inte får tillgång till de moment jag behöver?"</em> (Who is responsible for which parts of my training, and who do I turn to if I don't get access to what I need?)</li>
+  <li><strong>The next check-in.</strong> <em>"När ses vi nästa gång för att stämma av?"</em> (When do we meet next to follow up?) Aida herself said more follow-ups were needed.</li>
+  <li><strong>Summarise out loud at the end.</strong> <em>"Får jag sammanfatta vad vi kommit fram till, så att vi har samma bild?"</em> (May I summarise what we've agreed, so we have the same picture?) What they correct, she writes down.</li>
+  <li><strong>If the mood has been cool:</strong> <em>"Jag vill att ni ska veta att jag fortfarande vill få det här att fungera här."</em> (I want you to know I still want to make this work here.)</li>
+</ul>
+
+<h2>Answers ready, if they raise something</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>They raise</th><th>She says</th></tr></thead>
+  <tbody>
+    <tr><td>Adam, HR, rumours, trust</td><td><em>"Adam hörde av sig till mig i april 2025, kort efter att jag hade börjat, men jag svarade honom inte förrän i september i år. Nu har han skickat ett privat meddelande från mig till HR utan att fråga mig. Jag har pratat med HR och förtydligat, och jag vill gärna att vi fokuserar på min utbildning."</em><br>(Adam contacted me in April 2025 but I didn't reply until September this year. He has now sent a private message of mine to HR without asking me. I've spoken to HR and clarified, and I'd like us to focus on my training.)</td></tr>
+    <tr><td>"You're not at ST level" / ST year 1</td><td><em>"Det tar jag till mig. Vilka delmål gäller det, och vad behöver jag visa för att det ska ändras?"</em><br>(I'll take that on board. Which delmål does it concern, and what do I need to show for it to change?)<br><strong>Acknowledge, don't agree with the verdict.</strong></td></tr>
+    <tr><td>"You don't take feedback" / "be more humble"</td><td><em>"Det hoppas jag inte. Sedan i våras har jag arbetat igenom signeringskön, använder SBAR, är i tid till morgonrapporten och har tagit fram en studieplan. Om något fortfarande inte stämmer vill jag hellre höra det nu, med exempel."</em><br>(I hope not. Since the spring I've cleared the signing queue, use SBAR, am on time for morning report and have made a study plan. If something still isn't right, I'd rather hear it now, with examples.)</td></tr>
+    <tr><td>SBAR, signing, morning report</td><td><em>"Ni har rätt i att det var något jag behövde. Det har jag åtgärdat."</em><br>(You're right that it was something I needed. I've dealt with it.)</td></tr>
+    <tr><td>Structured assessment, reading up, consultation</td><td><em>"Det har jag arbetat med. Har ni ett aktuellt exempel, så att jag vet vad jag ska fokusera på?"</em><br>(I've been working on that. Do you have a recent example, so I know what to focus on?)</td></tr>
+    <tr><td>Medical / primary care competence</td><td><em>"Jag tar gärna till mig det. Vilket delmål i målbeskrivningen för käkkirurgi hör det till?"</em><br>(I'm happy to take that on. Which delmål in the käkkirurgi curriculum does it belong to?)</td></tr>
+    <tr><td>"You're not ready for implants" / patient safety</td><td><em>"Det förstår jag. Vad behöver jag visa, och till när? Jag börjar gärna med fall som gås igenom med specialist i förväg och med handledning på de första."</em><br>(I understand. What do I need to show, and by when? I'm happy to start with cases reviewed with a specialist beforehand and supervision on the first ones.)</td></tr>
+    <tr><td>"Why is this course so important to you?"</td><td><em>"För mig handlar det om mer än själva kursen. Det skulle ge mig en trygghet i att min ST är på rätt spår och följer en normal väg. Det senaste året har jag ofta känt mig osäker på var jag står, och det här skulle vara ett tydligt tecken på att vi går framåt tillsammans. Och om det inte går nu, skulle ett namn och ett datum för en motsvarande kurs ge mig samma trygghet."</em><br>(For me it's about more than the course itself. It would give me confidence that my ST is on the right track and following a normal path. Over the past year I've often felt unsure where I stand, and this would be a clear sign that we're moving forward together. And if it isn't possible now, a name and a date for an equivalent course would give me the same confidence.)<br><strong>Said warmly, as an explanation, not a complaint. Nothing about Sayf or fairness.</strong></td></tr>
+    <tr><td>"But are you ready for the course?"</td><td><em>"Jag har redan gått kurserna i rekonstruktion och ortognatkirurgi, och jag har en sexmånaders utbildning i implantologi sedan tidigare. Kursen är teoretisk, så den påverkar inte när jag börjar med implantatpatienter."</em><br>(I've already done the reconstruction and orthognathic surgery courses, and I have a six-month implantology qualification from before. The course is theoretical, so it doesn't affect when I start with implant patients.)</td></tr>
+    <tr><td>"We'll find another course later"</td><td><em>"Vilken kurs är det, och när ges den?"</em> If they don't know: <em>"Kan ni återkomma med namn och datum senast [datum]?"</em><br>(Which course, and when? Can you come back with a name and date by [date]?)</td></tr>
+    <tr><td>"Your letter was long / formal / why in writing?"</td><td><em>"Jag ville vara tydlig och ha allt samlat på ett ställe. Jag pratar hellre om det här än skriver."</em><br>(I wanted to be clear and have everything in one place. I'd rather talk about this than write.)</td></tr>
+    <tr><td>"You went to the studierektor / union / HR"</td><td><em>"Jag ville förstå vad som är normalt i en ST. Jag vill helst lösa det här tillsammans med er."</em><br>(I wanted to understand what's normal in an ST. I'd much rather solve this together with you.)</td></tr>
+    <tr><td>"Why are you comparing yourself with the assistant?"</td><td><em>"Jag jämför mig inte med honom. Jag frågar hur fördelningen av fall till ST går till."</em><br>(I'm not comparing myself with him. I'm asking how cases are allocated to ST.)</td></tr>
+    <tr><td>Correcting a colleague / the surgery with Sami</td><td><em>"Det förstår jag. Framöver tar jag sådant direkt och enskilt med personen."</em><br>(I understand. In future I'll raise that kind of thing directly and privately with the person.)<br><strong>Acknowledge the channel, not that she was wrong.</strong></td></tr>
+    <tr><td>The "thief" message to Aida</td><td><em>"Jag reagerade starkt då och skulle inte uttrycka mig så i dag."</em><br>(I reacted strongly then and wouldn't put it that way today.)</td></tr>
+    <tr><td>The necrotising fasciitis case</td><td><em>"Jag gjorde det jag bedömde var rätt och följde rutinen. Jag tar gärna emot konkret återkoppling om vad jag kunde ha gjort annorlunda."</em><br>(I did what I judged right and followed the routine. I'm glad to receive concrete feedback on what I could have done differently.)<br><strong>Never raised by her. Never argued.</strong></td></tr>
+    <tr><td>"Your Romanian training isn't comparable"</td><td><em>"Det förstår jag. Jag ber bara att den bedöms mot delmålen."</em><br>(I understand. I'm only asking that it be assessed against the delmål.)</td></tr>
+    <tr><td>Jahan: "I never promised a shorter ST"</td><td><em>"Processen för tillgodoräknande påbörjades efter att jag började. Jag vill gärna förstå vad som behövs för att återuppta den."</em><br>(The crediting process was started after I began. I'd like to understand what's needed to restart it.)</td></tr>
+    <tr><td>"Are you planning to leave?"</td><td><em>"Nej. Jag vill få det här att fungera här."</em><br>(No. I want to make this work here.)</td></tr>
+    <tr><td>"How are you doing?"</td><td><em>"Det har varit en tuff period, men jag vill få det här att fungera."</em><br>(It's been a hard period, but I want to make this work.)</td></tr>
+    <tr><td>"We'll come back to you"</td><td><em>"Tack. Till när?"</em> Ask twice if needed, warmly.</td></tr>
+    <tr><td>"That's not for this meeting"</td><td><em>"Då vill jag gärna veta när vi kan gå igenom det."</em></td></tr>
+    <tr><td>Someone from HR present, or it turns disciplinary</td><td><em>"Om vi ska prata om det här vill jag gärna göra det vid ett annat tillfälle, med någon från Läkarförbundet närvarande."</em></td></tr>
+    <tr><td>Raised voices, personal remarks</td><td>Don't match it. <em>"Jag tror vi ska fortsätta det här en annan gång."</em> Leave politely, write it down the same hour.</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Each said once, calmly, then she stops talking.</p>
+
+<h2>The same day: the summary email</h2>
+<div class="email">
+  <div class="subject"><strong>Ämne:</strong> Sammanfattning av mötet den 7 oktober</div>
+  <p>Hej [Aida och Jahan],</p>
+  <p>Tack för mötet i dag. Så som jag uppfattade det kom vi fram till följande:</p>
+  <ul>
+    <li>[Det viktigaste som sades, med datum där det finns]</li>
+    <li>[Vad som ska hända, vem som gör det och till när]</li>
+  </ul>
+  <p>Några frågor hann vi inte gå igenom i dag: [kriterier för implantat / fördelning av traumafall och komplexa fall / den individuella studieplanen / kursen]. Kan vi hitta en tid för dem?</p>
+  <p>Säg till om jag har missuppfattat något.</p>
+  <p>Med vänliga hälsningar,<br>Gabriela</p>
+</div>
+<div class="why"><strong>Always sent, the same day, to those who were there.</strong> If they address everything, this records it. If things are left open, they go in as open questions rather than a separate complaint. Warm, factual, no commentary. Then a copy to Läkarförbundet.<br><br>
+(Subject: Summary of the meeting on 7 October. Thanks for the meeting today. As I understood it, we agreed the following: [...]. Some questions we didn't get to today: [...]. Can we find a time for them? Let me know if I've misunderstood anything.)</div>
+
+<h2>Background she carries in her head</h2>
+<ul class="checklist">
+  <li>Their own June assessment says ST year 1; Aida's January notes put implants in the autumn of year 1.</li>
+  <li>The June protokoll copied the spring text word for word, with no new observation.</li>
+  <li>Between the two she cleared the signing queue, used SBAR, was on time and presented a study plan.</li>
+  <li>The implant pause has no reason, no criteria and no review; her surgical technique is praised in the same documents.</li>
+  <li>No individual plan was ever made; the review of her Romanian documentation was started on 27 January 2025 and never finished.</li>
+  <li>She has already done two harder national courses without her level being questioned.</li>
+  <li>She was taken off a planned complex operation on the day; an assistant has had the last six trauma cases.</li>
 </ul>
 
 <div class="flag">
-  <strong>Hold back:</strong> finding 12 and probably 11, which belong with the studierektor. Anything about a named colleague's attendance. Adam, his email, and anything from it. The department's reputation. None of these help in that room and all of them cost something.
+  <strong>Never raised by her tomorrow:</strong> Adam, Bari, the nurses, the "resign" story, the necrotising fasciitis case, Sami, the PRF decision, favouritism, any colleague by name, the whiteboard, the studierektor, escalation plans, the Romanian route, the department's reputation.
 </div>
 
 </div>
@@ -1761,120 +1766,118 @@ ul.todo .script {
 <div data-lang="sv">
 
 <div class="flag">
-  <strong>Vad den här sidan är.</strong> De släktskap som framträder när dokumenten läggs bredvid varandra, rangordnade efter hur svåra de är att besvara. Allt är byggt på klinikens egna handlingar: Aidas mötesanteckningar från den 27 januari 2025, de tre specialistkollegieprotokollen och klinikens utbildningsplan. Ingenting bygger på minne eller tyckande.<br><br>
-  <strong>Hur den används den 7/10.</strong> Inte som en lista att läsa upp. Välj högst tre. Ställ var och en som en fråga och sluta sedan prata. Värdet ligger i svaren, och flera av de här har inget bra svar.
+  <strong>Vårt sätt.</strong> Luta sig tillbaka och lyssna. Vara så varm som möjligt. Hålla med där de har rätt. Se till att hennes frågor ställs innan mötet tar slut. Skicka ett sammanfattningsmejl samma dag, oavsett hur det går, med det som lämnades öppet som öppna frågor.<br><br>
+  <strong>Varför det fungerar.</strong> Hennes mejl säger redan allt. Mötet behöver inte argumentera för det; det behöver låta dem svara, och sedan göra svaren till ett underlag.
 </div>
 
-<h2>Iakttagelserna</h2>
-
-<div class="finding">
-  <h3><span class="rank">1</span>Deras egen nivåbedömning lägger implantat till den här hösten</h3>
-  <span class="src">SK3 juni 2026 + Aidas anteckningar 27 jan 2025</span>
-  <p>Junikollegiet avslutas: <em>Bedömning sammanlagd aktuell utbildningsnivå: ST år 1.</em></p>
-  <p>Aidas anteckningar från första mötet beskriver vad år 1 innehåller: dentoalveolär kirurgi, opex, friläggningar, retrograda rotfyllningar, cystor, och sedan <em>hösten: implantat, benaugmentationer</em>, med c-op som tredje operatör.</p>
-  <p>Enligt klinikens egen klassificering är hon alltså ST år 1, och enligt klinikens eget år 1 hör implantat till hösten. Den här hösten.</p>
-  <p class="say">&rdquo;Om jag bedöms som ST år 1, och år 1 har implantat på hösten, då hör implantat enligt er egen bedömning hemma den här terminen. Vad missar jag?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">2</span>En områdesspecifik anmärkning blev en generell nedgradering genom kopiering</h3>
-  <span class="src">SK2 mot SK3</span>
-  <p>SK2 säger att hon inte når ST-nivå <em>gällande strukturerad bedömning, handläggning och rapportering av käkkirurgiska patienter</em>. Tre namngivna områden.</p>
-  <p>SK3 återger den texten ordagrant, lägger till en checklistegenomgång utan någon ny observation av hennes arbete, och avslutar med en oreserverad klassificering av hennes samlade utbildningsnivå.</p>
-  <p class="say">&rdquo;Bedömningstexten i juni är densamma som föregående, och genomgången innehåller inga nya observationer. Vad grundades nivåbedömningen på?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">3</span>Hon gick bakåt medan hon gjorde allt planen bad om</h3>
-  <span class="src">SK1 &rarr; SK2 &rarr; SK3</span>
-  <p>Augusti 2025: ST år 1, vilket stämde, hon var i år 1. VT 2026: under ST-nivå. Juni 2026: ST år 1 igen, nu i sitt andra år.</p>
-  <p>Mellan SK2 och SK3 arbetade hon igenom signeringskön, började använda SBAR, var i tid och förberedd till morgonrapport och presenterade en studieplan vid junikollegiet. Inget av det finns i juniprotokollet, och texten som kritiserar samma punkter står kvar oförändrad.</p>
-  <p class="say">&rdquo;Jag gjorde det planen bad om mellan mötena. Om bedömningstexten inte ändras när jag gör det, vad skulle ändra den?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">4</span>Implantatpausen har ingen grund någonstans i tre protokoll</h3>
-  <span class="src">SK1, SK2, SK3</span>
-  <p>Implantat nämns en gång i alla tre: <em>avvakta implantatpatienter</em>, tre ord i SK2:s åtgärdsplan. Ingen observation om hennes implantatarbete. Inget skäl. Inga kriterier för när det hävs. Inte uppföljt i juni.</p>
-  <p>SK1 nämner inte implantat alls; där står att hon ska fortsätta utveckla dentoalveolärkirurgi.</p>
-  <p>Samtidigt beskrivs hennes kirurgi positivt i båda de senare: förbättrad op-ex-teknik, benplastik, separation, god potential avseende kirurgiskt handlag.</p>
-  <p class="say">&rdquo;Vad vilar implantatpausen på, och vad behöver jag visa för att den ska hävas?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">5</span>De angivna påpekandena kan inte vara det implantat hänger på</h3>
-  <span class="src">SK2/SK3 + klinikens praxis</span>
-  <p>Anmärkningarna gäller strukturerad bedömning, inläsning i förväg, konsultationsgång, SBAR och medicinsk grundkompetens. Alla gäller samtliga patientkategorier. Ingen annan kategori är pausad.</p>
-  <p>Och kollegor utan läkarlegitimation sätter implantat rutinmässigt, så medicinsk kompetens kan inte vara grinden.</p>
-  <p class="say">&rdquo;Mina kollegor har inte läkarlegitimation och gör implantat. Vad är det med just implantat?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">6</span>Den individuella plan klinikens egna regler kräver blev aldrig till</h3>
-  <span class="src">Klinikens utbildningsplan + Jahan vid rekryteringen</span>
-  <p>Utbildningsplanen säger att den individuella studieplanen upprättas <em>snarast efter antagning</em>, utifrån ST-tandläkarens tidigare utbildning och erfarenhet, och revideras i slutet av varje termin, med resultat och överenskommelser dokumenterade. Ansvaret ligger på verksamhetschefen och den huvudansvariga handledaren.</p>
-  <p>Jahan sa att utkastet skulle anpassas tillsammans med Aida utifrån den rumänska ST-tiden, så att utbildningstiden skulle bli kortare. Det skedde aldrig.</p>
-  <p class="say">&rdquo;Utbildningsplanen säger att planen bygger på tidigare utbildning och revideras varje termin. Kan vi göra det nu?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">7</span>Bedömningen av hennes tidigare utbildning påbörjades och lämnades</h3>
-  <span class="src">Aidas anteckningar 27 jan 2025</span>
-  <p>Första raden vid första mötet: de gick igenom dokumentationen från Rumänien, den behövde kompletteras och sedan skrivas på av handledare. Anteckningarna listar också inskanning av hennes diplom, däribland Ethoss, alltså benregeneration.</p>
-  <p>Hennes implantatbakgrund var alltså känd från dag ett, och bedömningen av den har ett utpekat nästa steg som aldrig togs.</p>
-  <p class="say">&rdquo;Vi började gå igenom min rumänska dokumentation vid första mötet. Vad hände med den?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">8</span>Hon har redan gått två svårare nationella kurser</h3>
-  <span class="src">Kursmeriter</span>
-  <p>Rekonstruktion hos cancerpatienter och ortognatkirurgi, båda bland de åtta nationella fördjupningskurserna, båda betydligt mer komplexa än implantologi. Hennes nivå togs inte upp som hinder för någon av dem.</p>
-  <p class="say">&rdquo;Min nivå var inget hinder för rekonstruktions- eller ortognatkursen. Varför är den det för den här?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">9</span>Åtgärdsplanens klinikdelar rörde sig inte</h3>
-  <span class="src">SK3 junigenomgång</span>
-  <p>Av planen: genomgångarna med Anna Borg har påbörjats. Luftvägsdelen blev en terminsexamination som hon håller. De två medsittningarna bokar hon själv. Antikoagulantia ordnade hon själv med Sayf.</p>
-  <p>Och punkten om att handledargruppen skulle återkomma med en plan för den medicinska delen står ordagrant som i föregående protokoll.</p>
-  <p class="say">&rdquo;Kan vi gå igenom vilka delar som är mina att ordna och vilka som är klinikens, och sätta datum på var och en?&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">10</span>Återkoppling kommer bara vid formella bedömningar</h3>
-  <span class="src">SK1 mot SK2</span>
-  <p>SBAR, de osignerade anteckningarna och morgonrapporten dyker alla upp först i SK2, ungefär ett år in. Inget av det finns i SK1. Vart och ett hade kunnat rättas samma dag.</p>
-  <p>Bedömning och återkoppling under ST ska vara löpande, inte bara vid terminsavstämningarna.</p>
-  <p class="say">&rdquo;Jag hör hellre sådant när det händer än på ett kollegium en termin senare.&rdquo;</p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">11</span>Nästan ingenting i protokollen är faktiskt skattat</h3>
-  <span class="src">Alla tre protokoll</span>
-  <p>I de tre dokumenten är den enda ikryssade rutan förmåga att hantera stress. Raden övergripande skattning har aldrig fyllts i. Journaldokumentation är markerad <em>ej bedömt</em>. Klinisk bedömning hänvisar till andra rader i stället för att bedömas.</p>
-  <p class="say"><em>Kontrollera originalformateringen innan den här används. Hör hemma hos studierektorn snarare än i rummet.</em></p>
-</div>
-
-<div class="finding">
-  <h3><span class="rank">12</span>Skalan är fel för hennes specialitet</h3>
-  <span class="src">Alla tre protokoll</span>
-  <p>Raden övergripande skattning graderar mot <em>håller ej nivå legitimerad läkare</em>. Hon är ST-tandläkare i en odontologisk specialitet. Flera anmärkningar ligger helt utanför målbeskrivningen för käkkirurgi: självständig handläggning av primärvårdspatienter, medicinsk grundkompetens, primärjour i läkarroll.</p>
-  <p class="say">&rdquo;Vilka delmål i målbeskrivningen för käkkirurgi hör de här punkterna till?&rdquo;</p>
-  <p><em>Studierektorsmaterial. I rummet låter det som en formalitet; för en studierektor för tandläkarnas specialistutbildning är det ett kategorifel.</em></p>
-</div>
-
-<h2>Hur mötet körs</h2>
+<h2>Innan hon går in</h2>
 <ul class="checklist">
-  <li><strong>Välj tre, inte tolv.</strong> Punkt 1, 4 och 8 är starkast och hänger ihop: deras egen bedömning lägger implantat nu, pausen saknar dokumenterad grund, och hennes nivå var aldrig ett hinder för svårare kurser.</li>
-  <li><strong>Fråga, sedan tyst.</strong> Var och en är formulerad som en fråga av ett skäl. Tystnaden efteråt ger mer än någon följdfråga.</li>
-  <li><strong>Ta inte med papper.</strong> Kunna datumen. Papper på bordet gör samtalet till en förhörssituation.</li>
-  <li><strong>Medge snabbt där de har rätt.</strong> Varje medgiven punkt krämper ihop marken de har kvar.</li>
-  <li><strong>Gå därifrån med ett datum.</strong> Ett varmt möte utan datum är inget resultat.</li>
-  <li><strong>Skriv sammanfattningsmejlet samma dag.</strong> Vad som togs upp, vad som bestämdes, till när.</li>
+  <li><strong>Ett anteckningsblock.</strong> Allt med datum, namn eller åtaganden skrivs ner.</li>
+  <li><strong>Kunna datumen.</strong> Första handledarmötet 27 januari 2025. Protokoll augusti 2025, våren 2026, juni 2026. Hennes mejl 20 september.</li>
+  <li><strong>Notera vilka som är där.</strong> Någon oväntad, till exempel från HR, är ett skäl att använda raden om facket i tabellen nedan.</li>
+  <li><strong>Telefonen på ljudlöst, skärmen nedåt.</strong></li>
+  <li><strong>Hon kan pausa när som helst:</strong> <em>&rdquo;Får jag tänka på det och återkomma?&rdquo;</em></li>
+</ul>
+
+<h2>1. Början: låt dem leda</h2>
+<div class="finding">
+  <p>Hon låter dem öppna. Finns det ett naturligt läge för henne att säga något först:</p>
+  <p class="say">&rdquo;Tack för att vi ses. Jag har skickat ett mejl med några frågor, men jag lyssnar gärna först.&rdquo;</p>
+</div>
+
+<h2>2. Medan hon lyssnar: håll med om det konkreta</h2>
+<div class="finding">
+  <p>Att hålla med där de har rätt avväpnar och kostar henne ingenting. Hon håller med om enskilda punkter, aldrig om helhetsomdömet som &rdquo;når inte ST-nivå&rdquo; eller &rdquo;ST år 1&rdquo;.</p>
+  <p class="say">&rdquo;Det har du rätt i.&rdquo;</p>
+  <p class="say">&rdquo;Det tar jag till mig.&rdquo;</p>
+  <p class="say">&rdquo;Ni har rätt i att SBAR var något jag behövde. Det använder jag nu.&rdquo;</p>
+  <p class="say">&rdquo;Det förstår jag, och det har jag arbetat med sedan i våras.&rdquo;</p>
+  <p class="say">&rdquo;Har du ett exempel, så att jag vet exakt vad jag ska fokusera på?&rdquo;</p>
+</div>
+
+<h2>3. Före slutet: frågorna som inte tagits upp</h2>
+<div class="finding">
+  <p>När mötet börjar röra sig mot slutet:</p>
+  <p class="say">&rdquo;Innan vi avslutar: det finns några frågor från mitt mejl som vi inte har hunnit med. Kan vi ta dem nu, eller boka en tid för dem?&rdquo;</p>
+  <p>Sedan bara de som inte redan tagits upp:</p>
+  <p><strong>Implantat:</strong> <em>&rdquo;Vilka kriterier gäller för att jag ska kunna börja med implantat, och när kan vi stämma av det?&rdquo;</em></p>
+  <p><strong>Komplexa fall och trauma:</strong> <em>&rdquo;Hur fördelas komplexa fall och traumafall till ST?&rdquo;</em></p>
+  <p><strong>Den individuella planen:</strong> <em>&rdquo;Kan vi ta fram min individuella studieplan, inklusive hur min ST-tid från Rumänien räknas? När kan vi sätta oss och göra den?&rdquo;</em></p>
+  <p><strong>Kursen:</strong> <em>&rdquo;Vilken motsvarande kurs är det, och när ges den?&rdquo;</em></p>
+</div>
+
+<h2>Förslag: det jag ändå skulle försöka få med</h2>
+<ul class="checklist">
+  <li><strong>Ett datum för allt som utlovas.</strong> <em>&rdquo;Tack. Till när?&rdquo;</em></li>
+  <li><strong>Protokollet.</strong> <em>&rdquo;Jag skulle gärna vilja få protokollet efter mötet och ha möjlighet att kommentera om något saknas.&rdquo;</em></li>
+  <li><strong>Vem ansvarar för vad.</strong> <em>&rdquo;Vem ansvarar för vilka delar av min utbildning, och vem vänder jag mig till om jag inte får tillgång till de moment jag behöver?&rdquo;</em></li>
+  <li><strong>Nästa avstämning.</strong> <em>&rdquo;När ses vi nästa gång för att stämma av?&rdquo;</em></li>
+  <li><strong>Sammanfatta högt i slutet.</strong> <em>&rdquo;Får jag sammanfatta vad vi kommit fram till, så att vi har samma bild?&rdquo;</em></li>
+  <li><strong>Om stämningen varit sval:</strong> <em>&rdquo;Jag vill att ni ska veta att jag fortfarande vill få det här att fungera här.&rdquo;</em></li>
+</ul>
+
+<h2>Svar redo, om de tar upp något</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>De tar upp</th><th>Hon säger</th></tr></thead>
+  <tbody>
+    <tr><td>Adam, HR, rykten, förtroende</td><td><em>&rdquo;Adam hörde av sig till mig i april 2025, kort efter att jag hade börjat, men jag svarade honom inte förrän i september i år. Nu har han skickat ett privat meddelande från mig till HR utan att fråga mig. Jag har pratat med HR och förtydligat, och jag vill gärna att vi fokuserar på min utbildning.&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Du når inte ST-nivå&rdquo; / ST år 1</td><td><em>&rdquo;Det tar jag till mig. Vilka delmål gäller det, och vad behöver jag visa för att det ska ändras?&rdquo;</em> <strong>Ta till dig, håll inte med om omdömet.</strong></td></tr>
+    <tr><td>&rdquo;Du tar inte emot återkoppling&rdquo; / &rdquo;var mer ödmjuk&rdquo;</td><td><em>&rdquo;Det hoppas jag inte. Sedan i våras har jag arbetat igenom signeringskön, använder SBAR, är i tid till morgonrapporten och har tagit fram en studieplan. Om något fortfarande inte stämmer vill jag hellre höra det nu, med exempel.&rdquo;</em></td></tr>
+    <tr><td>SBAR, signering, morgonrapport</td><td><em>&rdquo;Ni har rätt i att det var något jag behövde. Det har jag åtgärdat.&rdquo;</em></td></tr>
+    <tr><td>Strukturerad bedömning, inläsning, konsultation</td><td><em>&rdquo;Det har jag arbetat med. Har ni ett aktuellt exempel, så att jag vet vad jag ska fokusera på?&rdquo;</em></td></tr>
+    <tr><td>Medicinsk kompetens / primärvård</td><td><em>&rdquo;Jag tar gärna till mig det. Vilket delmål i målbeskrivningen för käkkirurgi hör det till?&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Du är inte redo för implantat&rdquo; / patientsäkerhet</td><td><em>&rdquo;Det förstår jag. Vad behöver jag visa, och till när? Jag börjar gärna med fall som gås igenom med specialist i förväg och med handledning på de första.&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Varför är kursen så viktig för dig?&rdquo;</td><td><em>&rdquo;För mig handlar det om mer än själva kursen. Det skulle ge mig en trygghet i att min ST är på rätt spår och följer en normal väg. Det senaste året har jag ofta känt mig osäker på var jag står, och det här skulle vara ett tydligt tecken på att vi går framåt tillsammans. Och om det inte går nu, skulle ett namn och ett datum för en motsvarande kurs ge mig samma trygghet.&rdquo;</em> <strong>Sägs varmt, som en förklaring, inte ett klagomål. Inget om Sayf eller rättvisa.</strong></td></tr>
+    <tr><td>&rdquo;Men är du redo för kursen?&rdquo;</td><td><em>&rdquo;Jag har redan gått kurserna i rekonstruktion och ortognatkirurgi, och jag har en sexmånaders utbildning i implantologi sedan tidigare. Kursen är teoretisk, så den påverkar inte när jag börjar med implantatpatienter.&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Vi hittar en annan kurs senare&rdquo;</td><td><em>&rdquo;Vilken kurs är det, och när ges den?&rdquo;</em> Vet de inte: <em>&rdquo;Kan ni återkomma med namn och datum senast [datum]?&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Ditt mejl var långt / formellt / varför skriftligt?&rdquo;</td><td><em>&rdquo;Jag ville vara tydlig och ha allt samlat på ett ställe. Jag pratar hellre om det här än skriver.&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Du har gått till studierektorn / facket / HR&rdquo;</td><td><em>&rdquo;Jag ville förstå vad som är normalt i en ST. Jag vill helst lösa det här tillsammans med er.&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Varför jämför du dig med assistenten?&rdquo;</td><td><em>&rdquo;Jag jämför mig inte med honom. Jag frågar hur fördelningen av fall till ST går till.&rdquo;</em></td></tr>
+    <tr><td>Att rätta en kollega / operationen med Sami</td><td><em>&rdquo;Det förstår jag. Framöver tar jag sådant direkt och enskilt med personen.&rdquo;</em> <strong>Kanalen, inte att hon hade fel.</strong></td></tr>
+    <tr><td>Meddelandet om &rdquo;tjuv&rdquo; till Aida</td><td><em>&rdquo;Jag reagerade starkt då och skulle inte uttrycka mig så i dag.&rdquo;</em></td></tr>
+    <tr><td>Fallet med nekrotiserande fasciit</td><td><em>&rdquo;Jag gjorde det jag bedömde var rätt och följde rutinen. Jag tar gärna emot konkret återkoppling om vad jag kunde ha gjort annorlunda.&rdquo;</em> <strong>Tas aldrig upp av henne. Diskuteras aldrig.</strong></td></tr>
+    <tr><td>&rdquo;Din rumänska utbildning är inte jämförbar&rdquo;</td><td><em>&rdquo;Det förstår jag. Jag ber bara att den bedöms mot delmålen.&rdquo;</em></td></tr>
+    <tr><td>Jahan: &rdquo;Jag lovade aldrig en kortare ST&rdquo;</td><td><em>&rdquo;Processen för tillgodoräknande påbörjades efter att jag började. Jag vill gärna förstå vad som behövs för att återuppta den.&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Tänker du sluta?&rdquo;</td><td><em>&rdquo;Nej. Jag vill få det här att fungera här.&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Hur mår du?&rdquo;</td><td><em>&rdquo;Det har varit en tuff period, men jag vill få det här att fungera.&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Vi återkommer&rdquo;</td><td><em>&rdquo;Tack. Till när?&rdquo;</em></td></tr>
+    <tr><td>&rdquo;Det hör inte till det här mötet&rdquo;</td><td><em>&rdquo;Då vill jag gärna veta när vi kan gå igenom det.&rdquo;</em></td></tr>
+    <tr><td>HR närvarande, eller disciplinär ton</td><td><em>&rdquo;Om vi ska prata om det här vill jag gärna göra det vid ett annat tillfälle, med någon från Läkarförbundet närvarande.&rdquo;</em></td></tr>
+    <tr><td>Höjda röster, personliga kommentarer</td><td>Möt det inte. <em>&rdquo;Jag tror vi ska fortsätta det här en annan gång.&rdquo;</em> Gå artigt, anteckna samma timme.</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Varje svar sägs en gång, lugnt, och sedan slutar hon prata.</p>
+
+<h2>Samma dag: sammanfattningsmejlet</h2>
+<div class="email">
+  <div class="subject"><strong>Ämne:</strong> Sammanfattning av mötet den 7 oktober</div>
+  <p>Hej [Aida och Jahan],</p>
+  <p>Tack för mötet i dag. Så som jag uppfattade det kom vi fram till följande:</p>
+  <ul>
+    <li>[Det viktigaste som sades, med datum där det finns]</li>
+    <li>[Vad som ska hända, vem som gör det och till när]</li>
+  </ul>
+  <p>Några frågor hann vi inte gå igenom i dag: [kriterier för implantat / fördelning av traumafall och komplexa fall / den individuella studieplanen / kursen]. Kan vi hitta en tid för dem?</p>
+  <p>Säg till om jag har missuppfattat något.</p>
+  <p>Med vänliga hälsningar,<br>Gabriela</p>
+</div>
+<div class="why"><strong>Skickas alltid, samma dag, till dem som var där.</strong> Tar de upp allt dokumenterar mejlet det. Lämnas något öppet står det som öppna frågor, inte som ett separat klagomål. Sedan en kopia till Läkarförbundet.</div>
+
+<h2>Bakgrund hon bär med sig</h2>
+<ul class="checklist">
+  <li>Deras egen junibedömning säger ST år 1; Aidas januarianteckningar lägger implantat på hösten år 1.</li>
+  <li>Juniprotokollet kopierade vårens text ordagrant, utan ny observation.</li>
+  <li>Mellan dem arbetade hon igenom signeringskön, använde SBAR, var i tid och presenterade en studieplan.</li>
+  <li>Implantatpausen saknar skäl, kriterier och omprövning; hennes teknik beröms i samma dokument.</li>
+  <li>Ingen individuell plan har upprättats; genomgången av hennes rumänska dokumentation påbörjades 27 januari 2025 och blev aldrig klar.</li>
+  <li>Hon har redan gått två svårare nationella kurser utan att hennes nivå ifrågasattes.</li>
+  <li>Hon togs bort från en planerad komplex operation samma dag; en assistent har haft de senaste sex traumafallen.</li>
 </ul>
 
 <div class="flag">
-  <strong>Håll tillbaka:</strong> punkt 12 och troligen 11, som hör hemma hos studierektorn. Allt om en namngiven kollegas närvaro. Adam, hans mejl och allt därifrån. Klinikens rykte. Inget av det hjälper i det rummet och allt kostar något.
+  <strong>Tas aldrig upp av henne i morgon:</strong> Adam, Bari, sköterskorna, berättelsen om uppsägningen, fasciitfallet, Sami, PRF-beslutet, favorisering, någon kollega vid namn, whiteboarden, studierektorn, eskaleringsplaner, den rumänska vägen, klinikens rykte.
 </div>
 
 </div>
@@ -1884,113 +1887,122 @@ ul.todo .script {
 <div data-lang="en" class="on">
 
 <div class="flag">
-  <strong>The point of this list.</strong> Nothing here depends on anyone at the clinic changing their mind. Each step either produces a fact she doesn't have, puts someone outside the clinic in the picture, or creates a record. That is what shifts this over months.<br><br>
-  <strong>If she only does three things:</strong> call the union tomorrow, write to the studierektor once Aida has answered or failed to, and confirm every conversation by email the same day.
+  <strong>Where things stand.</strong> The letter to Aida went on Sunday 20 September and has had no written reply from anyone in eleven days. The studierektor has had a week with no reply. L&auml;karf&ouml;rbundet has answered and is taking it seriously. The warm message to Jahan has had no reply. And on the day of a complex operation, Aida took her off the list and brought in Sami instead.<br><br>
+  <strong>What that most likely means.</strong> They intend to answer verbally on 7 October, where nothing is written down. So the next ten days are about three things: putting the letter on that meeting's agenda in writing, getting the union involved before it, and making sure whatever is said in the room ends up in an email the same day.<br><br>
+  <strong>The course.</strong> Let it go, consciously. The refusal and the silence are both on record, and that is worth more later than the place would have been.
 </div>
 
 <div class="day">
-  <h3>Monday</h3>
-  <p class="when">The letter is with Aida. Don't chase it today.</p>
+  <h3>Done</h3>
+  <ul class="todo done">
+    <li><strong>Letter to Aida, Jahan and Sami</strong>, Sunday 20 September.</li>
+    <li><strong>Letter to the studierektor</strong>, Monday 21 September, leading with the course.</li>
+    <li><strong>L&auml;karf&ouml;rbundet has replied.</strong> They asked the right questions and called it serious.</li>
+    <li><strong>Joined Tandl&auml;karf&ouml;rbundet</strong> on Sunday. Not yet contacted centrally.</li>
+    <li><strong>The warm message to Jahan.</strong> Not to be chased. It was sent to be received, not answered.</li>
+    <li><strong>Decided not to send the course note to Jahan.</strong> Retired: its reason was that Aida was away, and she is back.</li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>This week</h3>
+  <p class="when">Before 7 October. Short, specific, nothing emotional.</p>
   <ul class="todo">
-    <li><strong>Call L&auml;karf&ouml;rbundet.</strong><span class="prio">first</span>
-      <span class="detail">She emailed on Wednesday and has had no reply. Ask for an ombudsman, not membership services. Say she has an employment matter with a meeting on 7 October. Membership is over six months old, so no qualifying period applies there.</span>
-      <span class="script">"Will you represent me? Is there any question about eligibility given I'm employed on the dental side? Can someone attend a meeting on 7 October?"</span>
-      <span class="detail">If they hesitate on eligibility, ask for that in writing. A written refusal is useful in itself: it documents her classification as a dental ST, which is the foundation of the delm&aring;l argument.</span>
+    <li><strong>Write down today's operation.</strong><span class="prio">today</span>
+      <span class="detail">When it was scheduled, who was on the list, when it changed from Jahan to Aida, what Aida said at morning report, who heard it, and that Sami's own patients were rescheduled. Dates and facts, no interpretation.</span>
     </li>
-    <li><strong>Call Tj&auml;nstetandl&auml;karna.</strong>
-      <span class="detail">Membership went in on Sunday. Ask what help is available from day one and what is subject to a qualifying period, given the matter began before she joined. Mention that she joined L&auml;karf&ouml;rbundet on her manager's suggestion and has been paying dues to a union that may not be able to represent her.</span>
+    <li><strong>Reply to L&auml;karf&ouml;rbundet, with the update.</strong><span class="prio">key</span>
+      <span class="detail">The drafted answer to their five questions, plus two facts: eleven days without a written reply, and being taken off the operation. Attach the three protokoll, the 27 January notes, the draft plan and the email thread. Nothing from Adam.</span>
+      <span class="script">Ask directly: can someone attend on 7 October, or speak with me before it?</span>
     </li>
-    <li><strong>Ask the friend in J&ouml;nk&ouml;ping.</strong>
-      <span class="detail">Is registration still open, who handles it, what did her own clinic have to do, and are people from other clinics attending. Information only &mdash; she must not ask the friend to arrange anything or put her name forward.</span>
+    <li><strong>Put the letter on the meeting agenda.</strong><span class="prio">key</span>
+      <span class="detail">One line in the existing thread. It records the silence and means the meeting has to address the letter.</span>
+      <span class="script">"Hi Aida, I haven't had a reply to my email of 20 September. I assume we'll go through it on 7 October. Could you confirm it's on the agenda, and who will be attending?"</span>
     </li>
-    <li><strong>Email the course organiser herself.</strong>
-      <span class="detail">Short, from an ST-tandl&auml;kare at Link&ouml;ping: is there still a place, and what does the clinic need to do. A written answer from the organiser is worth far more than anything informal.</span>
+    <li><strong>Call the studierektor.</strong>
+      <span class="detail">010-103 88 96. Only to confirm the letter arrived. The rest is in the letter.</span>
     </li>
-    <li><strong>Move the documents out of her work account.</strong>
-      <span class="detail">The three protokoll, Aida's 27 January notes, the draft plan, the email thread, her own timeline. Personal storage. Work accounts can be closed at short notice.</span>
+    <li><strong>Send the HR request.</strong>
+      <span class="detail">Position she is employed as, a copy of the contract, anything in writing from recruitment about crediting the Romanian ST, and when the funding for the post runs to. The permanent-or-fixed-term question can go: it is permanent.</span>
+    </li>
+    <li><strong>Contact Tandl&auml;karf&ouml;rbundet centrally.</strong>
+      <span class="detail">Not through the local representative: he works in her manager's team. Ask the central office for advice and, if the matter becomes formal, for a representative outside her own line management.</span>
+    </li>
+    <li><strong>Optional: one neutral question about the operation.</strong>
+      <span class="detail">Only if she feels steady. In writing, framed as learning.</span>
+      <span class="script">"I saw I was taken off today's operation. I'd been looking forward to it. Was there a particular reason for the change, so I know for next time?"</span>
+    </li>
+    <li><strong>Move the documents off the work account.</strong>
+      <span class="detail">Protokoll, the 27 January notes, the draft plan, the email thread, her own notes.</span>
     </li>
   </ul>
 </div>
 
 <div class="day">
-  <h3>Tuesday</h3>
-  <p class="when">Only if Aida hasn't answered, or the answer is thin.</p>
+  <h3>7 October</h3>
   <ul class="todo">
-    <li><strong>Short note to Jahan.</strong><span class="prio">key</span>
-      <span class="detail">Four lines, not a second letter. He has already read the twelve points, so nothing is repeated. This is the first time he has to either act or visibly decline to.</span>
-      <span class="script">"I wrote to Aida on Monday about the implantology course and haven't had an answer. A place needs securing before 7 October. Could you decide this one, since it can't wait for the meeting?"</span>
+    <li><strong>Know what the meeting is.</strong>
+      <span class="detail">Who attends, and whether anything is being assessed. The agenda line asks this.</span>
     </li>
-    <li><strong>Write her own timeline.</strong>
-      <span class="detail">Dates and facts only, no interpretation. Start January 2025, the 27 January meeting, SK1, the PRF conversation, the surgery with Sami, the NF case, SK2, what she did after SK2, SK3, the course emails. For her, the union and the studierektor &mdash; not for the clinic.</span>
+    <li><strong>Three findings, not twelve.</strong>
+      <span class="detail">From the 7 October tab: their own assessment places implants this autumn; the pause has no recorded basis in three protokoll; her level was never an obstacle for two harder national courses.</span>
+    </li>
+    <li><strong>Ask, then stop.</strong>
+      <span class="detail">Every point as a question. The silence after it produces more than any follow-up.</span>
+    </li>
+    <li><strong>Leave with one dated commitment.</strong>
+      <span class="detail">A written plan, criteria for implants, or a date for either.</span>
+    </li>
+    <li><strong>Summary email the same day.</strong><span class="prio">key</span>
+      <span class="detail">If they answer only verbally, this is what turns their answers into a record. Three or four lines: what was discussed, what was agreed, by when.</span>
     </li>
   </ul>
 </div>
 
 <div class="day">
-  <h3>Wednesday to Friday</h3>
-  <p class="when">Once Aida has answered or clearly won't.</p>
+  <h3>After 7 October</h3>
+  <p class="when">Depending on what the meeting produces.</p>
   <ul class="todo">
-    <li><strong>Write to the studierektor.</strong><span class="prio">key</span>
-      <span class="detail">Carin Starkhammar Johansson, Region &Ouml;sterg&ouml;tland &mdash; verify she still holds the role before writing. Keep it to three documented facts and one question. No history, no personalities, no Adam, no colleagues.</span>
-      <span class="script">Classified ST year 1 at eighteen months. Implants paused for over a year with no reason recorded in any of three protokoll and no criteria for lifting it. No individual study plan ever drawn up with her. Is this normal, and what is the route when a national course is withheld?</span>
+    <li><strong>If nothing changes: an external review of the ST programme.</strong>
+      <span class="detail">Requested by the union, through the studierektor. Framed as a review of the programme, not a comparison with named colleagues. Either outcome helps: if the others also lack plans, it is systemic; if only she does, it is differential treatment, documented independently.</span>
     </li>
-    <li><strong>Write to HR.</strong>
-      <span class="detail">Neutral, factual request. What is she employed as, ST-tandl&auml;kare or ST-l&auml;kare? What does her contract say about training length? Is there documentation of what was agreed at recruitment about crediting her Romanian ST? When does the regional funding for the post end?</span>
-      <span class="detail">That last date is the real deadline in this whole situation and nobody has established it.</span>
+    <li><strong>Meeting request to Jahan</strong>, from the Revised 3 tab.
+      <span class="detail">Two things only he can answer: the recruitment agreement about the Romanian credit, and how she finishes within the funded period. Opens with "tell me what I need to do".</span>
     </li>
-    <li><strong>Find out who the skyddsombud is</strong> at Sinnescentrum.
-      <span class="detail">Not to contact yet. Just to know, in case the health side needs a route that doesn't depend on any union.</span>
+    <li><strong>The whiteboard question, in passing.</strong>
+      <span class="detail">"I saw my name on the board for HT 27 with a question mark. What's undecided for me?" A light way into her plan.</span>
+    </li>
+    <li><strong>Ask what Gustav actually did.</strong>
+      <span class="detail">One factual question to Adam or to Gustav: what made them set his date?</span>
+    </li>
+    <li><strong>Lars, with low expectations.</strong>
+      <span class="detail">He is on the MAL rota and old friends with Jahan. The drafted email is safe to send; expect nothing from it beyond an honest view.</span>
+    </li>
+    <li><strong>Verify the Romanian route quietly.</strong>
+      <span class="detail">In writing, from the Romanian side and Socialstyrelsen. A card to hold, never to mention.</span>
     </li>
   </ul>
 </div>
 
 <div class="day">
-  <h3>Before 7 October</h3>
+  <h3>Running</h3>
   <ul class="todo">
-    <li><strong>Ask for the documents in advance.</strong>
-      <span class="detail">The earlier protokoll and the checklist Aida referred to, and the current version of the individual study plan. She was invited to read them; asking is simply accepting.</span>
-    </li>
-    <li><strong>Establish what the meeting is.</strong>
-      <span class="detail">Aida calls 7 October an uppf&ouml;ljningsm&ouml;te; Jahan has referred to the specialistkollegium. Who attends, and is anything being assessed? She should not walk into something that can produce another level judgment without knowing.</span>
-    </li>
-    <li><strong>Pick three findings from the 7 October tab.</strong>
-      <span class="detail">Findings 1, 4 and 8. Their own assessment places implants this autumn; the pause has no recorded basis; her level was never an obstacle for two harder national courses.</span>
-    </li>
-    <li><strong>Ask the union to attend.</strong>
-      <span class="detail">Whichever one will. Even a refusal establishes her as a member with an active matter.</span>
-    </li>
-  </ul>
-</div>
-
-<div class="day">
-  <h3>Running, from now on</h3>
-  <ul class="todo">
-    <li><strong>Confirm every conversation by email the same day.</strong><span class="prio">habit</span>
-      <span class="detail">Three lines. What was discussed, what was agreed, by when. This is the single highest-value thing available to her, and it is what makes the next year different from the last two. A department that runs on unrecorded decisions cannot operate that way with someone who writes things down.</span>
-    </li>
-    <li><strong>Log everything as it happens.</strong>
-      <span class="detail">Dates, who was present, what was said. Same evening, not later.</span>
-    </li>
-    <li><strong>Verify the Romanian route.</strong>
-      <span class="detail">Written answers: can the suspension be lifted, how much Swedish time counts, what documentation is needed at reactivation, and does the Swedish clinic have to attest anything. Do it a year before it could be needed, not when it is.</span>
-    </li>
-    <li><strong>Keep the exit warm and silent.</strong>
-      <span class="detail">Lars in G&ouml;teborg, once the course question has resolved. A conversation about her reading of the situation, not a request for a job. Nothing about Adam, nothing about escalation.</span>
-    </li>
-    <li><strong>Get her health support that isn't you.</strong>
-      <span class="detail">F&ouml;retagsh&auml;lsov&aring;rden or v&aring;rdcentralen, arranged in a good week rather than a bad one. This runs for months and there will be worse weeks than this one.</span>
-    </li>
+    <li><strong>Three-line email after every conversation that matters.</strong><span class="prio">habit</span></li>
+    <li><strong>Log incidents the same evening.</strong> Dates, who was there, what was said.</li>
+    <li><strong>Twenty minutes a day on this, at a fixed time.</strong> Outside that, it is closed. The fight is long and the last few weeks' pace isn't survivable.</li>
+    <li><strong>Health support that isn't you.</strong> F&ouml;retagsh&auml;lsov&aring;rden or the v&aring;rdcentral, arranged on a good day.</li>
   </ul>
 </div>
 
 <h2>Never, in any room or any email</h2>
 <ul class="checklist">
-  <li>The necrotising fasciitis case. She was right and it cost her. It goes to the union, or eventually chefl&auml;karen, and not before she has representation.</li>
-  <li>Sami, the PRF ban, or any suggestion that she is being held back to protect a colleague. True or not, unprovable, and the fastest way to lose everything she has built.</li>
-  <li>Favouritism, or anything a named colleague did or didn't attend.</li>
-  <li>Adam, his emails, his attachments, his nicknames. Any of it reaching the clinic makes her situation a continuation of his.</li>
+  <li>The necrotising fasciitis case, Sami, the PRF decision, or any suggestion she is held back to protect a colleague.</li>
+  <li>Favouritism, or comparisons with named colleagues. An external review does that for her.</li>
+  <li>Adam: his messages, his attachments, his nicknames. Nothing forwarded, by her or through him.</li>
+  <li>The MAL rota, or who covers it. Especially not to Lars.</li>
+  <li>The Romanian route, to anyone at the clinic.</li>
   <li>The department's reputation, the failed recruitment, what the nurses say.</li>
-  <li>The Romanian route, to anyone at the clinic. Its entire value is that they don't know about it.</li>
+  <li>Anything sensitive to the local union representative. He is in her manager's team; assume it travels.</li>
 </ul>
 
 </div>
@@ -1998,113 +2010,103 @@ ul.todo .script {
 <div data-lang="sv">
 
 <div class="flag">
-  <strong>Poängen med listan.</strong> Ingenting här hänger på att någon på kliniken ändrar sig. Varje steg ger antingen ett faktum hon inte har, drar in någon utanför kliniken, eller skapar ett underlag. Det är det som flyttar det här över månader.<br><br>
-  <strong>Om hon bara gör tre saker:</strong> ring facket i morgon, skriv till studierektorn när Aida svarat eller låtit bli, och bekräfta varje samtal med ett mejl samma dag.
+  <strong>Läget.</strong> Brevet till Aida gick söndagen den 20 september och har inte fått något skriftligt svar från någon på elva dagar. Studierektorn har haft en vecka utan svar. Läkarförbundet har svarat och tar det på allvar. Det personliga mejlet till Jahan har inte besvarats. Och på dagen för en komplex operation tog Aida bort henne och satte in Sami i stället.<br><br>
+  <strong>Vad det troligen betyder.</strong> De tänker svara muntligt den 7 oktober, där ingenting skrivs ner. De kommande tio dagarna handlar därför om tre saker: att sätta brevet på mötets dagordning skriftligt, att få in facket före mötet, och att det som sägs i rummet hamnar i ett mejl samma dag.<br><br>
+  <strong>Kursen.</strong> Släpp den, medvetet. Nejet och tystnaden finns båda dokumenterade, och det är värt mer längre fram än platsen hade varit.
 </div>
 
 <div class="day">
-  <h3>Måndag</h3>
-  <p class="when">Brevet ligger hos Aida. Ligg inte på idag.</p>
+  <h3>Klart</h3>
+  <ul class="todo done">
+    <li><strong>Brevet till Aida, Jahan och Sami</strong>, söndag 20 september.</li>
+    <li><strong>Brevet till studierektorn</strong>, måndag 21 september, med kursen först.</li>
+    <li><strong>Läkarförbundet har svarat.</strong> De ställde rätt frågor och kallar det allvarligt.</li>
+    <li><strong>Medlem i Tandläkarförbundet</strong> sedan söndag. Inte kontaktat centralt än.</li>
+    <li><strong>Det personliga mejlet till Jahan.</strong> Ska inte följas upp. Det skickades för att tas emot, inte besvaras.</li>
+    <li><strong>Kursmejlet till Jahan skickades inte.</strong> Pensionerat: skälet var att Aida var borta, och hon är tillbaka.</li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Den här veckan</h3>
+  <p class="when">Före den 7 oktober. Kort, konkret, inget känslomässigt.</p>
   <ul class="todo">
-    <li><strong>Ring Läkarförbundet.</strong><span class="prio">först</span>
-      <span class="detail">Hon mejlade i onsdags utan svar. Be om en ombudsman, inte medlemsservice. Säg att hon har ett anställningsärende med ett möte den 7/10. Medlemskapet är äldre än sex månader, så ingen kvalifikationstid gäller där.</span>
-      <span class="script">&rdquo;Kommer ni att företräda mig? Finns det någon fråga om behörighet eftersom jag är anställd på tandläkarsidan? Kan någon delta på ett möte den 7/10?&rdquo;</span>
-      <span class="detail">Tvekar de om behörigheten: be om det skriftligt. Ett skriftligt nej är i sig användbart, det dokumenterar hennes status som ST-tandläkare.</span>
+    <li><strong>Skriv ner dagens operation.</strong><span class="prio">idag</span>
+      <span class="detail">När den planerades, vilka som stod på listan, när det ändrades från Jahan till Aida, vad Aida sa på morgonrapporten, vilka som hörde det, och att Samis egna patienter bokades om. Datum och fakta, ingen tolkning.</span>
     </li>
-    <li><strong>Ring Tjänstetandläkarna.</strong>
-      <span class="detail">Fråga vad som gäller från dag ett och vad som har kvalifikationstid, eftersom ärendet började innan hon gick med. Nämn att hon gick med i Läkarförbundet på chefens förslag.</span>
+    <li><strong>Svara Läkarförbundet, med uppdateringen.</strong><span class="prio">nyckel</span>
+      <span class="detail">Det färdiga svaret på deras fem frågor, plus två fakta: elva dagar utan skriftligt svar, och att hon togs bort från operationen. Bifoga de tre protokollen, anteckningarna från 27 januari, planutkastet och mejltråden. Inget från Adam.</span>
+      <span class="script">Fråga rakt: kan någon delta den 7 oktober, eller prata med mig innan?</span>
     </li>
-    <li><strong>Fråga kompisen i Jönköping.</strong>
-      <span class="detail">Är anmälan öppen, vem håller i den, vad behövde hennes klinik göra, kommer folk från andra kliniker. Bara information &mdash; be henne inte ordna något.</span>
+    <li><strong>Sätt brevet på dagordningen.</strong><span class="prio">nyckel</span>
+      <span class="detail">En rad i den befintliga tråden.</span>
+      <span class="script">&rdquo;Hej Aida, jag har inte fått något svar på mitt mejl från den 20 september. Jag utgår från att vi går igenom det den 7 oktober. Kan du bekräfta att det finns med på dagordningen, och vilka som deltar?&rdquo;</span>
     </li>
-    <li><strong>Mejla kursarrangören själv.</strong>
-      <span class="detail">Kort, från en ST-tandläkare i Linköping: finns det plats kvar och vad behöver kliniken göra. Ett skriftligt svar är värt mycket mer än något informellt.</span>
+    <li><strong>Ring studierektorn.</strong>
+      <span class="detail">010-103 88 96. Bara för att bekräfta att brevet kommit fram.</span>
     </li>
-    <li><strong>Flytta dokumenten från jobbkontot.</strong>
-      <span class="detail">De tre protokollen, Aidas anteckningar från 27 januari, planutkastet, mejltråden, hennes egen tidslinje.</span>
+    <li><strong>Skicka HR-förfrågan.</strong>
+      <span class="detail">Befattning, kopia av avtalet, eventuella skriftliga handlingar från rekryteringen om tillgodoräknande, och hur länge tjänsten är finansierad. Frågan om tillsvidare kan strykas: den är tillsvidare.</span>
+    </li>
+    <li><strong>Kontakta Tandläkarförbundet centralt.</strong>
+      <span class="detail">Inte via den lokala representanten: han arbetar i hennes chefs team. Be om råd centralt och, om ärendet blir formellt, om en företrädare utanför hennes egen linje.</span>
+    </li>
+    <li><strong>Frivilligt: en neutral fråga om operationen.</strong>
+      <span class="detail">Bara om hon känner sig stadig. Skriftligt, som en lärofråga.</span>
+      <span class="script">&rdquo;Jag såg att jag togs bort från dagens operation. Jag hade sett fram emot den. Fanns det ett särskilt skäl till ändringen, så att jag vet till nästa gång?&rdquo;</span>
+    </li>
+    <li><strong>Flytta dokumenten från jobbkontot.</strong></li>
+  </ul>
+</div>
+
+<div class="day">
+  <h3>Den 7 oktober</h3>
+  <ul class="todo">
+    <li><strong>Veta vad mötet är.</strong> Vilka som deltar, och om något bedöms.</li>
+    <li><strong>Tre punkter, inte tolv.</strong> Punkt 1, 4 och 8 från fliken 7 oktober.</li>
+    <li><strong>Fråga, sedan tyst.</strong></li>
+    <li><strong>Gå därifrån med ett datum.</strong> En skriftlig plan, kriterier för implantat, eller ett datum för något av dem.</li>
+    <li><strong>Sammanfattningsmejl samma dag.</strong><span class="prio">nyckel</span>
+      <span class="detail">Svarar de bara muntligt är det detta som gör deras svar till ett underlag.</span>
     </li>
   </ul>
 </div>
 
 <div class="day">
-  <h3>Tisdag</h3>
-  <p class="when">Bara om Aida inte svarat, eller svarat tunt.</p>
+  <h3>Efter den 7 oktober</h3>
   <ul class="todo">
-    <li><strong>Kort mejl till Jahan.</strong><span class="prio">nyckel</span>
-      <span class="detail">Fyra rader, inte ett nytt brev. Han har redan läst de tolv punkterna.</span>
-      <span class="script">&rdquo;Jag skrev till Aida i måndags om implantatkursen och har inte fått svar. En plats behöver säkras före den 7/10. Skulle du kunna avgöra just den frågan, eftersom den inte kan vänta till mötet?&rdquo;</span>
+    <li><strong>Om inget ändras: extern granskning av ST-utbildningen.</strong>
+      <span class="detail">Begärd av facket via studierektorn. Som en granskning av utbildningen, inte en jämförelse med namngivna kollegor. Båda utfallen hjälper henne.</span>
     </li>
-    <li><strong>Skriv sin egen tidslinje.</strong>
-      <span class="detail">Datum och fakta, ingen tolkning. För henne, facket och studierektorn &mdash; inte för kliniken.</span>
+    <li><strong>Mötesbegäran till Jahan</strong>, från fliken Reviderat 3.</li>
+    <li><strong>Whiteboardfrågan, i förbigående.</strong>
+      <span class="detail">&rdquo;Jag såg mitt namn på tavlan för HT 27 med ett frågetecken. Vad är oklart för mig?&rdquo;</span>
     </li>
+    <li><strong>Ta reda på vad Gustav faktiskt gjorde.</strong></li>
+    <li><strong>Lars, med låga förväntningar.</strong> Han står på MAL-schemat och är gammal vän med Jahan.</li>
+    <li><strong>Verifiera den rumänska vägen i tysthet.</strong></li>
   </ul>
 </div>
 
 <div class="day">
-  <h3>Onsdag till fredag</h3>
-  <p class="when">När Aida svarat eller tydligt inte tänker göra det.</p>
+  <h3>Löpande</h3>
   <ul class="todo">
-    <li><strong>Skriv till studierektorn.</strong><span class="prio">nyckel</span>
-      <span class="detail">Carin Starkhammar Johansson &mdash; kontrollera att hon fortfarande har uppdraget. Tre dokumenterade fakta och en fråga. Ingen historik, inga personer, ingen Adam, inga kollegor.</span>
-      <span class="script">Bedömd som ST år 1 efter arton månader. Implantat pausade i över ett år utan angivet skäl i något av tre protokoll och utan kriterier för när det hävs. Ingen individuell studieplan har någonsin upprättats med henne. Är det normalt, och vad är vägen när en nationell kurs hålls inne?</span>
-    </li>
-    <li><strong>Skriv till HR.</strong>
-      <span class="detail">Vad är hon anställd som? Vad säger avtalet om utbildningstid? Finns dokumentation om vad som avtalades vid rekryteringen om tillgodoräknande? När tar regionens finansiering av tjänsten slut?</span>
-      <span class="detail">Det sista datumet är den verkliga deadline i hela den här historien, och ingen har tagit reda på det.</span>
-    </li>
-    <li><strong>Ta reda på vem skyddsombudet är</strong> på Sinnescentrum.
-      <span class="detail">Inte för att kontakta än. Bara för att veta.</span>
-    </li>
-  </ul>
-</div>
-
-<div class="day">
-  <h3>Inför den 7 oktober</h3>
-  <ul class="todo">
-    <li><strong>Be om handlingarna i förväg.</strong>
-      <span class="detail">De tidigare protokollen och checklistan Aida hänvisade till, samt den aktuella individuella studieplanen.</span>
-    </li>
-    <li><strong>Ta reda på vad mötet faktiskt är.</strong>
-      <span class="detail">Aida kallar det uppföljningsmöte; Jahan har talat om specialistkollegiet. Vilka deltar, och bedöms något?</span>
-    </li>
-    <li><strong>Välj tre punkter från fliken 7 oktober.</strong>
-      <span class="detail">Punkt 1, 4 och 8.</span>
-    </li>
-    <li><strong>Be facket delta.</strong>
-      <span class="detail">Vilket som än vill. Även ett nej etablerar henne som medlem med ett pågående ärende.</span>
-    </li>
-  </ul>
-</div>
-
-<div class="day">
-  <h3>Löpande härefter</h3>
-  <ul class="todo">
-    <li><strong>Bekräfta varje samtal med mejl samma dag.</strong><span class="prio">vana</span>
-      <span class="detail">Tre rader. Vad som togs upp, vad som bestämdes, till när. Det enskilt mest värdefulla hon kan göra. En klinik som lever på oantecknade beslut kan inte göra det med någon som skriver ner saker.</span>
-    </li>
-    <li><strong>Anteckna allt när det händer.</strong>
-      <span class="detail">Datum, vilka som var där, vad som sades. Samma kväll.</span>
-    </li>
-    <li><strong>Verifiera den rumänska vägen.</strong>
-      <span class="detail">Skriftliga svar: kan vilandeförklaringen hävas, hur mycket svensk tid räknas, vilka handlingar behövs, och måste svenska kliniken intyga något.</span>
-    </li>
-    <li><strong>Håll utgången varm och tyst.</strong>
-      <span class="detail">Lars i Göteborg, när kursfrågan är avgjord. Ett samtal om hur hon läser situationen, inte en jobbförfrågan.</span>
-    </li>
-    <li><strong>Ordna stöd för hälsan som inte är du.</strong>
-      <span class="detail">Företagshälsovården eller vårdcentralen, ordnat en bra vecka och inte en dålig.</span>
-    </li>
+    <li><strong>Trerads mejl efter varje viktigt samtal.</strong><span class="prio">vana</span></li>
+    <li><strong>Anteckna händelser samma kväll.</strong></li>
+    <li><strong>Tjugo minuter om dagen, på en fast tid.</strong> Utanför det är det stängt.</li>
+    <li><strong>Stöd för hälsan som inte är du.</strong></li>
   </ul>
 </div>
 
 <h2>Aldrig, i något rum eller mejl</h2>
 <ul class="checklist">
-  <li>Fallet med nekrotiserande fasciit. Hon hade rätt och det kostade henne. Det går till facket, eller så småningom chefläkaren.</li>
-  <li>Sami, PRF-stoppet, eller att hon hålls tillbaka för att skydda en kollega. Obevisbart, och snabbaste sättet att förlora allt.</li>
-  <li>Favorisering, eller vad en namngiven kollega gick eller inte gick på.</li>
-  <li>Adam, hans mejl, hans bilagor, hans öknamn.</li>
+  <li>Fasciitfallet, Sami, PRF-beslutet, eller att hon hålls tillbaka för att skydda en kollega.</li>
+  <li>Favorisering, eller jämförelser med namngivna kollegor.</li>
+  <li>Adam: hans meddelanden, bilagor, öknamn. Inget vidarebefordrat.</li>
+  <li>MAL-schemat, eller vem som täcker det. Särskilt inte till Lars.</li>
+  <li>Den rumänska vägen, till någon på kliniken.</li>
   <li>Klinikens rykte, den misslyckade rekryteringen, vad sköterskorna säger.</li>
-  <li>Den rumänska vägen, till någon på kliniken. Hela dess värde är att de inte vet om den.</li>
+  <li>Något känsligt till den lokala fackliga representanten. Han finns i hennes chefs team; utgå från att det sprids.</li>
 </ul>
 
 </div>
@@ -2693,7 +2695,7 @@ ul.todo .script {
 </div>
 
 <div class="email">
-  <div class="subject"><strong>Ämne:</strong> ST-tandläkare i käkkirurgi, Linköping. Fråga om nationell implantatkurs i oktober</div>
+  <div class="subject"><strong>Ämne:</strong> Brådskande fråga om nationell implantatkurs i oktober, ST-tandläkare i käkkirurgi Linköping</div>
 
   <p>Hej Carin,</p>
 
@@ -2757,7 +2759,7 @@ ul.todo .script {
 </div>
 
 <div class="email">
-  <div class="subject"><strong>Subject:</strong> ST-tandl&auml;kare in k&auml;kkirurgi, Link&ouml;ping. Question about the national implantology course in October</div>
+  <div class="subject"><strong>Subject:</strong> Br&aring;dskande fr&aring;ga om nationell implantatkurs i oktober, ST-tandl&auml;kare i k&auml;kkirurgi Link&ouml;ping</div>
 
   <p>Hi Carin,</p>
 
@@ -2808,6 +2810,599 @@ ul.todo .script {
 
 <div class="flag">
   <strong>Afterwards:</strong> save the letter outside the work account and note the date. No reply within three days on the course: call. Once the course is settled, the other points remain, and they're patient.
+</div>
+
+</div>
+</div>
+
+<div data-page="v4">
+<div data-lang="en" class="on">
+
+<div class="flag">
+  <strong>What changed.</strong> The speech now opens by asking him what she needs to do, before any of the documented points. That disarms him, it's true, and it makes everything afterwards read as someone trying to get on with it rather than someone building a case.<br><br>
+  <strong>And it solves the other problem:</strong> getting the meeting at all. He has deflected twice, because both times she asked about her training in general, which is something he can send to Aida. The request below asks about two things only he can answer.
+</div>
+
+<h2>First, the request</h2>
+
+<div class="email">
+  <div class="subject"><strong>Subject:</strong> Kort m&ouml;te om min ST</div>
+
+  <p>Hej Jahan,</p>
+
+  <p>Skulle jag kunna f&aring; tjugo minuter med dig n&aring;gon g&aring;ng den h&auml;r eller n&auml;sta vecka?</p>
+
+  <p>Det g&auml;ller tv&aring; saker som jag tror bara du kan svara p&aring;. Den ena &auml;r &ouml;verenskommelsen vi gjorde innan jag b&ouml;rjade, om tillgodor&auml;knandet av min ST fr&aring;n Rum&auml;nien. Den andra &auml;r hur jag ska hinna bli klar inom den tid tj&auml;nsten &auml;r finansierad.</p>
+
+  <p>Jag t&auml;nker mig inget stort m&ouml;te, bara du och jag en kort stund.</p>
+
+  <p>Med v&auml;nliga h&auml;lsningar,<br>Gabriela</p>
+</div>
+
+<div class="why"><strong>Why this one is harder to deflect.</strong> Both items are his and only his. The recruitment agreement was made by him personally, so Aida cannot answer it and neither can HR. The funded period is a resource question, which the clinic's own utbildningsplan puts with the verksamhetschef. Sending her to a meeting with her huvudhandledare would not answer either.<br><br>
+"Nothing big, just you and me" removes the thing he avoided the last two times: a formal conversation with an audience.<br><br>
+<strong>Send it after the course is settled</strong>, either way. If he says yes to the course, this follows naturally. If he doesn't, she has more reason to ask, not less.</div>
+
+<h2>The speech</h2>
+
+<div class="speech">
+
+  <div class="block">
+    <p>"Thanks for the time. I'll keep it short.</p>
+    <p>I'll start with the simplest thing. All I want is an ordinary ST, at a normal pace. Tell me what I need to do, and I'll do it.</p>
+    <div class="note"><strong>This is the whole strategy in two sentences, and it goes first for a reason.</strong> It is true, it asks him for something, and it cannot be argued with. Everything she says afterwards is heard as someone trying to get on with it.<br><br>"Ordinary" rather than "fair": fair implies the current arrangement isn't, which invites him to defend it. Ordinary asks for nothing more than what everyone else has.<br><br>Say it and then be quiet. If he answers with something concrete, that is more than eighteen months of protokoll have produced, and she should write it down afterwards word for word.</div>
+    <div class="interrupt"><h4>If he cuts in here</h4><dl>
+      <dt>"You're doing fine, just keep going."</dt><dd>"Then I'd like to understand the June assessment, because it says something different. What would change it?"</dd>
+      <dt>"It's not that simple."</dt><dd>"I know. But if there's something specific, I'd rather have it than guess."</dd>
+      <dt>He names something real.</dt><dd>"Thank you. Can I come back to you in a month and show you how I've got on with that?" <em>Then do exactly that. It is the single best outcome available from this meeting.</em></dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>The first thing I wanted to ask you about is the agreement we made before I started. What we discussed was a shorter ST, because of the year and a half I'd already done in Romania. The process to recognise that was begun after I started, and then it stopped. I've never been told why, and you're the only person who can tell me where it stands.</p>
+    <div class="note"><strong>His alone.</strong> Not a clinical judgment, not the coordinator's, not HR's. Say the last clause plainly and stop.</div>
+    <div class="interrupt"><h4>If he cuts in here</h4><dl>
+      <dt>"That's Socialstyrelsen's decision."</dt><dd>"I understand. But the application goes through the clinic and it stopped here. What's needed to restart it?"</dd>
+      <dt>"We were waiting for documents from you."</dt><dd>"Tell me which and you'll have them this week." <em>Write it down. This is a good answer.</em></dd>
+      <dt>"I don't remember promising that."</dt><dd>"The process was started after I began. I'd like to understand what it was for, if it wasn't that."</dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>The second is the time. In my plan, implants came at the end of year one. I'm in my second year and haven't started, and the June assessment puts me at ST year one. I'm not asking you to revisit that assessment. I'm asking what the plan is from here to finishing, and whether four years is still realistic.</p>
+    <div class="note"><strong>She explicitly declines to fight the assessment</strong>, which removes his easiest counter and leaves only the question he can't answer without producing a plan. "Whether four years is still realistic" is deliberately modest and very hard to answer with nothing.</div>
+    <div class="interrupt"><h4>If he cuts in here</h4><dl>
+      <dt>"That's Aida's area."</dt><dd>"The plan is. But the resources sit with you, and so does the time the post is funded for."</dd>
+      <dt>"You're not ready for implants."</dt><dd>"Then what do I need to show, and by when?" <em>Back to the opening question. Everything returns there.</em></dd>
+      <dt>"These things take the time they take."</dt><dd>"I understand. I'd still like to know whether four years is realistic, because I've been planning on it."</dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>I should also say something about how things reach me. I never had an introduction when I arrived, and SBAR is the clearest example: nobody mentioned it for months, and then it came up at a kollegium as part of an assessment of my level. I fixed it the same week. I'd much rather hear that kind of thing when it happens.</p>
+    <div class="note"><strong>Short, factual, no grievance.</strong> It explains the pattern without accusing anyone and it supports the opening question: she acts on things when she is told them.</div>
+  </div>
+
+  <div class="block">
+    <p>I want to be clear about one thing. What I find difficult here isn't the work or the demands of the ST. It's not knowing where I stand between these meetings. <em>[one true, concrete detail]</em> That has started to affect my health. I'm telling you as a work environment matter, not as a complaint about anyone.</p>
+    <div class="note"><strong>Once, evenly, then move on.</strong> If he offers f&ouml;retagsh&auml;lsov&aring;rden, accept. If he suggests reduced hours or time off, decline that framing: less work is not the problem.</div>
+  </div>
+
+  <div class="block">
+    <p>And I'll be honest with you. When I started, it was brought to my attention that not everyone's time in this department had been easy. I decided that was their experience and not necessarily mine, and that I was going to commit to this place. I still think that was the right call, and I'd very much like not to end up where they did.</p>
+    <p>I'm not looking to go anywhere. I just want to get on with it.</p>
+    <div class="note"><strong>Commitment, not loyalty.</strong> She is not offering to keep quiet and she should not, because she may well be writing to the studierektor next week. "I just want to get on with it" is true and promises nothing she would have to break.<br><br>If he asks who told her: <em>"I'd rather not say, and I don't think it matters. I'm asking about my own situation."</em></div>
+  </div>
+
+  <div class="block">
+    <p>So, two things I'm asking you for.</p>
+    <ol class="asks">
+      <li>Where the recognition of my Romanian time stands, and what's needed to restart it.</li>
+      <li>A plan showing how I complete, including when implants start. In writing, so we're both working from the same thing.</li>
+    </ol>
+    <p>And if you can tell me roughly when I'll have those, I'll leave it with you until then.</p>
+    <div class="note"><strong>The last line is the most important sentence in the meeting.</strong> It asks for a date and offers him something real in return: she stops raising it until then. He can accept that without conceding anything, and it turns a conversation into a deadline.</div>
+    <div class="interrupt"><h4>If he cuts in here</h4><dl>
+      <dt>"I'll look into it."</dt><dd>"Thank you. When should I check back?" <em>Ask twice if necessary, warmly. Do not leave without a date.</em></dd>
+      <dt>"Let's take it at the kollegium."</dt><dd>"I'd rather have the plan before then, so we have something to work from."</dd>
+      <dt>"You're being very formal."</dt><dd>"I've found things get lost otherwise. I'd rather we both have the same version."</dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>If I've got any of this wrong, I'd rather know than keep guessing.</p>
+    <p>Thank you."</p>
+  </div>
+
+</div>
+
+<p class="pause">&mdash; then stop talking &mdash;</p>
+
+<div class="flag">
+  <strong>Within the hour:</strong> <em>"Thanks for the time today. As I understood it: [what he said], and [what happens next] by [date]. Let me know if I've got anything wrong."</em><br><br>
+  If he answered the opening question with anything concrete, that goes in the email too, in his words. It becomes the standard she is working to, and the thing to point at in three months.
+</div>
+
+</div>
+
+<div data-lang="sv">
+
+<div class="flag">
+  <strong>Vad som ändrats.</strong> Talet inleds nu med att hon frågar vad hon behöver göra, innan någon av de dokumenterade punkterna. Det avväpnar honom, det är sant, och det gör att allt efteråt läses som någon som vill komma vidare i stället för någon som bygger ett ärende.<br><br>
+  <strong>Och det löser det andra problemet:</strong> att överhuvudtaget få mötet. Han har skjutit undan det två gånger, eftersom hon båda gångerna frågade om sin utbildning i allmänhet, vilket han kan skicka till Aida. Begäran nedan gäller två saker som bara han kan svara på.
+</div>
+
+<h2>Först begäran</h2>
+
+<div class="email">
+  <div class="subject"><strong>Ämne:</strong> Kort möte om min ST</div>
+
+  <p>Hej Jahan,</p>
+
+  <p>Skulle jag kunna få tjugo minuter med dig någon gång den här eller nästa vecka?</p>
+
+  <p>Det gäller två saker som jag tror bara du kan svara på. Den ena är överenskommelsen vi gjorde innan jag började, om tillgodoräknandet av min ST från Rumänien. Den andra är hur jag ska hinna bli klar inom den tid tjänsten är finansierad.</p>
+
+  <p>Jag tänker mig inget stort möte, bara du och jag en kort stund.</p>
+
+  <p>Med vänliga hälsningar,<br>Gabriela</p>
+</div>
+
+<div class="why"><strong>Varför den här är svårare att skjuta undan.</strong> Båda sakerna är hans och bara hans. Överenskommelsen gjorde han själv, så varken Aida eller HR kan svara. Den finansierade tiden är en resursfråga, som klinikens egen utbildningsplan lägger på verksamhetschefen.<br><br>
+&rdquo;Inget stort möte, bara du och jag&rdquo; tar bort det han undvek de två förra gångerna.<br><br>
+<strong>Skicka den när kursen är avgjord</strong>, hur det än går.</div>
+
+<h2>Talet</h2>
+
+<div class="speech">
+
+  <div class="block">
+    <p>&rdquo;Tack för att du tar dig tid. Jag ska fatta mig kort.</p>
+    <p>Jag börjar med det enklaste. Allt jag vill ha är en vanlig ST, i normal takt. Säg vad jag behöver göra, så gör jag det.</p>
+    <div class="note"><strong>Hela strategin i två meningar, och den kommer först av ett skäl.</strong> Den är sann, den ber honom om något, och den går inte att bemöta.<br><br>&rdquo;Vanlig&rdquo; och inte &rdquo;rättvis&rdquo;: rättvis antyder att det nuvarande inte är det, vilket bjuder in honom att försvara det.<br><br>Säg det och var sedan tyst. Svarar han med något konkret är det mer än arton månaders protokoll har gett.</div>
+    <div class="interrupt"><h4>Om han avbryter här</h4><dl>
+      <dt>&rdquo;Det går ju bra, fortsätt bara.&rdquo;</dt><dd>&rdquo;Då vill jag förstå junibedömningen, för den säger något annat. Vad skulle ändra den?&rdquo;</dd>
+      <dt>&rdquo;Det är inte så enkelt.&rdquo;</dt><dd>&rdquo;Jag vet. Men finns det något konkret vill jag hellre ha det än gissa.&rdquo;</dd>
+      <dt>Han nämner något verkligt.</dt><dd>&rdquo;Tack. Får jag återkomma om en månad och visa hur det gått?&rdquo; <em>Gör sedan precis det.</em></dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>Det första jag ville fråga om är överenskommelsen vi gjorde innan jag började. Det vi pratade om var en förkortad ST, eftersom jag redan gjort ett och ett halvt år i Rumänien. Processen för att tillgodoräkna det påbörjades efter att jag börjat, och sedan stannade den. Jag har aldrig fått veta varför, och du är den enda som kan säga var den står.</p>
+    <div class="note"><strong>Hans och bara hans.</strong> Säg sista satsen rakt och sluta.</div>
+    <div class="interrupt"><h4>Om han avbryter här</h4><dl>
+      <dt>&rdquo;Det är Socialstyrelsen som avgör.&rdquo;</dt><dd>&rdquo;Jag förstår. Men ansökan går via kliniken och den stannade här. Vad behövs för att återuppta den?&rdquo;</dd>
+      <dt>&rdquo;Vi väntade på handlingar från dig.&rdquo;</dt><dd>&rdquo;Säg vilka så har du dem den här veckan.&rdquo; <em>Anteckna.</em></dd>
+      <dt>&rdquo;Jag minns inte att jag lovade det.&rdquo;</dt><dd>&rdquo;Processen påbörjades efter att jag börjat. Jag vill förstå vad den syftade till, om inte det.&rdquo;</dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>Det andra är tiden. I min plan låg implantat i slutet av år 1. Jag är i mitt andra år och har inte börjat, och junibedömningen sätter mig på ST år 1. Jag ber dig inte ompröva den bedömningen. Jag frågar vad planen är härifrån till färdig, och om fyra år fortfarande är realistiskt.</p>
+    <div class="note"><strong>Hon avstår från att slåss om bedömningen</strong>, vilket tar bort hans enklaste motargument.</div>
+    <div class="interrupt"><h4>Om han avbryter här</h4><dl>
+      <dt>&rdquo;Det är Aidas område.&rdquo;</dt><dd>&rdquo;Planen är det. Men resurserna ligger hos dig, och det gör också den tid tjänsten är finansierad.&rdquo;</dd>
+      <dt>&rdquo;Du är inte redo för implantat.&rdquo;</dt><dd>&rdquo;Vad behöver jag då visa, och till när?&rdquo; <em>Tillbaka till öppningsfrågan.</em></dd>
+      <dt>&rdquo;Sånt tar den tid det tar.&rdquo;</dt><dd>&rdquo;Jag förstår. Jag vill ändå veta om fyra år är realistiskt, för jag har planerat efter det.&rdquo;</dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>Jag vill också säga något om hur saker når mig. Jag fick ingen inskolning när jag kom, och SBAR är tydligaste exemplet: ingen nämnde det på flera månader, och sedan kom det upp på ett kollegium som en del av en bedömning av min nivå. Jag rättade till det samma vecka. Jag hör mycket hellre sådant när det händer.</p>
+  </div>
+
+  <div class="block">
+    <p>Jag vill vara tydlig med en sak. Det jag tycker är svårt här är inte arbetet eller kraven i ST. Det är att inte veta var jag står mellan de här mötena. <em>[en sann, konkret detalj]</em> Det har börjat påverka min hälsa. Jag säger det som en arbetsmiljöfråga, inte som ett klagomål på någon.</p>
+    <div class="note"><strong>En gång, lugnt, sedan vidare.</strong></div>
+  </div>
+
+  <div class="block">
+    <p>Och jag ska vara ärlig mot dig. När jag började fick jag veta att alla inte haft det lätt på den här kliniken. Jag bestämde mig för att det var deras erfarenhet och inte nödvändigtvis min, och att jag skulle satsa på det här stället. Jag tycker fortfarande att det var rätt beslut, och jag skulle verkligen vilja slippa hamna där de hamnade.</p>
+    <p>Jag är inte på väg någon annanstans. Jag vill bara komma vidare.</p>
+    <div class="note"><strong>Engagemang, inte lojalitet.</strong> Hon lovar inte att hålla tyst, och ska inte göra det, eftersom hon kan komma att skriva till studierektorn nästa vecka.</div>
+  </div>
+
+  <div class="block">
+    <p>Så, två saker jag ber dig om.</p>
+    <ol class="asks">
+      <li>Var tillgodoräknandet av min rumänska tid står, och vad som behövs för att återuppta det.</li>
+      <li>En plan som visar hur jag blir klar, inklusive när implantat börjar. Skriftligt, så att vi utgår från samma sak.</li>
+    </ol>
+    <p>Och om du kan säga ungefär när jag får dem, låter jag det ligga hos dig till dess.</p>
+    <div class="note"><strong>Sista raden är mötets viktigaste mening.</strong> Den ber om ett datum och erbjuder honom något i utbyte.</div>
+    <div class="interrupt"><h4>Om han avbryter här</h4><dl>
+      <dt>&rdquo;Jag ska titta på det.&rdquo;</dt><dd>&rdquo;Tack. När ska jag återkomma?&rdquo; <em>Gå inte utan datum.</em></dd>
+      <dt>&rdquo;Vi tar det på kollegiet.&rdquo;</dt><dd>&rdquo;Jag vill hellre ha planen innan dess, så att vi har något att utgå från.&rdquo;</dd>
+      <dt>&rdquo;Du är väldigt formell.&rdquo;</dt><dd>&rdquo;Jag har märkt att saker annars försvinner.&rdquo;</dd>
+    </dl></div>
+  </div>
+
+  <div class="block">
+    <p>Om jag har fått något av det här om bakfoten vill jag hellre veta det än fortsätta gissa.</p>
+    <p>Tack.&rdquo;</p>
+  </div>
+
+</div>
+
+<p class="pause">&mdash; och sedan tyst &mdash;</p>
+
+<div class="flag">
+  <strong>Inom en timme:</strong> <em>&rdquo;Tack för tiden i dag. Så som jag uppfattade det: [vad han sa], och [vad som händer sedan] senast [datum]. Säg till om jag missuppfattat.&rdquo;</em><br><br>
+  Svarade han på öppningsfrågan med något konkret ska det också med, i hans ord. Då blir det den norm hon arbetar mot och det hon kan peka på om tre månader.
+</div>
+
+</div>
+</div>
+
+<div data-page="lars">
+<div data-lang="sv" class="on">
+
+<div class="flag">
+  <strong>Utgå från att allt når Jahan.</strong> De byggde kliniken tillsammans och är gamla bekanta. Brevet är därför skrivet så att varje mening tål att återges ordagrant för honom. Ingenting i det skadar henne om det gör det, och en del av det hjälper.<br><br>
+  <strong>När:</strong> efter att kursfrågan avgjorts. Att sondera Göteborg samtidigt som hon ber Linköping om en kursplats är den enda kombination som kostar henne båda.<br><br>
+  <strong>Vad hon inte ber om:</strong> ett jobb, ett ingångående, en åsikt om Jahan eller Aida. Adam testade den vägen och fick rådet att härda ut.
+</div>
+
+<div class="email">
+  <div class="subject"><strong>Ämne:</strong> Hälsning från Linköping</div>
+
+  <p>Hej Lars,</p>
+
+  <p>Jag vet inte om du kommer ihåg mig. Jag kommer från Rumänien och sökte en ST-plats i käkkirurgi i Sverige, och vi hade en informell intervju under första halvåret 2024. Du berättade om tjänsten i Linköping och tyckte att jag skulle söka den. Det gjorde jag, och jag har varit på Käkkliniken sedan januari 2025.</p>
+
+  <p>Jag ville höra av mig och säga tack. Du var rak mot mig då, och jag har tänkt på det flera gånger sedan dess. Det var värdefullt att veta vad jag gick till.</p>
+
+  <p>Jag är glad att jag kom. Det kliniska har varit bra, jag har lärt mig mycket, och jag vill bli färdig här.</p>
+
+  <p>Det jag kämpar med är det administrativa. Min individuella studieplan blev aldrig upprättad tillsammans med mig, mina ett och ett halvt år av ST från Rumänien har inte tillgodoräknats, och jag är inte säker på vilken tidsplan jag arbetar mot. Jag hanterar det genom rätt kanaler och tar det lugnt.</p>
+
+  <p>Det jag skulle vilja fråga dig, som någon som känner till hur det brukar fungera: är det här sådant man ska ha tålamod med, eller är det något att ta på allvar? Jag har svårt att själv bedöma vad som är normalt.</p>
+
+  <p>Jag vet att du och Jahan känner varandra sedan länge, så svara bara så långt du är bekväm med. Ingen brådska alls, och hör av dig när du har tid. Det skulle betyda mycket att få din syn på det.</p>
+
+  <p>Med vänliga hälsningar,<br>Gabriela Dragos</p>
+</div>
+
+<h2>Varför brevet ser ut så här</h2>
+
+<div class="why"><strong>Allt i det tål att återges för Jahan.</strong> Hör han det låter det så här: hon talar varmt om kliniken, hon vill bli färdig där, hon beskriver problemet som administrativt och inte personligt, och hon nämner ingen vid namn. Det gör bilden av en svår ST svårare att hålla fast vid.</div>
+
+<div class="why"><strong>&rdquo;Jag hanterar det genom rätt kanaler&rdquo;</strong> är sant och tillräckligt. Inget om studierektorn, inget om facket. Om Lars berättar för Jahan att hon gått vidare någonstans förlorar hon initiativet.</div>
+
+<div class="why"><strong>Hon ställer en fråga i stället för att be om hjälp.</strong> Adam bad honom agera och fick rådet att härda ut. En fråga om vad som är normalt kan han svara ärligt på utan att hamna i konflikt med en gammal kollega, och det är det svaret hon faktiskt behöver.</div>
+
+<div class="why"><strong>Inget om Göteborg.</strong> Tar han upp det själv: <em>&rdquo;Det är snällt av dig, men jag är inte där. Jag vill få det här att fungera.&rdquo;</em> Han kommer ihåg att han sagt det. Hon behöver inte påminna honom.</div>
+
+<div class="why"><strong>Påminnelsen behövs.</strong> Han träffade henne en gång, informellt, för över ett år sedan. Utan den riskerar han att ägna första stycket åt att lista ut vem som skriver. Den påminner också om att det var han som skickade henne dit.</div>
+
+<div class="why"><strong>&rdquo;Svara bara så långt du är bekväm med&rdquo; erkänner hans sits utan att ge honom en utväg.</strong> Att säga att han inte behöver svara skulle med stor sannolikhet ge just det. Den här varianten säger att hon inte ber honom välja sida.</div>
+
+<div class="why"><strong>&rdquo;Ingen brådska&rdquo; är med för att hon inte ska framstå som i kris.</strong> Den som verkar desperat får rådet att härda ut. Den som verkar samlad får ett ärligt svar.</div>
+
+<div class="flag">
+  <strong>Om han svarar och vill prata:</strong> samma regler i telefon. Inga namn, inget om Adam, inget om eskalering, inget om Rumänien. Lyssna mer än hon pratar. Det hon är ute efter är en enda sak: är det här värre än han väntade sig, eller ungefär vad han väntade sig?
+</div>
+
+</div>
+
+<div data-lang="en">
+
+<div class="flag">
+  <strong>Assume everything reaches Jahan.</strong> They built the clinic together and are old acquaintances. So the letter is written so that every sentence can be repeated to him verbatim. Nothing in it hurts her if it is, and some of it helps.<br><br>
+  <strong>When:</strong> after the course question is settled. Sounding out G&ouml;teborg while asking Link&ouml;ping for a course place is the one combination that costs her both.<br><br>
+  <strong>What she is not asking for:</strong> a job, an opening, or an opinion about Jahan or Aida. Adam tried that route and was told to endure it.
+</div>
+
+<div class="email">
+  <div class="subject"><strong>Subject:</strong> H&auml;lsning fr&aring;n Link&ouml;ping</div>
+
+  <p>Hi Lars,</p>
+
+  <p>I don't know if you'll remember me. I'm from Romania and was looking for an ST post in k&auml;kkirurgi in Sweden, and we had an informal interview in the first half of 2024. You told me about the opening in Link&ouml;ping and suggested I apply. I did, and I've been at K&auml;kkliniken since January 2025.</p>
+
+  <p>I wanted to get in touch and say thank you. You were straight with me then, and I've thought about that several times since. It was valuable to know what I was walking into.</p>
+
+  <p>I'm glad I came. The clinical side has been good, I've learned a lot, and I want to finish here.</p>
+
+  <p>What I'm struggling with is the administrative side. My individual study plan was never drawn up with me, my year and a half of ST from Romania hasn't been credited, and I'm not sure what timeline I'm working to. I'm handling it through the proper channels and taking it calmly.</p>
+
+  <p>What I'd like to ask you, as someone who knows how these things usually work: is this the kind of thing to be patient about, or is it something to take seriously? I find it hard to judge what's normal.</p>
+
+  <p>I know you and Jahan go back a long way, so please only answer as far as you're comfortable. No hurry at all, and get back to me whenever you have time. It would mean a lot to hear your view.</p>
+
+  <p>Best regards,<br>Gabriela Dragos</p>
+</div>
+
+<h2>Why the letter looks like this</h2>
+
+<div class="why"><strong>Everything in it survives being repeated to Jahan.</strong> If he hears it, it sounds like this: she speaks warmly about the clinic, she wants to finish there, she describes the problem as administrative rather than personal, and she names nobody. That makes the difficult-trainee reading harder to sustain.</div>
+
+<div class="why"><strong>"I'm handling it through the proper channels"</strong> is true and sufficient. Nothing about the studierektor, nothing about the union. If Lars tells Jahan she has gone somewhere with it, she loses the initiative.</div>
+
+<div class="why"><strong>She asks a question rather than for help.</strong> Adam asked him to act and was advised to endure. A question about what is normal is something he can answer honestly without coming into conflict with an old colleague, and it is the answer she actually needs.</div>
+
+<div class="why"><strong>Nothing about G&ouml;teborg.</strong> If he raises it: <em>"That's kind, and I'm not there. I want to make this work."</em> He remembers what he said. She doesn't need to remind him.</div>
+
+<div class="why"><strong>The reminder is necessary.</strong> He met her once, informally, well over a year ago. Opening without it risks him spending the first paragraph working out who is writing. It also reminds him, gently, that he was the one who sent her there, which is a small reason to take an interest.</div>
+
+<div class="why"><strong>"Only answer as far as you're comfortable" acknowledges his position without offering him an exit.</strong> Telling him he doesn't have to reply would almost certainly produce exactly that. This version says she isn't asking him to take sides, which is the thing that would otherwise make him go quiet.</div>
+
+<div class="why"><strong>"No hurry" is there so she doesn't read as being in crisis.</strong> Someone who seems desperate gets told to endure. Someone who seems composed gets an honest answer.</div>
+
+<div class="flag">
+  <strong>If he replies and wants to talk:</strong> same rules by phone. No names, nothing about Adam, nothing about escalation, nothing about Romania. Listen more than she talks. She is after one thing only: is this worse than he expected, or about what he expected?
+</div>
+
+</div>
+</div>
+
+<div data-page="jahanmail">
+<div data-lang="sv" class="on">
+
+<div class="flag">
+  <strong>När:</strong> onsdag morgon. Två arbetsdagar efter brevet till Aida.<br><br>
+  <strong>Skälet är inte att Aida inte svarat.</strong> Hon är borta hela veckan, och det är ett fullgott skäl i sig. Att skriva &rdquo;jag har inte fått svar&rdquo; skulle vara både orättvist och taktiskt dåligt. Skälet är att kursen inte kan vänta tills hon är tillbaka.<br><br>
+  <strong>Kort.</strong> Han är kopierad på hela tråden och har läst de tolv punkterna. Att upprepa något av dem gör mejlet lättare att skjuta på. En fråga, ett svar.
+</div>
+
+<div class="email">
+  <div class="subject"><strong>Ämne:</strong> Implantatkursen i oktober, kort fråga till dig</div>
+
+  <p>Hej Jahan,</p>
+
+  <p>Jag svarade i söndags på Aidas mejl om implantatkursen i oktober, i tråden där du är med, så jag hoppas att du sett det också. Jag visste att hon skulle vara borta den här veckan men hoppades ändå höra från henne i måndags eller tisdags.</p>
+
+  <p>Platsen behöver säkras så snart som möjligt, så jag frågar dig direkt: kan jag bli anmäld till kursen?</p>
+
+  <p>Jag vill vara tydlig med att jag inte går förbi Aida. Allt det övriga tar jag med henne när hon är tillbaka, och på mötet den 7/10. Det är bara själva platsen som inte kan vänta.</p>
+
+  <p>Med vänliga hälsningar,<br>Gabriela</p>
+</div>
+
+<h2>Varför mejlet ser ut så här</h2>
+
+<div class="why"><strong>Fyra stycken, en fråga.</strong> Han har redan läst argumenten. Ett långt mejl här skulle göra det till något att återkomma till; ett kort mejl med en fråga är något att svara på.</div>
+
+<div class="why"><strong>&rdquo;I tråden där du är med, så du har sett det&rdquo; är korrekt och räcker.</strong> Hon valde inte mottagarna; det gjorde Aida. Att påstå att hon kopierade honom med flit vore en liten osanning i ett brev vars styrka är att allt i det går att kontrollera.<br><br><strong>&rdquo;Men hoppades ändå höra från henne&rdquo; betyder mer än det ser ut.</strong> Utan den meningen antyder mejlet att hon aldrig räknade med ett svar från Aida, vilket läses som att hon gått över huvudet på henne från början.</div>
+
+<div class="why"><strong>Stycket om att inte gå förbi Aida är inte artighet.</strong> Det tar bort hans enklaste utväg. Utan det kan han svara &rdquo;det här är Aidas område&rdquo;. Med det har hon redan sagt att allt annat är hennes, och det enda kvar på bordet är en platsbokning.</div>
+
+<div class="why"><strong>&rdquo;Kan jag bli anmäld till kursen?&rdquo;</strong> Är en ja- eller nej-fråga. Den går inte att besvara med ett resonemang.</div>
+
+<h2>Vad han kan svara, och vad hon gör</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Han säger</th><th>Hon gör</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>&rdquo;Ja, gör det.&rdquo;</td>
+      <td>Svara inom en timme: tack, och bekräfta att hon ordnar anmälan och återkommer när den är gjord. Boka sedan, och skicka bekräftelsen. Ett ja i ett mejl är inte en plats på en kurs.</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Ta det med Aida när hon är tillbaka.&rdquo;</td>
+      <td>&rdquo;Det gör jag gärna, men platsen behöver bokas innan dess. Skulle du kunna godkänna själva anmälan nu, så tar vi resten med henne efteråt?&rdquo; <em>En påstötning, inte fler. Upprepar han sig: sluta och gå till studierektorn.</em></td>
+    </tr>
+    <tr>
+      <td>&rdquo;Vi tar det den 7/10.&rdquo;</td>
+      <td>Samma svar. &rdquo;Kursen ligger före mötet, så just den behöver avgöras separat.&rdquo;</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Aida har redan bestämt det här.&rdquo;</td>
+      <td>&rdquo;Jag förstår. Jag frågar dig eftersom resurserna för ST ligger hos dig, och eftersom hon är borta. Om svaret ändå är nej vill jag gärna veta vad som skulle behöva förändras.&rdquo; <em>Sedan släpp det. Frågan är det användbara.</em></td>
+    </tr>
+    <tr>
+      <td>&rdquo;Du är inte redo.&rdquo;</td>
+      <td>&rdquo;Vad behöver jag då visa, och till när?&rdquo; Inget mer. Diskutera inte, räkna inte upp kurser. Anteckna svaret.</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Det finns ingen budget / ingen plats.&rdquo;</td>
+      <td>&rdquo;Tack, bra att veta. Skulle jag kunna få det skriftligt så att jag kan planera efter det?&rdquo; Ett budgetskäl på papper är något helt annat än ett kompetensskäl.</td>
+    </tr>
+    <tr>
+      <td>&rdquo;Vi tar det muntligt.&rdquo;</td>
+      <td>Säg ja direkt och gå dit. Sedan trerads sammanfattning samma dag. Det är ett bra utfall: det är mötet hon försökt få i veckor.</td>
+    </tr>
+    <tr>
+      <td>Något långt och vänligt som inte svarar.</td>
+      <td>En rad tillbaka: &rdquo;Tack. Bara så jag förstår rätt, betyder det att jag kan bli anmäld eller inte?&rdquo;</td>
+    </tr>
+    <tr>
+      <td>Ingenting alls.</td>
+      <td>Två dagar, sedan en kort fråga i korridoren. Sedan ett kort mejl om vad han sa. Sedan studierektorn.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="flag">
+  <strong>Vad han än svarar: svara samma dag och håll det till tre rader.</strong> Vänligt, inga argument, inget återupptående. Var svaret vagt är svaret den enda klargörande frågan och inget mer. Varje utbyte ger antingen platsen eller ett tydligare underlag.
+</div>
+
+<div class="flag">
+  <strong>Om han inte svarar på två dagar:</strong> fråga honom i korridoren, kort och vänligt, om han sett mejlet. Sedan samma dag ett trerads mejl om vad han sa. Därefter är nästa steg studierektorn, inte fler mejl till honom.
+</div>
+
+</div>
+
+<div data-lang="en">
+
+<div class="flag">
+  <strong>When:</strong> Wednesday morning. Two working days after the letter to Aida.<br><br>
+  <strong>The reason is not that Aida hasn't replied.</strong> She is away all week, and that is a sufficient reason on its own. Writing "I haven't had an answer" would be both unfair and tactically poor. The reason is that the course cannot wait until she is back.<br><br>
+  <strong>Short.</strong> He is copied on the whole thread and has read the twelve points. Repeating any of them makes the email easier to defer. One question, one answer.
+</div>
+
+<div class="email">
+  <div class="subject"><strong>Subject:</strong> Implantatkursen i oktober, kort fr&aring;ga till dig</div>
+
+  <p>Hi Jahan,</p>
+
+  <p>I replied on Sunday to Aida's email about the implantology course in October, in the thread you're on, so I hope you've seen it too. I knew she'd be away this week but was still hoping to hear from her on Monday or Tuesday.</p>
+
+  <p>The place needs securing as soon as possible, so I'm asking you directly: can I be registered for the course?</p>
+
+  <p>I want to be clear that I'm not going around Aida. I'll take everything else with her when she's back, and at the meeting on 7 October. It's only the place itself that can't wait.</p>
+
+  <p>Best regards,<br>Gabriela</p>
+</div>
+
+<h2>Why the email looks like this</h2>
+
+<div class="why"><strong>Four paragraphs, one question.</strong> He has already read the arguments. A long email here would make it something to come back to; a short one with a question is something to answer.</div>
+
+<div class="why"><strong>"In the thread you're on, so you'll have seen it" is accurate and sufficient.</strong> She did not choose the recipients; Aida did. Saying she copied him deliberately would be a small untruth in a letter whose strength is that every word is checkable. This version explains why she is writing to him, contains no complaint about silence, and claims nothing.<br><br><strong>"But was still hoping to hear from her" matters more than it looks.</strong> Without it, writing to him implies she never expected Aida to answer, which reads as going over her head from the start. With it, she gave Aida the chance and is asking him only because of the timing.</div>
+
+<div class="why"><strong>The paragraph about not going around Aida isn't politeness.</strong> It removes his easiest exit. Without it he can reply "this is Aida's area". With it, she has already said everything else is Aida's, and the only thing left on the table is booking a place.</div>
+
+<div class="why"><strong>"Can I be registered for the course?"</strong> is a yes or no question. It can't be answered with a line of reasoning.</div>
+
+<h2>What he might reply, and what she does</h2>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>He says</th><th>She does</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>"Yes, go ahead."</td>
+      <td>Reply within the hour: thank you, and confirm she'll arrange the registration and let him know once it's booked. Then actually book it, and send the confirmation. A yes in an email is not a place on a course.</td>
+    </tr>
+    <tr>
+      <td>"Sort it out with Aida when she's back."</td>
+      <td>"I will, but the place has to be booked before then. Could you approve just the registration now, and we can go through the rest with her afterwards?" <em>One follow-up only. If he repeats it, stop and go to the studierektor.</em></td>
+    </tr>
+    <tr>
+      <td>"We'll take it on 7 October."</td>
+      <td>Same answer. The meeting is after the course, and saying so once is enough: "The course is before the meeting, so that one needs deciding separately."</td>
+    </tr>
+    <tr>
+      <td>"Aida has already decided this."</td>
+      <td>"I understand. I'm asking you because resources for ST sit with you, and because she's away. If the answer is still no, I'd like to know what would need to change." <em>Then let it rest. That question is the useful part.</em></td>
+    </tr>
+    <tr>
+      <td>"You're not ready."</td>
+      <td>"Then what would I need to show, and by when?" Nothing else. Do not argue about readiness, do not list her courses. Write down whatever he answers.</td>
+    </tr>
+    <tr>
+      <td>"There's no budget / no place."</td>
+      <td>"Thank you, that's useful to know. Could I have that in writing so I can plan around it?" A budget reason on record is worth having, and it is very different from a competence reason.</td>
+    </tr>
+    <tr>
+      <td>"Let's talk in person."</td>
+      <td>Say yes immediately and go. Then the three-line summary email the same day. This is a good outcome: it's the meeting she's been trying to get for weeks.</td>
+    </tr>
+    <tr>
+      <td>Something long and warm that doesn't answer.</td>
+      <td>One line back: "Thanks. Just so I'm clear, does that mean I can be registered, or not?" Warm, short, unavoidable.</td>
+    </tr>
+    <tr>
+      <td>Nothing at all.</td>
+      <td>Two days, then a brief corridor question. Then a short email recording what he said. Then the studierektor.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="flag">
+  <strong>Whatever he answers, reply the same day and keep it to three lines.</strong> Warm, no argument, no reopening. If the answer was vague, the reply is the one-line clarifying question and nothing more. Every exchange either produces the place or produces a clearer record, and both are worth having.
+</div>
+
+<div class="flag">
+  <strong>If he doesn't reply within two days:</strong> ask him in the corridor, briefly and warmly, whether he saw the email. Then a three-line email the same day recording what he said. After that the next step is the studierektor, not more emails to him.
+</div>
+
+</div>
+</div>
+
+<div data-page="personal">
+<div data-lang="en" class="on">
+
+<div class="flag">
+  <strong>What this is for.</strong> Everything he has had from her recently is formal. This is the one message with no argument, no dates, and nothing to answer. Its whole value is that it asks for nothing.<br><br>
+  <strong>When:</strong> being off sick makes this easier to send now rather than later, because the opening line is true and explains itself. Still, not the same day as the course note, and not immediately after it. A day or two apart is enough to keep them separate.<br><br>
+  <strong>The one ask it makes is the softest one available:</strong> tell me what I can do. It asks for nothing he has to give up, it can't be refused without seeming unhelpful, and a real answer would be the first concrete criterion she has ever been given.
+</div>
+
+<div class="email">
+  <div class="subject"><strong>Subject:</strong> Utanf&ouml;r allt det formella</div>
+
+  <p>Hi Jahan,</p>
+
+  <p>I had hoped to have a short meeting with you over the last couple of days, but unfortunately I got sick. Still, I didn't want to go into the weekend without getting this off my chest.</p>
+
+  <p>When I came here I was very enthusiastic. I'd moved my family from Romania and I came in to the clinic almost every day for three months before I was even employed, because I wanted to be ready.</p>
+
+  <p>This past year has been challenging, in ways I did not expect. What has been hardest is the uncertainty: not knowing, and not understanding how things got to where they are. Looking back, I know there are things I could have handled differently too.</p>
+
+  <p>But I want you to know that I still am enthusiastic. I still want to be here in the long run, I still want to make this work, and I still want to have a good relationship with everyone here.</p>
+
+  <p>You once told me that I'm someone who gets back up after being knocked down. I'm trying to do that again now, but I would appreciate some help. If there are things you think I can do to improve the situation, please tell me what they are.</p>
+
+  <p>Best regards,<br>Gabriela</p>
+</div>
+
+<h2>Why it's written this way</h2>
+
+<div class="why"><strong>Quoting him back to himself is the strongest move in the email.</strong> "You once told me I'm someone who gets back up" is his own judgment of her, offered warmly at some point. Repeating it invites him to live up to it, and it is very hard to answer a compliment you gave with indifference.<br><br><strong>"Tell me what I can do" is the right ask, not a tactic.</strong> It is the same question as the opening of the speech, and it has no comfortable vague answer. Be ready for the possibility that the answer is some version of "be more humble". If it is, she has it in writing, and the strategy tab already has her doing exactly that.</div>
+
+<div class="why"><strong>"Things I could have handled differently too" is deliberately general.</strong> It gives him the self-awareness he values without conceding anything specific. "I should have kept more to myself" would do the opposite: in writing, it admits the exact charge used to justify constraining her, and it would undercut the Aida and studierektor letters sent the same week if it ever travelled. The word "too" matters: it implies shared responsibility without assigning any.</div>
+
+<div class="why"><strong>It doesn't apologise and it doesn't retract.</strong> Nothing here softens the letter she sent or suggests she regrets asking. Warmth and firmness are not in tension, and mixing an apology in would undo both.</div>
+
+<div class="why"><strong>The three months are the detail that carries it.</strong> Concrete, verifiable, and it says more about her commitment than any adjective would. He may not have known, or may have forgotten.</div>
+
+<div class="why"><strong>"I still am" is the whole message.</strong> Not that she was enthusiastic and lost it, but that she is enthusiastic despite the year. That is a much harder thing to hear and do nothing about, and it doesn't ask him to feel bad about anything.<br><br><strong>"Challenging, in ways I did not expect" is one sentence and then it moves on.</strong> It carries a mild edge: he will understand that the unexpected part wasn't the surgery. That is fine in a personal message, because it opens a door without walking through it, and it is phrased so that he can ask rather than defend. One line, then forward.</div>
+
+<div class="why"><strong>Short.</strong> Five short paragraphs. A long personal email reads as a plea; a brief one reads as sincerity.</div>
+
+<div class="flag">
+  <strong>What to expect.</strong> Quite possibly nothing, or something brief and warm. That is fine. The purpose is not a reply, it is to be a person to him rather than a file. With someone who responds to people who don't make noise, this is the most useful kind of noise there is.<br><br>
+  <strong>If he answers with something concrete:</strong> thank him, and write it down. That becomes the standard she works to, and the thing she can point to later. Don't follow it with another request for at least a week.
+</div>
+
+</div>
+
+<div data-lang="sv">
+
+<div class="flag">
+  <strong>Vad det här är till för.</strong> Allt han fått från henne på sistone är formellt. Det här är det enda meddelandet utan argument, utan datum och utan något att besvara. Hela dess värde ligger i att det inte ber om något.<br><br>
+  <strong>När:</strong> att hon är sjukskriven gör det lättare att skicka nu, eftersom inledningen är sann och förklarar sig själv. Ändå inte samma dag som kursmejlet. En eller två dagars mellanrum räcker för att hålla dem isär.<br><br>
+  <strong>Den enda fråga det ställer är den mjukaste som finns:</strong> säg vad jag kan göra. Den kräver inget av honom, den går inte att avvisa utan att verka ojälpsam, och ett riktigt svar vore det första konkreta kriterium hon någonsin fått.
+</div>
+
+<div class="email">
+  <div class="subject"><strong>Ämne:</strong> Utanför allt det formella</div>
+
+  <p>Hej Jahan,</p>
+
+  <p>Jag hade hoppats på ett kort möte med dig de senaste dagarna, men tyvärr blev jag sjuk. Jag ville ändå inte gå in i helgen utan att ha lättat mitt hjärta.</p>
+
+  <p>När jag kom hit var jag väldigt taggad. Jag hade flyttat min familj från Rumänien och jag kom in till kliniken nästan varje dag i tre månader innan jag ens var anställd, för att jag ville vara förberedd.</p>
+
+  <p>Det här året har varit utmanande, på sätt jag inte hade väntat mig. Det svåraste har varit ovissheten, att inte veta och inte förstå hur det blev som det blev. När jag ser tillbaka vet jag att det finns saker jag också hade kunnat hantera annorlunda.</p>
+
+  <p>Men jag vill att du ska veta att jag fortfarande är taggad. Jag vill fortfarande vara här på lång sikt, jag vill fortfarande få det här att fungera, och jag vill fortfarande ha en bra relation med alla här.</p>
+
+  <p>Du sa en gång till mig att jag är en person som reser sig efter att ha varit nere. Det är vad jag försöker göra nu igen, men jag skulle uppskatta lite hjälp. Om du tycker att det finns saker jag kan göra för att förbättra situationen, säg gärna vilka.</p>
+
+  <p>Med vänliga hälsningar,<br>Gabriela</p>
+</div>
+
+<h2>Varför det är skrivet så här</h2>
+
+<div class="why"><strong>Att citera honom själv är mejlets starkaste drag.</strong> &rdquo;Du sa en gång att jag är en person som reser sig&rdquo; är hans eget omdöme om henne. Att upprepa det bjuder in honom att leva upp till det, och det är svårt att möta en komplimang man själv gett med likgiltighet.<br><br><strong>&rdquo;Säg vad jag kan göra&rdquo; är rätt fråga, inte en taktik.</strong> Var beredd på att svaret kan bli någon variant av &rdquo;var mer ödmjuk&rdquo;. Blir det så har hon det skriftligt.</div>
+
+<div class="why"><strong>&rdquo;Saker jag också hade kunnat hantera annorlunda&rdquo; är medvetet allmänt.</strong> Det ger honom den självinsikt han värderar utan att medge något konkret. &rdquo;Jag borde ha hållit mer för mig själv&rdquo; skulle göra motsatsen: skriftligt medger det just det som använts för att begränsa henne. Ordet &rdquo;också&rdquo; är viktigt: det antyder delat ansvar utan att fördela något.</div>
+
+<div class="why"><strong>Det ber inte om ursäkt och tar inte tillbaka något.</strong> Ingenting här mjukar upp brevet hon skickade eller antyder att hon ångrar att hon frågade.</div>
+
+<div class="why"><strong>De tre månaderna är detaljen som bär det.</strong> Konkret, kontrollerbar, och säger mer om hennes engagemang än något adjektiv. Han kanske inte visste, eller har glömt.</div>
+
+<div class="why"><strong>&rdquo;Jag är fortfarande taggad&rdquo; är hela budskapet.</strong> Inte att hon var taggad och tappade det, utan att hon är det trots året. Det är mycket svårare att höra och inte göra något åt.<br><br><strong>&rdquo;Utmanande, på sätt jag inte hade väntat mig&rdquo; är en mening och sedan vidare.</strong> Den har en lätt udd: han förstår att det oväntade inte var kirurgin. Det går bra i ett personligt meddelande, eftersom det öppnar en dörr utan att gå igenom den.</div>
+
+<div class="why"><strong>Kort.</strong> Fem korta stycken. Ett långt personligt mejl läses som en vädjan; ett kort läses som uppriktighet.</div>
+
+<div class="flag">
+  <strong>Vad man kan vänta sig.</strong> Möjligen ingenting, eller något kort och vänligt. Det gör inget. Syftet är inte ett svar, utan att vara en person för honom och inte en akt.<br><br>
+  <strong>Om han svarar med något konkret:</strong> tacka, och anteckna det. Det blir normen hon arbetar mot. Följ inte upp med en ny begäran på minst en vecka.
 </div>
 
 </div>
